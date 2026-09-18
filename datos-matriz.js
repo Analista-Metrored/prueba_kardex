@@ -1,10 +1,10 @@
-/* Kardex Demo - Matriz de pedido de compra.
-   Fuente: pedido-demo-septiembre.xlsx (leida el 18/09/2026).
-   Cruzada contra el catalogo de catalogo-demo.xlsx.
+/* Kardex Metrored - Matriz de pedido de compra.
+   Fuente: Matriz de pedido SEPTIEMBRE RJAS (1).xlsx (leida el 18/09/2026).
+   Cruzada contra el catalogo de kardex 2026 actualizado.xlsx.
    Archivo generado automaticamente: no editar a mano. */
 window.MATRIZ_DATOS = {
  "generado": "2026-09-18",
- "fuente": "pedido-demo-septiembre.xlsx",
+ "fuente": "Matriz de pedido SEPTIEMBRE RJAS (1).xlsx",
  "mes": "septiembre 2026",
  "hojas": [
   {
@@ -12,29 +12,29 @@ window.MATRIZ_DATOS = {
    "icono": "1",
    "hdr": 3,
    "destinos": [
-    "PONIENTE",
-    "PARAISO",
-    "ENDOSCOPIA PARAISO",
-    "SUR",
-    "ENDOSCOPIA SUR",
-    "NORTE",
-    "ENDOSCOPIA NORTE",
-    "PRADERA",
-    "LAGUNA",
-    "RIBERA",
-    "VALLE",
-    "Z. NORTE",
-    "ENDOSCOPIA ZNORTE",
-    "COLINA",
-    "CIUDAD JARDIN",
-    "MIRADOR",
-    "SAN MARCOS"
+    "CARCELEN",
+    "CUMBAYA",
+    "ENDOSCOPIA CUMBAYA",
+    "ALBORADA",
+    "ENDOSCOPIA ALBORADA",
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS",
+    "CAROLINA",
+    "CHILLOS",
+    "CONDADO",
+    "KENNEDY",
+    "Q. SUR",
+    "ENDOSCOPIA QSUR",
+    "CALDERON",
+    "CIUDAD CELESTE",
+    "IÑAQUITO",
+    "SAN LUIS"
    ],
    "prods": [
     {
      "p": "ARCHIVADOR ACORDEON CON ELASTICO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 17.5,
      "c": {},
      "r": 4
@@ -42,7 +42,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "ARCHIVADOR ACORDEON DE CARTON GRANDE HECHO A MANO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 21,
      "c": {},
      "r": 5
@@ -50,7 +50,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "ARCHIVADOR ACORDEÓN PLÁSTICO PEQUEÑO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.35,
      "c": {},
      "r": 6
@@ -58,23 +58,23 @@ window.MATRIZ_DATOS = {
     {
      "p": "ARCHIVADOR DOS ANILLOS OFICIO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.88,
      "c": {
-      "SUR": 1,
-      "ENDOSCOPIA SUR": 2,
-      "ENDOSCOPIA NORTE": 2,
-      "LAGUNA": 1,
-      "RIBERA": 2,
-      "VALLE": 2,
-      "MIRADOR": 5
+      "ALBORADA": 1,
+      "ENDOSCOPIA ALBORADA": 2,
+      "ENDOSCOPIA AMAZONAS": 2,
+      "CHILLOS": 1,
+      "CONDADO": 2,
+      "KENNEDY": 2,
+      "IÑAQUITO": 5
      },
      "r": 7
     },
     {
      "p": "ARCHIVADOR MEDIO OFICIO 2 ANILLOS (PEQUEÑO)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.23,
      "c": {},
      "r": 8
@@ -82,7 +82,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "BANDERITAS ADHESIVAS X 5",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.5,
      "c": {},
      "r": 9
@@ -90,7 +90,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "BATERIAS 9V ENERGIZER",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 4.238,
      "c": {},
      "r": 10
@@ -98,27 +98,27 @@ window.MATRIZ_DATOS = {
     {
      "p": "BOLÍGRAFO BIC PUNTA MEDIANA COLOR AZUL",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.288,
      "c": {
-      "PARAISO": 10,
-      "SUR": 8,
-      "ENDOSCOPIA SUR": 5,
-      "NORTE": 30,
-      "ENDOSCOPIA NORTE": 8,
-      "PRADERA": 10,
-      "LAGUNA": 8,
-      "VALLE": 5,
-      "Z. NORTE": 10,
-      "COLINA": 10,
-      "MIRADOR": 10
+      "CUMBAYA": 10,
+      "ALBORADA": 8,
+      "ENDOSCOPIA ALBORADA": 5,
+      "AMAZONAS": 30,
+      "ENDOSCOPIA AMAZONAS": 8,
+      "CAROLINA": 10,
+      "CHILLOS": 8,
+      "KENNEDY": 5,
+      "Q. SUR": 10,
+      "CALDERON": 10,
+      "IÑAQUITO": 10
      },
      "r": 11
     },
     {
      "p": "BOLÍGRAFO BIC PUNTA MEDIANA COLOR NEGRO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.29,
      "c": {},
      "r": 12
@@ -126,17 +126,17 @@ window.MATRIZ_DATOS = {
     {
      "p": "BOLÍGRAFO BIC PUNTA MEDIANA COLOR ROJO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.29,
      "c": {
-      "COLINA": 2
+      "CALDERON": 2
      },
      "r": 13
     },
     {
      "p": "BORRADOR DE PIZARRA MARCADOR",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.5,
      "c": {},
      "r": 14
@@ -144,28 +144,28 @@ window.MATRIZ_DATOS = {
     {
      "p": "BORRADOR DE QUESO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.178,
      "c": {
-      "COLINA": 6,
-      "CIUDAD JARDIN": 5
+      "CALDERON": 6,
+      "CIUDAD CELESTE": 5
      },
      "r": 15
     },
     {
      "p": "CAJA DE GRAPAS GRANDES",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.9,
      "c": {
-      "MIRADOR": 2
+      "IÑAQUITO": 2
      },
      "r": 16
     },
     {
      "p": "CAJA DE MINAS PARA LAPICERO HB 0,5",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.238,
      "c": {},
      "r": 17
@@ -173,22 +173,22 @@ window.MATRIZ_DATOS = {
     {
      "p": "CAJA GRAPAS 26/6 NORMAL",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.09,
      "c": {
-      "PARAISO": 5,
-      "SUR": 4,
-      "PRADERA": 5,
-      "LAGUNA": 3,
-      "RIBERA": 5,
-      "MIRADOR": 20
+      "CUMBAYA": 5,
+      "ALBORADA": 4,
+      "CAROLINA": 5,
+      "CHILLOS": 3,
+      "CONDADO": 5,
+      "IÑAQUITO": 20
      },
      "r": 18
     },
     {
      "p": "CALCULADORA PEQUEÑA CASIO HL-815",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 3.375,
      "c": {},
      "r": 19
@@ -196,40 +196,40 @@ window.MATRIZ_DATOS = {
     {
      "p": "CARPETA DE CARTON",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.115,
      "c": {
-      "ENDOSCOPIA SUR": 50
+      "ENDOSCOPIA ALBORADA": 50
      },
      "r": 20
     },
     {
      "p": "CARPETA PLÁSTICA DOBLE ANILLO COLOR AZUL",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 2.07,
      "c": {
-      "SUR": 1,
-      "COLINA": 5,
-      "MIRADOR": 10
+      "ALBORADA": 1,
+      "CALDERON": 5,
+      "IÑAQUITO": 10
      },
      "r": 21
     },
     {
      "p": "CARPETA TAPA PLÁSTICA TRANSPARENTE CON BINCHA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.8,
      "c": {
-      "PRADERA": 10,
-      "Z. NORTE": 3
+      "CAROLINA": 10,
+      "Q. SUR": 3
      },
      "r": 22
     },
     {
-     "p": "CARPETAS AZULES CON LOGO",
+     "p": "CARPETAS AZULES LOGO METRORED",
      "u": "",
-     "prov": "PROVEEDOR P",
+     "prov": "IESTUDIO",
      "pre": 1.5,
      "c": {},
      "r": 23
@@ -237,7 +237,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "CARTONES GRANDES PARA ENVIO DOCUMENTACIÓN IESS",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 2.21,
      "c": {},
      "r": 24
@@ -245,7 +245,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "CARTONES MEDIANOS PARA ENVIO DOCUMENTACIÓN IESS",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.7,
      "c": {},
      "r": 25
@@ -253,7 +253,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "CARTULINA BRISTO AZUL A4",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.09,
      "c": {},
      "r": 26
@@ -261,7 +261,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "CARTULINA BRISTO BLANCA A4",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.15,
      "c": {},
      "r": 27
@@ -269,7 +269,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "CARTULINA BRISTO ROJA A4",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.15,
      "c": {},
      "r": 28
@@ -277,76 +277,76 @@ window.MATRIZ_DATOS = {
     {
      "p": "CINTA DE EMBALAJE",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.65,
      "c": {
-      "PARAISO": 2,
-      "SUR": 1,
-      "NORTE": 1,
-      "COLINA": 1,
-      "MIRADOR": 5
+      "CUMBAYA": 2,
+      "ALBORADA": 1,
+      "AMAZONAS": 1,
+      "CALDERON": 1,
+      "IÑAQUITO": 5
      },
      "r": 29
     },
     {
      "p": "CINTA MASQUIN 1\" 24 * 40",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.77,
      "c": {
-      "COLINA": 1,
-      "MIRADOR": 2
+      "CALDERON": 1,
+      "IÑAQUITO": 2
      },
      "r": 30
     },
     {
      "p": "CINTA SCOTCH 3M MAGICA 19MM X 25M",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 2.12,
      "c": {
-      "PARAISO": 3,
-      "SUR": 6,
-      "NORTE": 4,
-      "PRADERA": 4,
-      "RIBERA": 10,
-      "VALLE": 2,
-      "Z. NORTE": 2,
-      "COLINA": 2,
-      "MIRADOR": 10
+      "CUMBAYA": 3,
+      "ALBORADA": 6,
+      "AMAZONAS": 4,
+      "CAROLINA": 4,
+      "CONDADO": 10,
+      "KENNEDY": 2,
+      "Q. SUR": 2,
+      "CALDERON": 2,
+      "IÑAQUITO": 10
      },
      "r": 31
     },
     {
      "p": "CLIP TIPO MARIPOSA OFFICE",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.314,
      "c": {
-      "VALLE": 1,
-      "Z. NORTE": 1
+      "KENNEDY": 1,
+      "Q. SUR": 1
      },
      "r": 32
     },
     {
      "p": "CLIPS CAJA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.2,
      "c": {
-      "PARAISO": 2,
-      "LAGUNA": 4,
-      "RIBERA": 10,
-      "Z. NORTE": 3,
-      "CIUDAD JARDIN": 12,
-      "MIRADOR": 20
+      "CUMBAYA": 2,
+      "CHILLOS": 4,
+      "CONDADO": 10,
+      "Q. SUR": 3,
+      "CIUDAD CELESTE": 12,
+      "IÑAQUITO": 20
      },
      "r": 33
     },
     {
      "p": "CONO CD-R X 100",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 27.3,
      "c": {},
      "r": 34
@@ -354,18 +354,18 @@ window.MATRIZ_DATOS = {
     {
      "p": "CORRECTOR TIPO ESFERO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.21,
      "c": {
-      "SUR": 1,
-      "PRADERA": 2
+      "ALBORADA": 1,
+      "CAROLINA": 2
      },
      "r": 35
     },
     {
      "p": "CUADERNO PEQUEÑO CUADROS",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.8,
      "c": {},
      "r": 36
@@ -373,7 +373,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "CUADERNO UNIVERSITARIO 100 HOJAS",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.1,
      "c": {},
      "r": 37
@@ -381,17 +381,17 @@ window.MATRIZ_DATOS = {
     {
      "p": "DISPENSADOR DE CINTA ADHESIVA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.81,
      "c": {
-      "MIRADOR": 10
+      "IÑAQUITO": 10
      },
      "r": 38
     },
     {
      "p": "DVD PRINCO RAYOS X 100 UNIDADES",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 25.42,
      "c": {},
      "r": 39
@@ -399,42 +399,42 @@ window.MATRIZ_DATOS = {
     {
      "p": "ESTILETE",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.69,
      "c": {
-      "SUR": 1,
-      "PRADERA": 1,
-      "MIRADOR": 1
+      "ALBORADA": 1,
+      "CAROLINA": 1,
+      "IÑAQUITO": 1
      },
      "r": 40
     },
     {
      "p": "FRASCO DE TINTA PARA SELLO COLOR NEGRO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.341,
      "c": {
-      "ENDOSCOPIA SUR": 1,
-      "PRADERA": 3,
-      "LAGUNA": 1,
-      "MIRADOR": 2
+      "ENDOSCOPIA ALBORADA": 1,
+      "CAROLINA": 3,
+      "CHILLOS": 1,
+      "IÑAQUITO": 2
      },
      "r": 41
     },
     {
      "p": "FUNDA DE KILO DE LIGAS",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 2.85,
      "c": {
-      "Z. NORTE": 1
+      "Q. SUR": 1
      },
      "r": 42
     },
     {
      "p": "GLOBOS PARA CUMPLEAÑOS F/50",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 8,
      "c": {},
      "r": 43
@@ -442,44 +442,44 @@ window.MATRIZ_DATOS = {
     {
      "p": "GOMA EN BARRA BESTER 36 GR",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.97,
      "c": {
-      "SUR": 1,
-      "PRADERA": 2,
-      "LAGUNA": 1
+      "ALBORADA": 1,
+      "CAROLINA": 2,
+      "CHILLOS": 1
      },
      "r": 44
     },
     {
      "p": "GRAPADORA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 5.33,
      "c": {
-      "PRADERA": 3,
-      "VALLE": 1,
-      "COLINA": 3,
-      "CIUDAD JARDIN": 2,
-      "MIRADOR": 5
+      "CAROLINA": 3,
+      "KENNEDY": 1,
+      "CALDERON": 3,
+      "CIUDAD CELESTE": 2,
+      "IÑAQUITO": 5
      },
      "r": 45
     },
     {
      "p": "GRAPADORA SEMIINDUSTRIAL",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 19.25,
      "c": {
-      "RIBERA": 1,
-      "MIRADOR": 1
+      "CONDADO": 1,
+      "IÑAQUITO": 1
      },
      "r": 46
     },
     {
      "p": "GUIAS CLASIFICADORAS A-Z A4 CARTULINA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 4,
      "c": {},
      "r": 47
@@ -487,111 +487,111 @@ window.MATRIZ_DATOS = {
     {
      "p": "JUEGOS SEPARADORES DE HOJAS PLÁSTICOS VARIOS COLORES",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.96,
      "c": {
-      "Z. NORTE": 4,
-      "COLINA": 2,
-      "MIRADOR": 5
+      "Q. SUR": 4,
+      "CALDERON": 2,
+      "IÑAQUITO": 5
      },
      "r": 48
     },
     {
      "p": "LAPICERO - PORTAMINAS PLASTICO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.81,
      "c": {
-      "Z. NORTE": 1
+      "Q. SUR": 1
      },
      "r": 49
     },
     {
      "p": "LAPIZ REY REY",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.13,
      "c": {
-      "LAGUNA": 2,
-      "Z. NORTE": 2,
-      "COLINA": 7,
-      "MIRADOR": 2
+      "CHILLOS": 2,
+      "Q. SUR": 2,
+      "CALDERON": 7,
+      "IÑAQUITO": 2
      },
      "r": 50
     },
     {
      "p": "MARCADOR PELIKAN 420 VARIOS COLORES",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.47,
      "c": {
-      "Z. NORTE": 4
+      "Q. SUR": 4
      },
      "r": 51
     },
     {
      "p": "MARCADOR PERMANENTE FINO NEGRO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.5,
      "c": {
-      "COLINA": 2,
-      "MIRADOR": 3
+      "CALDERON": 2,
+      "IÑAQUITO": 3
      },
      "r": 52
     },
     {
      "p": "MARCADOR PERMANENTE GRUESO NEGRO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.7,
      "c": {
-      "PARAISO": 1,
-      "NORTE": 2,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 2
+      "CUMBAYA": 1,
+      "AMAZONAS": 2,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 2
      },
      "r": 53
     },
     {
      "p": "MARCADOR PERMANENTE PUNTA FINA PARA CD",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.61,
      "c": {
-      "PRADERA": 3,
-      "RIBERA": 5,
-      "Z. NORTE": 4,
-      "COLINA": 1,
-      "MIRADOR": 3
+      "CAROLINA": 3,
+      "CONDADO": 5,
+      "Q. SUR": 4,
+      "CALDERON": 1,
+      "IÑAQUITO": 3
      },
      "r": 54
     },
     {
      "p": "MARCADOR PUNTA FINA AZUL EDDING",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.25,
      "c": {
-      "Z. NORTE": 2,
-      "COLINA": 1
+      "Q. SUR": 2,
+      "CALDERON": 1
      },
      "r": 55
     },
     {
      "p": "MARCADOR PUNTA FINA ROJO EDDING",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.25,
      "c": {
-      "Z. NORTE": 2
+      "Q. SUR": 2
      },
      "r": 56
     },
     {
      "p": "MARCADORES TIZA LÍQUIDA (AZUL-ROJO-NEGRO VERDE)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.35,
      "c": {},
      "r": 57
@@ -599,105 +599,105 @@ window.MATRIZ_DATOS = {
     {
      "p": "MOUSE PAD CON APOYA MUÑECA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 8.55,
      "c": {
-      "PRADERA": 3,
-      "VALLE": 1,
-      "Z. NORTE": 2,
-      "COLINA": 8,
-      "MIRADOR": 20
+      "CAROLINA": 3,
+      "KENNEDY": 1,
+      "Q. SUR": 2,
+      "CALDERON": 8,
+      "IÑAQUITO": 20
      },
      "r": 58
     },
     {
      "p": "PAPEL FOTOGRÁFICO A-4",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.65,
      "c": {
-      "ENDOSCOPIA NORTE": 5,
-      "ENDOSCOPIA ZNORTE": 4
+      "ENDOSCOPIA AMAZONAS": 5,
+      "ENDOSCOPIA QSUR": 4
      },
      "r": 59
     },
     {
      "p": "PAPELERA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 5,
      "c": {
-      "Z. NORTE": 1,
-      "MIRADOR": 1
+      "Q. SUR": 1,
+      "IÑAQUITO": 1
      },
      "r": 60
     },
     {
      "p": "PAQUETE ETIQUETAS AUTO ADHESIVAS MULTIPEG BLANCAS T-22 (TIRITAS)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.3,
      "c": {
-      "MIRADOR": 5
+      "IÑAQUITO": 5
      },
      "r": 61
     },
     {
      "p": "PASTA DE CONTAR DINERO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.15,
      "c": {
-      "SUR": 1,
-      "Z. NORTE": 1
+      "ALBORADA": 1,
+      "Q. SUR": 1
      },
      "r": 62
     },
     {
      "p": "PERFORADORA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 5.96,
      "c": {
-      "MIRADOR": 5
+      "IÑAQUITO": 5
      },
      "r": 63
     },
     {
      "p": "PILAS AA SONY(PAR)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.56,
      "c": {
-      "SUR": 5,
-      "NORTE": 14,
-      "PRADERA": 5,
-      "LAGUNA": 6,
-      "Z. NORTE": 10,
-      "COLINA": 8
+      "ALBORADA": 5,
+      "AMAZONAS": 14,
+      "CAROLINA": 5,
+      "CHILLOS": 6,
+      "Q. SUR": 10,
+      "CALDERON": 8
      },
      "r": 64
     },
     {
      "p": "PILAS AAA (PAR)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.56,
      "c": {
-      "PARAISO": 10,
-      "SUR": 24,
-      "NORTE": 14,
-      "PRADERA": 6,
-      "Z. NORTE": 8,
-      "COLINA": 8,
-      "CIUDAD JARDIN": 20
+      "CUMBAYA": 10,
+      "ALBORADA": 24,
+      "AMAZONAS": 14,
+      "CAROLINA": 6,
+      "Q. SUR": 8,
+      "CALDERON": 8,
+      "CIUDAD CELESTE": 20
      },
      "r": 65
     },
     {
      "p": "PILAS C (PAR)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 2.82,
      "c": {},
      "r": 66
@@ -705,7 +705,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "PILAS SONY CR",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.1,
      "c": {},
      "r": 67
@@ -713,227 +713,227 @@ window.MATRIZ_DATOS = {
     {
      "p": "Porta esferos",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.42,
      "c": {
-      "Z. NORTE": 2,
-      "MIRADOR": 10
+      "Q. SUR": 2,
+      "IÑAQUITO": 10
      },
      "r": 68
     },
     {
      "p": "POST IT 1 1/2 *2 EAGLE AMARILLO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.313,
      "c": {
-      "SUR": 1,
-      "COLINA": 1
+      "ALBORADA": 1,
+      "CALDERON": 1
      },
      "r": 69
     },
     {
      "p": "POST IT 3 X 3 EAGLE AMARILLO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.41,
      "c": {
-      "PARAISO": 2,
-      "SUR": 1,
-      "VALLE": 4,
-      "COLINA": 1
+      "CUMBAYA": 2,
+      "ALBORADA": 1,
+      "KENNEDY": 4,
+      "CALDERON": 1
      },
      "r": 70
     },
     {
      "p": "PROTECTOR DE DOCUMENTOS GRUESO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.202,
      "c": {
-      "MIRADOR": 10
+      "IÑAQUITO": 10
      },
      "r": 71
     },
     {
-     "p": "RECETARIOS RED MEDICA DEMO (100 U)",
+     "p": "RECETARIOS METRORED (100 U)",
      "u": "",
-     "prov": "PROVEEDOR H",
+     "prov": "FESA",
      "pre": 2.1,
      "c": {
-      "NORTE": 10,
-      "PRADERA": 40,
-      "RIBERA": 200,
-      "Z. NORTE": 10,
-      "MIRADOR": 100
+      "AMAZONAS": 10,
+      "CAROLINA": 40,
+      "CONDADO": 200,
+      "Q. SUR": 10,
+      "IÑAQUITO": 100
      },
      "r": 72
     },
     {
      "p": "REGLA PLÁSTICA ARTESCO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.13,
      "c": {
-      "PRADERA": 2,
-      "CIUDAD JARDIN": 1
+      "CAROLINA": 2,
+      "CIUDAD CELESTE": 1
      },
      "r": 73
     },
     {
      "p": "RESALTADOR VARIOS COLORES",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.344,
      "c": {
-      "SUR": 3,
-      "Z. NORTE": 4,
-      "COLINA": 6,
-      "MIRADOR": 3
+      "ALBORADA": 3,
+      "Q. SUR": 4,
+      "CALDERON": 6,
+      "IÑAQUITO": 3
      },
      "r": 74
     },
     {
      "p": "RESMAS DE PAPEL BOND",
      "u": "",
-     "prov": "PROVEEDOR N",
+     "prov": "SEREC",
      "pre": 2.9,
      "c": {
-      "PARAISO": 20,
-      "SUR": 65,
-      "ENDOSCOPIA SUR": 2,
-      "NORTE": 70,
-      "ENDOSCOPIA NORTE": 2,
-      "LAGUNA": 60,
-      "RIBERA": 30,
-      "VALLE": 20,
-      "Z. NORTE": 40,
-      "ENDOSCOPIA ZNORTE": 2,
-      "COLINA": 28,
-      "CIUDAD JARDIN": 12,
-      "MIRADOR": 30
+      "CUMBAYA": 20,
+      "ALBORADA": 65,
+      "ENDOSCOPIA ALBORADA": 2,
+      "AMAZONAS": 70,
+      "ENDOSCOPIA AMAZONAS": 2,
+      "CHILLOS": 60,
+      "CONDADO": 30,
+      "KENNEDY": 20,
+      "Q. SUR": 40,
+      "ENDOSCOPIA QSUR": 2,
+      "CALDERON": 28,
+      "CIUDAD CELESTE": 12,
+      "IÑAQUITO": 30
      },
      "r": 75
     },
     {
      "p": "RESMAS DE PAPEL BOND A5",
      "u": "",
-     "prov": "PROVEEDOR N",
+     "prov": "SEREC",
      "pre": 1.8,
      "c": {
-      "PARAISO": 50,
-      "NORTE": 50,
-      "PRADERA": 50,
-      "RIBERA": 20,
-      "Z. NORTE": 40,
-      "COLINA": 28,
-      "MIRADOR": 20
+      "CUMBAYA": 50,
+      "AMAZONAS": 50,
+      "CAROLINA": 50,
+      "CONDADO": 20,
+      "Q. SUR": 40,
+      "CALDERON": 28,
+      "IÑAQUITO": 20
      },
      "r": 76
     },
     {
      "p": "RESMAS DE PAPEL BOND MEMBRETADO (500 U)",
      "u": "",
-     "prov": "PROVEEDOR H",
+     "prov": "FESA",
      "pre": 14.5,
      "c": {
-      "NORTE": 3,
-      "PRADERA": 5,
-      "RIBERA": 2,
-      "Z. NORTE": 3,
-      "MIRADOR": 3
+      "AMAZONAS": 3,
+      "CAROLINA": 5,
+      "CONDADO": 2,
+      "Q. SUR": 3,
+      "IÑAQUITO": 3
      },
      "r": 77
     },
     {
      "p": "ROLLOS DE PAPEL PARA Q-MATIC",
      "u": "",
-     "prov": "PROVEEDOR H",
+     "prov": "FESA",
      "pre": 1.93,
      "c": {
-      "PARAISO": 25,
-      "SUR": 6,
-      "NORTE": 50,
-      "PRADERA": 20,
-      "LAGUNA": 20,
-      "RIBERA": 15,
-      "Z. NORTE": 15,
-      "COLINA": 15,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 20
+      "CUMBAYA": 25,
+      "ALBORADA": 6,
+      "AMAZONAS": 50,
+      "CAROLINA": 20,
+      "CHILLOS": 20,
+      "CONDADO": 15,
+      "Q. SUR": 15,
+      "CALDERON": 15,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 20
      },
      "r": 78
     },
     {
      "p": "SACAGRAPAS",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.38,
      "c": {
-      "ENDOSCOPIA SUR": 1,
-      "COLINA": 2,
-      "MIRADOR": 5
+      "ENDOSCOPIA ALBORADA": 1,
+      "CALDERON": 2,
+      "IÑAQUITO": 5
      },
      "r": 79
     },
     {
      "p": "SACAPUNTAS ARTESCO",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.26,
      "c": {
-      "SUR": 1,
-      "CIUDAD JARDIN": 2
+      "ALBORADA": 1,
+      "CIUDAD CELESTE": 2
      },
      "r": 80
     },
     {
      "p": "Sobres manila F5",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.097,
      "c": {
-      "SUR": 5,
-      "COLINA": 50,
-      "MIRADOR": 100
+      "ALBORADA": 5,
+      "CALDERON": 50,
+      "IÑAQUITO": 100
      },
      "r": 81
     },
     {
      "p": "SOBRES MANILA GRANDES F4",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.081,
      "c": {
-      "PARAISO": 100,
-      "ENDOSCOPIA PARAISO": 100,
-      "SUR": 5,
-      "LAGUNA": 50,
-      "RIBERA": 100,
-      "Z. NORTE": 20,
-      "ENDOSCOPIA ZNORTE": 100,
-      "COLINA": 50,
-      "MIRADOR": 100
+      "CUMBAYA": 100,
+      "ENDOSCOPIA CUMBAYA": 100,
+      "ALBORADA": 5,
+      "CHILLOS": 50,
+      "CONDADO": 100,
+      "Q. SUR": 20,
+      "ENDOSCOPIA QSUR": 100,
+      "CALDERON": 50,
+      "IÑAQUITO": 100
      },
      "r": 82
     },
     {
      "p": "SOBRES MANILA PEQUEÑOS F2 (26 CM ALTO X 19 CM ANCHO)",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.051,
      "c": {
-      "SUR": 300,
-      "VALLE": 200,
-      "COLINA": 100,
-      "CIUDAD JARDIN": 5
+      "ALBORADA": 300,
+      "KENNEDY": 200,
+      "CALDERON": 100,
+      "CIUDAD CELESTE": 5
      },
      "r": 83
     },
     {
      "p": "SOBRES PARA CDS DE PAPEL",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.043,
      "c": {},
      "r": 84
@@ -941,38 +941,38 @@ window.MATRIZ_DATOS = {
     {
      "p": "SOBRES PARA LABORATORIO (PAQUTE 50 U)",
      "u": "",
-     "prov": "PROVEEDOR H",
+     "prov": "FESA",
      "pre": 0.103,
      "c": {
-      "PARAISO": 3,
-      "SUR": 50,
-      "ENDOSCOPIA SUR": 100,
-      "NORTE": 300,
-      "RIBERA": 400,
-      "Z. NORTE": 5,
-      "COLINA": 50,
-      "MIRADOR": 200
+      "CUMBAYA": 3,
+      "ALBORADA": 50,
+      "ENDOSCOPIA ALBORADA": 100,
+      "AMAZONAS": 300,
+      "CONDADO": 400,
+      "Q. SUR": 5,
+      "CALDERON": 50,
+      "IÑAQUITO": 200
      },
      "r": 85
     },
     {
      "p": "TIJERAS DE OFICINA",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 0.51,
      "c": {
-      "COLINA": 2,
-      "MIRADOR": 5
+      "CALDERON": 2,
+      "IÑAQUITO": 5
      },
      "r": 86
     },
     {
      "p": "VINCHA PARA LAS CARPETAS CAJA /50",
      "u": "",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1.11,
      "c": {
-      "ENDOSCOPIA SUR": 2
+      "ENDOSCOPIA ALBORADA": 2
      },
      "r": 87
     }
@@ -987,20 +987,20 @@ window.MATRIZ_DATOS = {
    "icono": "2",
    "hdr": 3,
    "destinos": [
-    "PONIENTE",
-    "PARAISO",
-    "COVID PRADERA",
-    "SUR",
-    "NORTE",
-    "ENDOSCOPIA NORTE",
-    "PRADERA",
-    "LAGUNA",
-    "RIBERA",
-    "VALLE",
-    "Z. NORTE",
-    "COLINA",
-    "CIUDAD JARDIN",
-    "MIRADOR",
+    "CARCELEN",
+    "CUMBAYA",
+    "COVID CAROLINA",
+    "ALBORADA",
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS",
+    "CAROLINA",
+    "CHILLOS",
+    "CONDADO",
+    "KENNEDY",
+    "Q. SUR",
+    "CALDERON",
+    "CIUDAD CELESTE",
+    "IÑAQUITO",
     "ADMINISTRACIÓN"
    ],
    "prods": [
@@ -1010,17 +1010,17 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 2.95,
      "c": {
-      "PARAISO": 10,
-      "SUR": 20,
-      "NORTE": 25,
-      "PRADERA": 15,
-      "LAGUNA": 10,
-      "RIBERA": 15,
-      "VALLE": 10,
-      "Z. NORTE": 10,
-      "COLINA": 4,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 40
+      "CUMBAYA": 10,
+      "ALBORADA": 20,
+      "AMAZONAS": 25,
+      "CAROLINA": 15,
+      "CHILLOS": 10,
+      "CONDADO": 15,
+      "KENNEDY": 10,
+      "Q. SUR": 10,
+      "CALDERON": 4,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 40
      },
      "r": 4
     },
@@ -1030,9 +1030,9 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.73,
      "c": {
-      "SUR": 1,
-      "Z. NORTE": 1,
-      "MIRADOR": 5,
+      "ALBORADA": 1,
+      "Q. SUR": 1,
+      "IÑAQUITO": 5,
       "ADMINISTRACIÓN": 4
      },
      "r": 5
@@ -1043,13 +1043,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 2.62,
      "c": {
-      "PARAISO": 2,
-      "SUR": 3,
-      "NORTE": 3,
-      "PRADERA": 3,
-      "LAGUNA": 2,
-      "VALLE": 5,
-      "COLINA": 4,
+      "CUMBAYA": 2,
+      "ALBORADA": 3,
+      "AMAZONAS": 3,
+      "CAROLINA": 3,
+      "CHILLOS": 2,
+      "KENNEDY": 5,
+      "CALDERON": 4,
       "ADMINISTRACIÓN": 3
      },
      "r": 6
@@ -1060,11 +1060,11 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 3.28,
      "c": {
-      "PRADERA": 1,
-      "LAGUNA": 1,
-      "RIBERA": 1,
-      "Z. NORTE": 1,
-      "MIRADOR": 1
+      "CAROLINA": 1,
+      "CHILLOS": 1,
+      "CONDADO": 1,
+      "Q. SUR": 1,
+      "IÑAQUITO": 1
      },
      "r": 7
     },
@@ -1074,10 +1074,10 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 5.76,
      "c": {
-      "PARAISO": 1,
-      "SUR": 2,
-      "NORTE": 1,
-      "RIBERA": 2
+      "CUMBAYA": 1,
+      "ALBORADA": 2,
+      "AMAZONAS": 1,
+      "CONDADO": 2
      },
      "r": 8
     },
@@ -1087,8 +1087,8 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 14.76,
      "c": {
-      "LAGUNA": 1,
-      "MIRADOR": 1
+      "CHILLOS": 1,
+      "IÑAQUITO": 1
      },
      "r": 9
     },
@@ -1098,9 +1098,9 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 6.88,
      "c": {
-      "SUR": 1,
-      "NORTE": 1,
-      "VALLE": 1
+      "ALBORADA": 1,
+      "AMAZONAS": 1,
+      "KENNEDY": 1
      },
      "r": 10
     },
@@ -1110,23 +1110,23 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.39,
      "c": {
-      "SUR": 3,
-      "RIBERA": 5,
-      "VALLE": 10,
-      "CIUDAD JARDIN": 3,
-      "MIRADOR": 20
+      "ALBORADA": 3,
+      "CONDADO": 5,
+      "KENNEDY": 10,
+      "CIUDAD CELESTE": 3,
+      "IÑAQUITO": 20
      },
      "r": 11
     },
     {
      "p": "CHISGUETE",
      "u": "UNIDAD",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 0.78,
      "c": {
-      "PRADERA": 3,
-      "Z. NORTE": 2,
-      "COLINA": 3,
+      "CAROLINA": 3,
+      "Q. SUR": 2,
+      "CALDERON": 3,
       "ADMINISTRACIÓN": 2
      },
      "r": 12
@@ -1137,14 +1137,14 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 2.63,
      "c": {
-      "PARAISO": 3,
-      "SUR": 5,
-      "NORTE": 1,
-      "LAGUNA": 3,
-      "RIBERA": 1,
-      "VALLE": 3,
-      "CIUDAD JARDIN": 2,
-      "MIRADOR": 6,
+      "CUMBAYA": 3,
+      "ALBORADA": 5,
+      "AMAZONAS": 1,
+      "CHILLOS": 3,
+      "CONDADO": 1,
+      "KENNEDY": 3,
+      "CIUDAD CELESTE": 2,
+      "IÑAQUITO": 6,
       "ADMINISTRACIÓN": 1
      },
      "r": 13
@@ -1155,14 +1155,14 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 4.35,
      "c": {
-      "SUR": 6,
-      "NORTE": 2,
-      "RIBERA": 2,
-      "VALLE": 3,
-      "Z. NORTE": 2,
-      "COLINA": 2,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 6,
+      "ALBORADA": 6,
+      "AMAZONAS": 2,
+      "CONDADO": 2,
+      "KENNEDY": 3,
+      "Q. SUR": 2,
+      "CALDERON": 2,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 6,
       "ADMINISTRACIÓN": 2
      },
      "r": 14
@@ -1173,13 +1173,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.81,
      "c": {
-      "PARAISO": 1,
-      "SUR": 3,
-      "LAGUNA": 2,
-      "RIBERA": 2,
-      "Z. NORTE": 1,
-      "COLINA": 3,
-      "MIRADOR": 5,
+      "CUMBAYA": 1,
+      "ALBORADA": 3,
+      "CHILLOS": 2,
+      "CONDADO": 2,
+      "Q. SUR": 1,
+      "CALDERON": 3,
+      "IÑAQUITO": 5,
       "ADMINISTRACIÓN": 2
      },
      "r": 15
@@ -1187,12 +1187,12 @@ window.MATRIZ_DATOS = {
     {
      "p": "ESCOBA",
      "u": "UNIDAD",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 1.71,
      "c": {
-      "SUR": 3,
-      "VALLE": 2,
-      "MIRADOR": 4,
+      "ALBORADA": 3,
+      "KENNEDY": 2,
+      "IÑAQUITO": 4,
       "ADMINISTRACIÓN": 2
      },
      "r": 16
@@ -1200,16 +1200,16 @@ window.MATRIZ_DATOS = {
     {
      "p": "ESPONJA MIXTA",
      "u": "UNIDAD",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 0.33,
      "c": {
-      "PARAISO": 1,
-      "SUR": 3,
-      "NORTE": 1,
-      "RIBERA": 3,
-      "COLINA": 4,
-      "CIUDAD JARDIN": 4,
-      "MIRADOR": 3,
+      "CUMBAYA": 1,
+      "ALBORADA": 3,
+      "AMAZONAS": 1,
+      "CONDADO": 3,
+      "CALDERON": 4,
+      "CIUDAD CELESTE": 4,
+      "IÑAQUITO": 3,
       "ADMINISTRACIÓN": 5
      },
      "r": 17
@@ -1220,25 +1220,25 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.36,
      "c": {
-      "SUR": 5,
-      "LAGUNA": 5,
-      "Z. NORTE": 4,
-      "CIUDAD JARDIN": 2,
-      "MIRADOR": 10
+      "ALBORADA": 5,
+      "CHILLOS": 5,
+      "Q. SUR": 4,
+      "CIUDAD CELESTE": 2,
+      "IÑAQUITO": 10
      },
      "r": 18
     },
     {
      "p": "FACIAL ELITE CAJA CORTA 2H 14X21.6CMS CAJITAX50UNIDADES",
      "u": "PAQUETE",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 0.64,
      "c": {
-      "PARAISO": 2,
-      "SUR": 1,
-      "PRADERA": 4,
-      "Z. NORTE": 3,
-      "MIRADOR": 2
+      "CUMBAYA": 2,
+      "ALBORADA": 1,
+      "CAROLINA": 4,
+      "Q. SUR": 3,
+      "IÑAQUITO": 2
      },
      "r": 19
     },
@@ -1248,14 +1248,14 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.21,
      "c": {
-      "PARAISO": 25,
-      "SUR": 110,
-      "NORTE": 60,
-      "LAGUNA": 25,
-      "RIBERA": 40,
-      "VALLE": 60,
-      "Z. NORTE": 60,
-      "MIRADOR": 100,
+      "CUMBAYA": 25,
+      "ALBORADA": 110,
+      "AMAZONAS": 60,
+      "CHILLOS": 25,
+      "CONDADO": 40,
+      "KENNEDY": 60,
+      "Q. SUR": 60,
+      "IÑAQUITO": 100,
       "ADMINISTRACIÓN": 20
      },
      "r": 20
@@ -1266,14 +1266,14 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.31,
      "c": {
-      "PARAISO": 20,
-      "SUR": 25,
-      "NORTE": 50,
-      "LAGUNA": 20,
-      "RIBERA": 40,
-      "VALLE": 30,
-      "Z. NORTE": 30,
-      "MIRADOR": 100
+      "CUMBAYA": 20,
+      "ALBORADA": 25,
+      "AMAZONAS": 50,
+      "CHILLOS": 20,
+      "CONDADO": 40,
+      "KENNEDY": 30,
+      "Q. SUR": 30,
+      "IÑAQUITO": 100
      },
      "r": 21
     },
@@ -1283,11 +1283,11 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.77,
      "c": {
-      "PARAISO": 10,
-      "SUR": 30,
-      "RIBERA": 15,
-      "VALLE": 30,
-      "MIRADOR": 50,
+      "CUMBAYA": 10,
+      "ALBORADA": 30,
+      "CONDADO": 15,
+      "KENNEDY": 30,
+      "IÑAQUITO": 50,
       "ADMINISTRACIÓN": 20
      },
      "r": 22
@@ -1298,8 +1298,8 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.24,
      "c": {
-      "RIBERA": 5,
-      "MIRADOR": 50
+      "CONDADO": 5,
+      "IÑAQUITO": 50
      },
      "r": 23
     },
@@ -1309,11 +1309,11 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.51,
      "c": {
-      "SUR": 25,
-      "LAGUNA": 20,
-      "RIBERA": 10,
-      "VALLE": 10,
-      "MIRADOR": 40,
+      "ALBORADA": 25,
+      "CHILLOS": 20,
+      "CONDADO": 10,
+      "KENNEDY": 10,
+      "IÑAQUITO": 40,
       "ADMINISTRACIÓN": 1
      },
      "r": 24
@@ -1324,9 +1324,9 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.92,
      "c": {
-      "RIBERA": 5,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 30
+      "CONDADO": 5,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 30
      },
      "r": 25
     },
@@ -1336,12 +1336,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 3.53,
      "c": {
-      "SUR": 3,
-      "LAGUNA": 5,
-      "RIBERA": 5,
-      "VALLE": 6,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 50,
+      "ALBORADA": 3,
+      "CHILLOS": 5,
+      "CONDADO": 5,
+      "KENNEDY": 6,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 50,
       "ADMINISTRACIÓN": 1
      },
      "r": 26
@@ -1376,8 +1376,8 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.66,
      "c": {
-      "RIBERA": 5,
-      "MIRADOR": 4
+      "CONDADO": 5,
+      "IÑAQUITO": 4
      },
      "r": 30
     },
@@ -1387,7 +1387,7 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.66,
      "c": {
-      "PARAISO": 1
+      "CUMBAYA": 1
      },
      "r": 31
     },
@@ -1397,9 +1397,9 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.66,
      "c": {
-      "LAGUNA": 1,
-      "RIBERA": 5,
-      "CIUDAD JARDIN": 2
+      "CHILLOS": 1,
+      "CONDADO": 5,
+      "CIUDAD CELESTE": 2
      },
      "r": 32
     },
@@ -1409,24 +1409,24 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.66,
      "c": {
-      "SUR": 3,
-      "PRADERA": 6,
-      "LAGUNA": 1,
-      "RIBERA": 5,
-      "VALLE": 3,
-      "CIUDAD JARDIN": 2
+      "ALBORADA": 3,
+      "CAROLINA": 6,
+      "CHILLOS": 1,
+      "CONDADO": 5,
+      "KENNEDY": 3,
+      "CIUDAD CELESTE": 2
      },
      "r": 33
     },
     {
      "p": "INSECTICIDA COCINA 600cc c/atomizador",
      "u": "UNIDAD",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 2.66,
      "c": {
-      "PRADERA": 1,
-      "LAGUNA": 1,
-      "MIRADOR": 1
+      "CAROLINA": 1,
+      "CHILLOS": 1,
+      "IÑAQUITO": 1
      },
      "r": 34
     },
@@ -1436,7 +1436,7 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 3.8,
      "c": {
-      "MIRADOR": 30,
+      "IÑAQUITO": 30,
       "ADMINISTRACIÓN": 5
      },
      "r": 35
@@ -1447,8 +1447,8 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 4.31,
      "c": {
-      "RIBERA": 10,
-      "VALLE": 2,
+      "CONDADO": 10,
+      "KENNEDY": 2,
       "ADMINISTRACIÓN": 1
      },
      "r": 36
@@ -1459,13 +1459,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 2.83,
      "c": {
-      "PARAISO": 6,
-      "SUR": 12,
-      "NORTE": 25,
-      "PRADERA": 12,
-      "LAGUNA": 8,
-      "Z. NORTE": 8,
-      "COLINA": 12,
+      "CUMBAYA": 6,
+      "ALBORADA": 12,
+      "AMAZONAS": 25,
+      "CAROLINA": 12,
+      "CHILLOS": 8,
+      "Q. SUR": 8,
+      "CALDERON": 12,
       "ADMINISTRACIÓN": 2
      },
      "r": 37
@@ -1476,13 +1476,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 2.13,
      "c": {
-      "PARAISO": 1,
-      "SUR": 2,
-      "NORTE": 1,
-      "RIBERA": 1,
-      "Z. NORTE": 1,
-      "CIUDAD JARDIN": 4,
-      "MIRADOR": 2,
+      "CUMBAYA": 1,
+      "ALBORADA": 2,
+      "AMAZONAS": 1,
+      "CONDADO": 1,
+      "Q. SUR": 1,
+      "CIUDAD CELESTE": 4,
+      "IÑAQUITO": 2,
       "ADMINISTRACIÓN": 2
      },
      "r": 38
@@ -1493,11 +1493,11 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.36,
      "c": {
-      "SUR": 1,
-      "NORTE": 2,
-      "LAGUNA": 2,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 1
+      "ALBORADA": 1,
+      "AMAZONAS": 2,
+      "CHILLOS": 2,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 1
      },
      "r": 39
     },
@@ -1507,12 +1507,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 14,
      "c": {
-      "PARAISO": 2,
-      "SUR": 1,
-      "NORTE": 2,
-      "RIBERA": 2,
-      "VALLE": 2,
-      "MIRADOR": 2
+      "CUMBAYA": 2,
+      "ALBORADA": 1,
+      "AMAZONAS": 2,
+      "CONDADO": 2,
+      "KENNEDY": 2,
+      "IÑAQUITO": 2
      },
      "r": 40
     },
@@ -1522,12 +1522,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 14,
      "c": {
-      "SUR": 1,
-      "NORTE": 2,
-      "RIBERA": 2,
-      "VALLE": 2,
-      "Z. NORTE": 2,
-      "MIRADOR": 2,
+      "ALBORADA": 1,
+      "AMAZONAS": 2,
+      "CONDADO": 2,
+      "KENNEDY": 2,
+      "Q. SUR": 2,
+      "IÑAQUITO": 2,
       "ADMINISTRACIÓN": 2
      },
      "r": 41
@@ -1538,7 +1538,7 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 10.5,
      "c": {
-      "NORTE": 2
+      "AMAZONAS": 2
      },
      "r": 42
     },
@@ -1548,23 +1548,23 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.95,
      "c": {
-      "RIBERA": 1,
-      "MIRADOR": 4
+      "CONDADO": 1,
+      "IÑAQUITO": 4
      },
      "r": 43
     },
     {
      "p": "PAÑO DE MICROFIBRA AMARILLO 35X30 CM",
      "u": "UNIDAD",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 1.37,
      "c": {
-      "SUR": 3,
-      "NORTE": 2,
-      "LAGUNA": 1,
-      "RIBERA": 2,
-      "Z. NORTE": 2,
-      "MIRADOR": 8,
+      "ALBORADA": 3,
+      "AMAZONAS": 2,
+      "CHILLOS": 1,
+      "CONDADO": 2,
+      "Q. SUR": 2,
+      "IÑAQUITO": 8,
       "ADMINISTRACIÓN": 3
      },
      "r": 44
@@ -1575,13 +1575,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.44,
      "c": {
-      "PARAISO": 3,
-      "SUR": 3,
-      "NORTE": 2,
-      "PRADERA": 5,
-      "LAGUNA": 1,
-      "RIBERA": 2,
-      "MIRADOR": 8,
+      "CUMBAYA": 3,
+      "ALBORADA": 3,
+      "AMAZONAS": 2,
+      "CAROLINA": 5,
+      "CHILLOS": 1,
+      "CONDADO": 2,
+      "IÑAQUITO": 8,
       "ADMINISTRACIÓN": 2
      },
      "r": 45
@@ -1592,13 +1592,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.44,
      "c": {
-      "PARAISO": 1,
-      "SUR": 3,
-      "NORTE": 1,
-      "PRADERA": 5,
-      "LAGUNA": 1,
-      "RIBERA": 2,
-      "MIRADOR": 8,
+      "CUMBAYA": 1,
+      "ALBORADA": 3,
+      "AMAZONAS": 1,
+      "CAROLINA": 5,
+      "CHILLOS": 1,
+      "CONDADO": 2,
+      "IÑAQUITO": 8,
       "ADMINISTRACIÓN": 3
      },
      "r": 46
@@ -1609,11 +1609,11 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.44,
      "c": {
-      "SUR": 3,
-      "PRADERA": 5,
-      "LAGUNA": 1,
-      "RIBERA": 2,
-      "MIRADOR": 4,
+      "ALBORADA": 3,
+      "CAROLINA": 5,
+      "CHILLOS": 1,
+      "CONDADO": 2,
+      "IÑAQUITO": 4,
       "ADMINISTRACIÓN": 3
      },
      "r": 47
@@ -1624,14 +1624,14 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 8.5,
      "c": {
-      "PARAISO": 4,
-      "SUR": 12,
-      "LAGUNA": 5,
-      "RIBERA": 12,
-      "VALLE": 8,
-      "Z. NORTE": 9,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 6,
+      "CUMBAYA": 4,
+      "ALBORADA": 12,
+      "CHILLOS": 5,
+      "CONDADO": 12,
+      "KENNEDY": 8,
+      "Q. SUR": 9,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 6,
       "ADMINISTRACIÓN": 7
      },
      "r": 48
@@ -1642,12 +1642,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.48,
      "c": {
-      "PRADERA": 2,
-      "RIBERA": 4,
-      "VALLE": 2,
-      "Z. NORTE": 2,
-      "COLINA": 2,
-      "MIRADOR": 10,
+      "CAROLINA": 2,
+      "CONDADO": 4,
+      "KENNEDY": 2,
+      "Q. SUR": 2,
+      "CALDERON": 2,
+      "IÑAQUITO": 10,
       "ADMINISTRACIÓN": 1
      },
      "r": 49
@@ -1674,11 +1674,11 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1,
      "c": {
-      "SUR": 2,
-      "LAGUNA": 2,
-      "VALLE": 7,
-      "Z. NORTE": 5,
-      "COLINA": 3
+      "ALBORADA": 2,
+      "CHILLOS": 2,
+      "KENNEDY": 7,
+      "Q. SUR": 5,
+      "CALDERON": 3
      },
      "r": 52
     },
@@ -1688,16 +1688,16 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.2,
      "c": {
-      "PARAISO": 150,
-      "SUR": 156,
-      "NORTE": 280,
-      "PRADERA": 250,
-      "LAGUNA": 140,
-      "RIBERA": 160,
-      "VALLE": 150,
-      "Z. NORTE": 170,
-      "COLINA": 150,
-      "MIRADOR": 150,
+      "CUMBAYA": 150,
+      "ALBORADA": 156,
+      "AMAZONAS": 280,
+      "CAROLINA": 250,
+      "CHILLOS": 140,
+      "CONDADO": 160,
+      "KENNEDY": 150,
+      "Q. SUR": 170,
+      "CALDERON": 150,
+      "IÑAQUITO": 150,
       "ADMINISTRACIÓN": 110
      },
      "r": 53
@@ -1705,11 +1705,11 @@ window.MATRIZ_DATOS = {
     {
      "p": "TRAPEADOR CASERO",
      "u": "UNIDAD",
-     "prov": "proveedor B",
+     "prov": "soci",
      "pre": 2.46,
      "c": {
-      "RIBERA": 1,
-      "MIRADOR": 1
+      "CONDADO": 1,
+      "IÑAQUITO": 1
      },
      "r": 54
     },
@@ -1727,8 +1727,8 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.99,
      "c": {
-      "RIBERA": 2,
-      "MIRADOR": 2
+      "CONDADO": 2,
+      "IÑAQUITO": 2
      },
      "r": 56
     }
@@ -1743,39 +1743,39 @@ window.MATRIZ_DATOS = {
    "icono": "3",
    "hdr": 3,
    "destinos": [
-    "PONIENTE",
-    "PARAISO",
-    "ENDOSCOPIA PARAISO",
-    "SUR",
-    "ENDOSCOPIA SUR",
-    "NORTE",
-    "ENDOSCOPIA NORTE",
-    "PRADERA",
-    "LAGUNA",
-    "RIBERA",
-    "VALLE",
-    "Z. NORTE",
-    "ENDOSCOPIA ZNORTE",
-    "COLINA",
-    "CIUDAD JARDIN",
-    "MIRADOR",
-    "SAN MARCOS"
+    "CARCELEN",
+    "CUMBAYA",
+    "ENDOSCOPIA CUMBAYA",
+    "ALBORADA",
+    "ENDOSCOPIA ALBORADA",
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS",
+    "CAROLINA",
+    "CHILLOS",
+    "CONDADO",
+    "KENNEDY",
+    "Q. SUR",
+    "ENDOSCOPIA QSUR",
+    "CALDERON",
+    "CIUDAD CELESTE",
+    "IÑAQUITO",
+    "SAN LUIS"
    ],
    "prods": [
     {
      "p": "ACEITE DE VASELINA",
      "u": "GALÓN",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 18,
      "c": {
-      "Z. NORTE": 1
+      "Q. SUR": 1
      },
      "r": 4
     },
     {
      "p": "ÁCIDO ACÉTICO 5%",
      "u": "GALÓN",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 22,
      "c": {},
      "r": 5
@@ -1783,87 +1783,87 @@ window.MATRIZ_DATOS = {
     {
      "p": "AGUA BIDESTILADA 10 ML (AGUA INYECTABLE INTRAVENOSA)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.3,
      "c": {
-      "PARAISO": 10,
-      "SUR": 5
+      "CUMBAYA": 10,
+      "ALBORADA": 5
      },
      "r": 6
     },
     {
      "p": "AGUA DESTILADA",
      "u": "GALÓN",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 2.5,
      "c": {
-      "SUR": 6,
-      "ENDOSCOPIA SUR": 6,
-      "NORTE": 1,
-      "Z. NORTE": 3,
-      "COLINA": 2,
-      "CIUDAD JARDIN": 4,
-      "MIRADOR": 5
+      "ALBORADA": 6,
+      "ENDOSCOPIA ALBORADA": 6,
+      "AMAZONAS": 1,
+      "Q. SUR": 3,
+      "CALDERON": 2,
+      "CIUDAD CELESTE": 4,
+      "IÑAQUITO": 5
      },
      "r": 7
     },
     {
      "p": "AGUA OXIGENADA 120 ML",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.95,
      "c": {
-      "SUR": 2,
-      "PRADERA": 1,
-      "VALLE": 1,
-      "CIUDAD JARDIN": 1
+      "ALBORADA": 2,
+      "CAROLINA": 1,
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 1
      },
      "r": 8
     },
     {
      "p": "AGUJA HIPODERMICA N0 20",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.036,
      "c": {
-      "RIBERA": 20,
-      "MIRADOR": 100
+      "CONDADO": 20,
+      "IÑAQUITO": 100
      },
      "r": 9
     },
     {
      "p": "AGUJA HIPODERMICA N0 23",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.04,
      "c": {
-      "PARAISO": 100,
-      "PRADERA": 100,
-      "ENDOSCOPIA ZNORTE": 100,
-      "CIUDAD JARDIN": 50,
-      "MIRADOR": 100
+      "CUMBAYA": 100,
+      "CAROLINA": 100,
+      "ENDOSCOPIA QSUR": 100,
+      "CIUDAD CELESTE": 50,
+      "IÑAQUITO": 100
      },
      "r": 10
     },
     {
      "p": "AGUJA HIPODERMICA N0 25",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.04,
      "c": {
-      "PARAISO": 100,
-      "ENDOSCOPIA NORTE": 100,
-      "PRADERA": 100,
-      "RIBERA": 40,
-      "ENDOSCOPIA ZNORTE": 100,
-      "MIRADOR": 100
+      "CUMBAYA": 100,
+      "ENDOSCOPIA AMAZONAS": 100,
+      "CAROLINA": 100,
+      "CONDADO": 40,
+      "ENDOSCOPIA QSUR": 100,
+      "IÑAQUITO": 100
      },
      "r": 11
     },
     {
      "p": "AGUJA VACUTAINER",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR Q",
+     "prov": "NIPRO",
      "pre": 0.134,
      "c": {},
      "r": 12
@@ -1871,164 +1871,164 @@ window.MATRIZ_DATOS = {
     {
      "p": "ALCOHOL FCO. 1000ML CON ATOMIZADOR",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 3,
      "c": {
-      "PARAISO": 30,
-      "SUR": 5,
-      "ENDOSCOPIA SUR": 1,
-      "NORTE": 3,
-      "RIBERA": 5,
-      "COLINA": 5
+      "CUMBAYA": 30,
+      "ALBORADA": 5,
+      "ENDOSCOPIA ALBORADA": 1,
+      "AMAZONAS": 3,
+      "CONDADO": 5,
+      "CALDERON": 5
      },
      "r": 13
     },
     {
      "p": "ALCOHOL GALON",
      "u": "GALÓN",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 7.5,
      "c": {
-      "PRADERA": 2,
-      "CIUDAD JARDIN": 1
+      "CAROLINA": 2,
+      "CIUDAD CELESTE": 1
      },
      "r": 14
     },
     {
      "p": "ALCOHOL PRE PAD VANSWAB",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.8,
      "c": {
-      "PARAISO": 5,
-      "SUR": 5,
-      "ENDOSCOPIA SUR": 1,
-      "NORTE": 12,
-      "ENDOSCOPIA NORTE": 1,
-      "PRADERA": 10,
-      "LAGUNA": 5,
-      "RIBERA": 10,
-      "Z. NORTE": 9,
-      "CIUDAD JARDIN": 20,
-      "MIRADOR": 4
+      "CUMBAYA": 5,
+      "ALBORADA": 5,
+      "ENDOSCOPIA ALBORADA": 1,
+      "AMAZONAS": 12,
+      "ENDOSCOPIA AMAZONAS": 1,
+      "CAROLINA": 10,
+      "CHILLOS": 5,
+      "CONDADO": 10,
+      "Q. SUR": 9,
+      "CIUDAD CELESTE": 20,
+      "IÑAQUITO": 4
      },
      "r": 15
     },
     {
      "p": "APLICADORES 6\" MADERA UN LADO CARICIA X 100",
      "u": "PAQUETE X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.9,
      "c": {
-      "PARAISO": 1,
-      "SUR": 2,
-      "NORTE": 5,
-      "LAGUNA": 1,
-      "RIBERA": 5,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 5
+      "CUMBAYA": 1,
+      "ALBORADA": 2,
+      "AMAZONAS": 5,
+      "CHILLOS": 1,
+      "CONDADO": 5,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 5
      },
      "r": 16
     },
     {
      "p": "APÓSITOS OCULARES LEUKOPLAST",
      "u": "CAJA X 10",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 11,
      "c": {
-      "VALLE": 1,
-      "Z. NORTE": 1,
-      "MIRADOR": 1
+      "KENNEDY": 1,
+      "Q. SUR": 1,
+      "IÑAQUITO": 1
      },
      "r": 17
     },
     {
      "p": "BAJALENGUAS DE MADERA F X 500 UNIDADES",
      "u": "PAQUETE X 500",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 5,
      "c": {
-      "PARAISO": 1,
-      "SUR": 1,
-      "NORTE": 5,
-      "RIBERA": 3,
-      "VALLE": 1,
-      "Z. NORTE": 2,
-      "CIUDAD JARDIN": 2
+      "CUMBAYA": 1,
+      "ALBORADA": 1,
+      "AMAZONAS": 5,
+      "CONDADO": 3,
+      "KENNEDY": 1,
+      "Q. SUR": 2,
+      "CIUDAD CELESTE": 2
      },
      "r": 18
     },
     {
      "p": "BATAS DESCARTABLES DE MEDICO MANGA LARGA CON PUÑO",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR I",
+     "prov": "YOLANDA VASQUEZ",
      "pre": 1.8,
      "c": {
-      "ENDOSCOPIA SUR": 100,
-      "ENDOSCOPIA NORTE": 60,
-      "ENDOSCOPIA ZNORTE": 50,
-      "CIUDAD JARDIN": 10
+      "ENDOSCOPIA ALBORADA": 100,
+      "ENDOSCOPIA AMAZONAS": 60,
+      "ENDOSCOPIA QSUR": 50,
+      "CIUDAD CELESTE": 10
      },
      "r": 19
     },
     {
      "p": "BIGOTERA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.66,
      "c": {
-      "ENDOSCOPIA PARAISO": 50,
-      "ENDOSCOPIA SUR": 100,
-      "ENDOSCOPIA NORTE": 75,
-      "ENDOSCOPIA ZNORTE": 70,
-      "CIUDAD JARDIN": 4
+      "ENDOSCOPIA CUMBAYA": 50,
+      "ENDOSCOPIA ALBORADA": 100,
+      "ENDOSCOPIA AMAZONAS": 75,
+      "ENDOSCOPIA QSUR": 70,
+      "CIUDAD CELESTE": 4
      },
      "r": 20
     },
     {
      "p": "BIGOTERA PEDIÁTRICA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.8,
      "c": {
-      "PRADERA": 1,
-      "CIUDAD JARDIN": 2
+      "CAROLINA": 1,
+      "CIUDAD CELESTE": 2
      },
      "r": 21
     },
     {
      "p": "BISTURI N° 11",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.2,
      "c": {
-      "PARAISO": 100,
-      "SUR": 5,
-      "NORTE": 200,
-      "RIBERA": 25,
-      "VALLE": 10,
-      "MIRADOR": 20
+      "CUMBAYA": 100,
+      "ALBORADA": 5,
+      "AMAZONAS": 200,
+      "CONDADO": 25,
+      "KENNEDY": 10,
+      "IÑAQUITO": 20
      },
      "r": 22
     },
     {
      "p": "BISTURI N° 15",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.2,
      "c": {
-      "SUR": 5,
-      "NORTE": 100,
-      "RIBERA": 10,
-      "VALLE": 10,
-      "MIRADOR": 20
+      "ALBORADA": 5,
+      "AMAZONAS": 100,
+      "CONDADO": 10,
+      "KENNEDY": 10,
+      "IÑAQUITO": 20
      },
      "r": 23
     },
     {
      "p": "BRAZALETES DE PACIENTES ADULTO",
      "u": "PAQUETE X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 30,
      "c": {},
      "r": 24
@@ -2036,154 +2036,154 @@ window.MATRIZ_DATOS = {
     {
      "p": "CANDADO COCHE DE PARO PAQUETE X 100",
      "u": "PAQUETE",
-     "prov": "PROVEEDOR J",
+     "prov": "INTERMÉDICA",
      "pre": 120,
      "c": {
-      "CIUDAD JARDIN": 1
+      "CIUDAD CELESTE": 1
      },
      "r": 25
     },
     {
      "p": "CATETER INTRAVENOSO 14 G",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {
-      "NORTE": 10,
-      "LAGUNA": 5,
-      "COLINA": 6,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 10
+      "AMAZONAS": 10,
+      "CHILLOS": 5,
+      "CALDERON": 6,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 10
      },
      "r": 26
     },
     {
      "p": "CATETER INTRAVENOSO 18 G",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {
-      "SUR": 22,
-      "NORTE": 5,
-      "PRADERA": 30,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 10
+      "ALBORADA": 22,
+      "AMAZONAS": 5,
+      "CAROLINA": 30,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 10
      },
      "r": 27
     },
     {
      "p": "CATETER INTRAVENOSO 20 G",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {
-      "SUR": 12,
-      "ENDOSCOPIA SUR": 40,
-      "NORTE": 5,
-      "ENDOSCOPIA NORTE": 100,
-      "PRADERA": 30,
-      "VALLE": 15,
-      "Z. NORTE": 50,
-      "ENDOSCOPIA ZNORTE": 100,
-      "CIUDAD JARDIN": 20,
-      "MIRADOR": 5
+      "ALBORADA": 12,
+      "ENDOSCOPIA ALBORADA": 40,
+      "AMAZONAS": 5,
+      "ENDOSCOPIA AMAZONAS": 100,
+      "CAROLINA": 30,
+      "KENNEDY": 15,
+      "Q. SUR": 50,
+      "ENDOSCOPIA QSUR": 100,
+      "CIUDAD CELESTE": 20,
+      "IÑAQUITO": 5
      },
      "r": 28
     },
     {
      "p": "CATETER INTRAVENOSO 22 G",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {
-      "PARAISO": 10,
-      "SUR": 5,
-      "ENDOSCOPIA SUR": 40,
-      "NORTE": 5,
-      "PRADERA": 20,
-      "CIUDAD JARDIN": 20,
-      "MIRADOR": 5
+      "CUMBAYA": 10,
+      "ALBORADA": 5,
+      "ENDOSCOPIA ALBORADA": 40,
+      "AMAZONAS": 5,
+      "CAROLINA": 20,
+      "CIUDAD CELESTE": 20,
+      "IÑAQUITO": 5
      },
      "r": 29
     },
     {
      "p": "CATETER INTRAVENOSO 24 G",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {
-      "PARAISO": 10,
-      "NORTE": 5,
-      "PRADERA": 20,
-      "CIUDAD JARDIN": 20,
-      "MIRADOR": 5
+      "CUMBAYA": 10,
+      "AMAZONAS": 5,
+      "CAROLINA": 20,
+      "CIUDAD CELESTE": 20,
+      "IÑAQUITO": 5
      },
      "r": 30
     },
     {
      "p": "CINTA CONTROL DE ESTERILIZACION 3M",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 8,
      "c": {
-      "SUR": 3,
-      "NORTE": 1,
-      "RIBERA": 2,
-      "VALLE": 1,
-      "CIUDAD JARDIN": 2
+      "ALBORADA": 3,
+      "AMAZONAS": 1,
+      "CONDADO": 2,
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 2
      },
      "r": 31
     },
     {
      "p": "CORNETAS PARA OTOSCOPIOS PAQUETE X 500",
      "u": "PAQUETE X 500",
-     "prov": "PROVEEDOR O",
+     "prov": "DT MEDICAL",
      "pre": 47,
      "c": {
-      "PARAISO": 1,
-      "SUR": 1,
-      "RIBERA": 3,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 2
+      "CUMBAYA": 1,
+      "ALBORADA": 1,
+      "CONDADO": 3,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 2
      },
      "r": 32
     },
     {
      "p": "CORNETAS PARA OTOSCOPIOS PAQUETE X 500 PEDIATRICAS",
      "u": "PAQUETE X 500",
-     "prov": "PROVEEDOR O",
+     "prov": "DT MEDICAL",
      "pre": 47,
      "c": {
-      "PARAISO": 1,
-      "NORTE": 1,
-      "LAGUNA": 1,
-      "VALLE": 1,
-      "COLINA": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 2
+      "CUMBAYA": 1,
+      "AMAZONAS": 1,
+      "CHILLOS": 1,
+      "KENNEDY": 1,
+      "CALDERON": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 2
      },
      "r": 33
     },
     {
      "p": "CURITAS COVERPLAST STANDARD",
      "u": "CAJA X 10",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 3.5,
      "c": {
-      "PARAISO": 2,
-      "ENDOSCOPIA NORTE": 1,
-      "LAGUNA": 1,
-      "RIBERA": 8,
-      "VALLE": 2,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 5
+      "CUMBAYA": 2,
+      "ENDOSCOPIA AMAZONAS": 1,
+      "CHILLOS": 1,
+      "CONDADO": 8,
+      "KENNEDY": 2,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 5
      },
      "r": 34
     },
     {
      "p": "DAFILON 2-0 AG. RECTA (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {},
      "r": 35
@@ -2191,17 +2191,17 @@ window.MATRIZ_DATOS = {
     {
      "p": "DAFILON 2-0 CURVA (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {
-      "CIUDAD JARDIN": 4
+      "CIUDAD CELESTE": 4
      },
      "r": 36
     },
     {
      "p": "DAFILON 3-0 AG. RECTA (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {},
      "r": 37
@@ -2209,105 +2209,105 @@ window.MATRIZ_DATOS = {
     {
      "p": "DAFILON 3-0 CURVA (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {
-      "NORTE": 10,
-      "RIBERA": 10,
-      "CIUDAD JARDIN": 4
+      "AMAZONAS": 10,
+      "CONDADO": 10,
+      "CIUDAD CELESTE": 4
      },
      "r": 38
     },
     {
      "p": "DAFILON 4/0 (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {
-      "NORTE": 20,
-      "PRADERA": 15,
-      "RIBERA": 5,
-      "COLINA": 10
+      "AMAZONAS": 20,
+      "CAROLINA": 15,
+      "CONDADO": 5,
+      "CALDERON": 10
      },
      "r": 39
     },
     {
      "p": "DAFILON 5-0 AG. CURVA (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {
-      "NORTE": 20,
-      "RIBERA": 5,
-      "COLINA": 10,
-      "CIUDAD JARDIN": 4
+      "AMAZONAS": 20,
+      "CONDADO": 5,
+      "CALDERON": 10,
+      "CIUDAD CELESTE": 4
      },
      "r": 40
     },
     {
      "p": "DAFILON 6-0 (BRAUN)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.95,
      "c": {
-      "NORTE": 2,
-      "PRADERA": 5,
-      "COLINA": 10
+      "AMAZONAS": 2,
+      "CAROLINA": 5,
+      "CALDERON": 10
      },
      "r": 41
     },
     {
      "p": "DETERGENTE ENZIMATICO",
      "u": "GALÓN",
-     "prov": "PROVEEDOR K",
+     "prov": "TEXTIQUIM",
      "pre": 24,
      "c": {
-      "SUR": 2,
-      "ENDOSCOPIA SUR": 4,
-      "NORTE": 2,
-      "ENDOSCOPIA NORTE": 5,
-      "RIBERA": 1,
-      "Z. NORTE": 2,
-      "ENDOSCOPIA ZNORTE": 4,
-      "CIUDAD JARDIN": 1
+      "ALBORADA": 2,
+      "ENDOSCOPIA ALBORADA": 4,
+      "AMAZONAS": 2,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CONDADO": 1,
+      "Q. SUR": 2,
+      "ENDOSCOPIA QSUR": 4,
+      "CIUDAD CELESTE": 1
      },
      "r": 42
     },
     {
      "p": "ELECTRODOS ADULTO SOBRE X 30",
      "u": "SOBRE X 30",
-     "prov": "PROVEEDOR J",
+     "prov": "INTERMÉDICA",
      "pre": 5.7,
      "c": {
-      "ENDOSCOPIA PARAISO": 10,
-      "SUR": 10,
-      "NORTE": 100,
-      "ENDOSCOPIA NORTE": 10,
-      "PRADERA": 80,
-      "LAGUNA": 25,
-      "RIBERA": 50,
-      "ENDOSCOPIA ZNORTE": 8,
-      "COLINA": 30,
-      "CIUDAD JARDIN": 15,
-      "MIRADOR": 30
+      "ENDOSCOPIA CUMBAYA": 10,
+      "ALBORADA": 10,
+      "AMAZONAS": 100,
+      "ENDOSCOPIA AMAZONAS": 10,
+      "CAROLINA": 80,
+      "CHILLOS": 25,
+      "CONDADO": 50,
+      "ENDOSCOPIA QSUR": 8,
+      "CALDERON": 30,
+      "CIUDAD CELESTE": 15,
+      "IÑAQUITO": 30
      },
      "r": 43
     },
     {
      "p": "ELECTRODOS PARA FISIOTERAPIA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR J",
+     "prov": "INTERMÉDICA",
      "pre": 16.8,
      "c": {
-      "COLINA": 5,
-      "MIRADOR": 12
+      "CALDERON": 5,
+      "IÑAQUITO": 12
      },
      "r": 44
     },
     {
      "p": "ENVASES DE ORINA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.12,
      "c": {},
      "r": 45
@@ -2315,147 +2315,147 @@ window.MATRIZ_DATOS = {
     {
      "p": "EQUIPO DE VENOCLISIS",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.35,
      "c": {
-      "PARAISO": 10,
-      "ENDOSCOPIA PARAISO": 25,
-      "SUR": 10,
-      "ENDOSCOPIA SUR": 80,
-      "NORTE": 5,
-      "ENDOSCOPIA NORTE": 75,
-      "Z. NORTE": 5,
-      "ENDOSCOPIA ZNORTE": 50,
-      "CIUDAD JARDIN": 10
+      "CUMBAYA": 10,
+      "ENDOSCOPIA CUMBAYA": 25,
+      "ALBORADA": 10,
+      "ENDOSCOPIA ALBORADA": 80,
+      "AMAZONAS": 5,
+      "ENDOSCOPIA AMAZONAS": 75,
+      "Q. SUR": 5,
+      "ENDOSCOPIA QSUR": 50,
+      "CIUDAD CELESTE": 10
      },
      "r": 46
     },
     {
      "p": "ESPARADRAPO HIPOALERGIC HOSPITALARIO",
      "u": "PAQUETE X 4",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 34,
      "c": {
-      "PARAISO": 1,
-      "LAGUNA": 1,
-      "CIUDAD JARDIN": 2
+      "CUMBAYA": 1,
+      "CHILLOS": 1,
+      "CIUDAD CELESTE": 2
      },
      "r": 47
     },
     {
      "p": "ESPARADRAPO MICROPORE TRANSPORE 1\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2,
      "c": {
-      "SUR": 2,
-      "NORTE": 1,
-      "VALLE": 1,
-      "CIUDAD JARDIN": 1
+      "ALBORADA": 2,
+      "AMAZONAS": 1,
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 1
      },
      "r": 48
     },
     {
      "p": "ESPARADRAPO MICROPORE TRANSPORE 2\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 4.8,
      "c": {
-      "PARAISO": 1,
-      "SUR": 2,
-      "PRADERA": 6,
-      "RIBERA": 2,
-      "VALLE": 1,
-      "COLINA": 5,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 2
+      "CUMBAYA": 1,
+      "ALBORADA": 2,
+      "CAROLINA": 6,
+      "CONDADO": 2,
+      "KENNEDY": 1,
+      "CALDERON": 5,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 2
      },
      "r": 49
     },
     {
      "p": "ESPARADRAPO MICROPORE TRANSPORE 3\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 5.8,
      "c": {
-      "PARAISO": 1,
-      "NORTE": 2,
-      "PRADERA": 6,
-      "LAGUNA": 1,
-      "RIBERA": 1,
-      "VALLE": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 2
+      "CUMBAYA": 1,
+      "AMAZONAS": 2,
+      "CAROLINA": 6,
+      "CHILLOS": 1,
+      "CONDADO": 1,
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 2
      },
      "r": 50
     },
     {
      "p": "ESPÁTULA DE AYRE PAQUETE X 100",
      "u": "PAQUETE X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 5,
      "c": {
-      "NORTE": 2,
-      "RIBERA": 2,
-      "VALLE": 1,
-      "COLINA": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 2
+      "AMAZONAS": 2,
+      "CONDADO": 2,
+      "KENNEDY": 1,
+      "CALDERON": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 2
      },
      "r": 51
     },
     {
      "p": "ESPÉCULO VAGINAL \"LARGE\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.4,
      "c": {
-      "PRADERA": 20,
-      "RIBERA": 25,
-      "CIUDAD JARDIN": 10
+      "CAROLINA": 20,
+      "CONDADO": 25,
+      "CIUDAD CELESTE": 10
      },
      "r": 52
     },
     {
      "p": "ESPÉCULO VAGINAL MEDIUM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.4,
      "c": {
-      "SUR": 50,
-      "NORTE": 100,
-      "PRADERA": 250,
-      "LAGUNA": 150,
-      "RIBERA": 100,
-      "VALLE": 100,
-      "COLINA": 50,
-      "CIUDAD JARDIN": 20,
-      "MIRADOR": 50
+      "ALBORADA": 50,
+      "AMAZONAS": 100,
+      "CAROLINA": 250,
+      "CHILLOS": 150,
+      "CONDADO": 100,
+      "KENNEDY": 100,
+      "CALDERON": 50,
+      "CIUDAD CELESTE": 20,
+      "IÑAQUITO": 50
      },
      "r": 53
     },
     {
      "p": "ESPÉCULO VAGINAL SMALL",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.399,
      "c": {
-      "SUR": 50,
-      "NORTE": 200,
-      "PRADERA": 300,
-      "LAGUNA": 120,
-      "RIBERA": 150,
-      "VALLE": 100,
-      "COLINA": 150,
-      "CIUDAD JARDIN": 25,
-      "MIRADOR": 50
+      "ALBORADA": 50,
+      "AMAZONAS": 200,
+      "CAROLINA": 300,
+      "CHILLOS": 120,
+      "CONDADO": 150,
+      "KENNEDY": 100,
+      "CALDERON": 150,
+      "CIUDAD CELESTE": 25,
+      "IÑAQUITO": 50
      },
      "r": 54
     },
     {
      "p": "ESTOQUINETE VENDAJE TUBULAR 1\"",
      "u": "ROLLO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 18,
      "c": {},
      "r": 55
@@ -2463,7 +2463,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "ESTOQUINETE VENDAJE TUBULAR 2\"",
      "u": "ROLLO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 18,
      "c": {},
      "r": 56
@@ -2471,610 +2471,610 @@ window.MATRIZ_DATOS = {
     {
      "p": "FCO. TIRILLAS CIDEX C/60",
      "u": "FCO X 60",
-     "prov": "PROVEEDOR K",
+     "prov": "TEXTIQUIM",
      "pre": 30,
      "c": {
-      "ENDOSCOPIA SUR": 2,
-      "ENDOSCOPIA ZNORTE": 2,
-      "CIUDAD JARDIN": 1
+      "ENDOSCOPIA ALBORADA": 2,
+      "ENDOSCOPIA QSUR": 2,
+      "CIUDAD CELESTE": 1
      },
      "r": 57
     },
     {
      "p": "FÉRULA NASAL",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 15,
      "c": {
-      "VALLE": 1
+      "KENNEDY": 1
      },
      "r": 58
     },
     {
      "p": "FÉRULAS DE DEDO DE 1\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 1.68,
      "c": {
-      "PARAISO": 6,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 5
+      "CUMBAYA": 6,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 5
      },
      "r": 59
     },
     {
      "p": "FÉRULAS DE DEDO DE 3/4\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 1.68,
      "c": {
-      "COLINA": 2,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 5
+      "CALDERON": 2,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 5
      },
      "r": 60
     },
     {
      "p": "FIJADOR CITOLÓGICO SPRAY",
      "u": "FRASCO",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.25,
      "c": {
-      "VALLE": 1,
-      "MIRADOR": 5
+      "KENNEDY": 1,
+      "IÑAQUITO": 5
      },
      "r": 61
     },
     {
      "p": "FILTRO PARA SUCCIONADOR",
      "u": "UNIDAD",
-     "prov": "Proveedor L",
+     "prov": "Mequimedix",
      "pre": 8.5,
      "c": {
-      "SUR": 1,
-      "ENDOSCOPIA NORTE": 5,
-      "CIUDAD JARDIN": 2
+      "ALBORADA": 1,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CIUDAD CELESTE": 2
      },
      "r": 62
     },
     {
      "p": "FIXOMUL ROLLO 10M X 15 CM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 28,
      "c": {
-      "MIRADOR": 1
+      "IÑAQUITO": 1
      },
      "r": 63
     },
     {
      "p": "FORMOL",
      "u": "FRASCO",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 14,
      "c": {
-      "ENDOSCOPIA NORTE": 1,
-      "PRADERA": 1,
-      "RIBERA": 1,
-      "ENDOSCOPIA ZNORTE": 1,
-      "COLINA": 1
+      "ENDOSCOPIA AMAZONAS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1,
+      "ENDOSCOPIA QSUR": 1,
+      "CALDERON": 1
      },
      "r": 64
     },
     {
      "p": "FRASCOS CUVIALES",
      "u": "PAQUETE X 50",
-     "prov": "PROVEEDOR R",
+     "prov": "MERCHAN",
      "pre": 7,
      "c": {
-      "RIBERA": 2,
-      "ENDOSCOPIA ZNORTE": 2,
-      "COLINA": 1,
-      "MIRADOR": 2
+      "CONDADO": 2,
+      "ENDOSCOPIA QSUR": 2,
+      "CALDERON": 1,
+      "IÑAQUITO": 2
      },
      "r": 65
     },
     {
      "p": "FUNDA DE 100 CEPILLOS CERVICALES",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 15.75,
      "c": {
-      "NORTE": 2,
-      "RIBERA": 2,
-      "CIUDAD JARDIN": 1
+      "AMAZONAS": 2,
+      "CONDADO": 2,
+      "CIUDAD CELESTE": 1
      },
      "r": 66
     },
     {
      "p": "FUNDAS DE ESTERILIZACIÓN 190mm X 360 mm",
      "u": "CAJA X 200",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 27,
      "c": {
-      "PARAISO": 2,
-      "RIBERA": 1,
-      "VALLE": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 1
+      "CUMBAYA": 2,
+      "CONDADO": 1,
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 1
      },
      "r": 67
     },
     {
      "p": "FUNDAS DE ESTERILIZACIÓN 360 mm X 360 mm",
      "u": "CAJA X 200",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 65,
      "c": {
-      "LAGUNA": 1,
-      "Z. NORTE": 1,
-      "MIRADOR": 1
+      "CHILLOS": 1,
+      "Q. SUR": 1,
+      "IÑAQUITO": 1
      },
      "r": 68
     },
     {
      "p": "FUNDAS DE ESTERILIZACIÓN 57mm X 130 mm",
      "u": "CAJA X 200",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 3.5,
      "c": {
-      "LAGUNA": 2,
-      "RIBERA": 1,
-      "COLINA": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 1
+      "CHILLOS": 2,
+      "CONDADO": 1,
+      "CALDERON": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 1
      },
      "r": 69
     },
     {
      "p": "FUNDAS DE ESTERILIZACIÓN 90mm X 260 mm",
      "u": "CAJA X 200",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 15,
      "c": {
-      "LAGUNA": 1,
-      "RIBERA": 1,
-      "VALLE": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 1
+      "CHILLOS": 1,
+      "CONDADO": 1,
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 1
      },
      "r": 70
     },
     {
      "p": "GASA ESTERIL 4X4",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9,
      "c": {
-      "PARAISO": 5,
-      "SUR": 4,
-      "NORTE": 10,
-      "PRADERA": 3,
-      "LAGUNA": 4,
-      "RIBERA": 3,
-      "VALLE": 2,
-      "COLINA": 2,
-      "CIUDAD JARDIN": 4,
-      "MIRADOR": 4
+      "CUMBAYA": 5,
+      "ALBORADA": 4,
+      "AMAZONAS": 10,
+      "CAROLINA": 3,
+      "CHILLOS": 4,
+      "CONDADO": 3,
+      "KENNEDY": 2,
+      "CALDERON": 2,
+      "CIUDAD CELESTE": 4,
+      "IÑAQUITO": 4
      },
      "r": 71
     },
     {
      "p": "GASA PARAFINADA NUCAST 10CMX10CM",
      "u": "CAJA X 10",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 7.5,
      "c": {
-      "VALLE": 1,
-      "CIUDAD JARDIN": 15,
-      "MIRADOR": 1
+      "KENNEDY": 1,
+      "CIUDAD CELESTE": 15,
+      "IÑAQUITO": 1
      },
      "r": 72
     },
     {
      "p": "GEL ULTRASONIDO AQUAGELLY GALÓN",
      "u": "GALÓN",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 12,
      "c": {
-      "SUR": 1,
-      "NORTE": 4,
-      "PRADERA": 4,
-      "LAGUNA": 1,
-      "RIBERA": 3,
-      "VALLE": 2,
-      "Z. NORTE": 4,
-      "MIRADOR": 2
+      "ALBORADA": 1,
+      "AMAZONAS": 4,
+      "CAROLINA": 4,
+      "CHILLOS": 1,
+      "CONDADO": 3,
+      "KENNEDY": 2,
+      "Q. SUR": 4,
+      "IÑAQUITO": 2
      },
      "r": 73
     },
     {
      "p": "GORROS DE ENFERMERA X 100",
      "u": "PAQUETE X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9,
      "c": {
-      "ENDOSCOPIA NORTE": 1,
-      "LAGUNA": 1,
-      "Z. NORTE": 2,
-      "CIUDAD JARDIN": 2
+      "ENDOSCOPIA AMAZONAS": 1,
+      "CHILLOS": 1,
+      "Q. SUR": 2,
+      "CIUDAD CELESTE": 2
      },
      "r": 74
     },
     {
      "p": "GUANTE EXAMINACIÓN LATEX LARGE POLVO",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.55,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 75
     },
     {
      "p": "GUANTE EXAMINACIÓN LATEX LARGE SIN POLVO",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.55,
      "c": {
-      "PARAISO": 5,
-      "NORTE": 4,
-      "VALLE": 1,
-      "Z. NORTE": 3,
-      "ENDOSCOPIA ZNORTE": 2,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 5
+      "CUMBAYA": 5,
+      "AMAZONAS": 4,
+      "KENNEDY": 1,
+      "Q. SUR": 3,
+      "ENDOSCOPIA QSUR": 2,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 5
      },
      "r": 76
     },
     {
      "p": "GUANTE EXAMINACIÓN LATEX MEDIUM POLVO",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.55,
      "c": {
-      "SUR": 3,
-      "ENDOSCOPIA SUR": 2,
-      "COLINA": 10,
-      "CIUDAD JARDIN": 10
+      "ALBORADA": 3,
+      "ENDOSCOPIA ALBORADA": 2,
+      "CALDERON": 10,
+      "CIUDAD CELESTE": 10
      },
      "r": 77
     },
     {
      "p": "GUANTE EXAMINACIÓN LATEX MEDIUM SIN POLVO",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.55,
      "c": {
-      "PARAISO": 10,
-      "ENDOSCOPIA PARAISO": 1,
-      "ENDOSCOPIA SUR": 2,
-      "NORTE": 12,
-      "PRADERA": 15,
-      "RIBERA": 5,
-      "VALLE": 5,
-      "Z. NORTE": 5,
-      "COLINA": 3,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 5
+      "CUMBAYA": 10,
+      "ENDOSCOPIA CUMBAYA": 1,
+      "ENDOSCOPIA ALBORADA": 2,
+      "AMAZONAS": 12,
+      "CAROLINA": 15,
+      "CONDADO": 5,
+      "KENNEDY": 5,
+      "Q. SUR": 5,
+      "CALDERON": 3,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 5
      },
      "r": 78
     },
     {
      "p": "GUANTE EXAMINACIÓN LATEX SMALL POLVO",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.55,
      "c": {
-      "SUR": 3,
-      "CIUDAD JARDIN": 10
+      "ALBORADA": 3,
+      "CIUDAD CELESTE": 10
      },
      "r": 79
     },
     {
      "p": "GUANTE EXAMINACIÓN LATEX SMALL SIN POLVO",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 9.55,
      "c": {
-      "NORTE": 12,
-      "PRADERA": 10,
-      "RIBERA": 8,
-      "VALLE": 3,
-      "Z. NORTE": 5,
-      "ENDOSCOPIA ZNORTE": 2,
-      "COLINA": 5,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 5
+      "AMAZONAS": 12,
+      "CAROLINA": 10,
+      "CONDADO": 8,
+      "KENNEDY": 3,
+      "Q. SUR": 5,
+      "ENDOSCOPIA QSUR": 2,
+      "CALDERON": 5,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 5
      },
      "r": 80
     },
     {
      "p": "GUANTE NITRILO SIN POLVO MEDIUM",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 4.8,
      "c": {
-      "NORTE": 8,
-      "ENDOSCOPIA NORTE": 5,
-      "PRADERA": 10,
-      "LAGUNA": 15,
-      "RIBERA": 5,
-      "VALLE": 3,
-      "ENDOSCOPIA ZNORTE": 3,
-      "COLINA": 5,
-      "CIUDAD JARDIN": 5
+      "AMAZONAS": 8,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CAROLINA": 10,
+      "CHILLOS": 15,
+      "CONDADO": 5,
+      "KENNEDY": 3,
+      "ENDOSCOPIA QSUR": 3,
+      "CALDERON": 5,
+      "CIUDAD CELESTE": 5
      },
      "r": 81
     },
     {
      "p": "GUANTES DE NITRILO LARGE",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 4.8,
      "c": {
-      "PARAISO": 2,
-      "SUR": 1,
-      "NORTE": 8,
-      "LAGUNA": 2,
-      "RIBERA": 6,
-      "VALLE": 3,
-      "Z. NORTE": 6
+      "CUMBAYA": 2,
+      "ALBORADA": 1,
+      "AMAZONAS": 8,
+      "CHILLOS": 2,
+      "CONDADO": 6,
+      "KENNEDY": 3,
+      "Q. SUR": 6
      },
      "r": 82
     },
     {
      "p": "GUANTES DE NITRILO SMALL",
      "u": "CAJA X 100",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 4.8,
      "c": {
-      "PARAISO": 3,
-      "SUR": 2,
-      "ENDOSCOPIA SUR": 2,
-      "NORTE": 6,
-      "ENDOSCOPIA NORTE": 5,
-      "PRADERA": 10,
-      "LAGUNA": 10,
-      "RIBERA": 6,
-      "VALLE": 3,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 5
+      "CUMBAYA": 3,
+      "ALBORADA": 2,
+      "ENDOSCOPIA ALBORADA": 2,
+      "AMAZONAS": 6,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CAROLINA": 10,
+      "CHILLOS": 10,
+      "CONDADO": 6,
+      "KENNEDY": 3,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 5
      },
      "r": 83
     },
     {
      "p": "GUANTES QUIRURGICOS ESTERIL N°6 1/2",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.46,
      "c": {
-      "NORTE": 15,
-      "PRADERA": 15,
-      "LAGUNA": 5,
-      "RIBERA": 5,
-      "COLINA": 15,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 5
+      "AMAZONAS": 15,
+      "CAROLINA": 15,
+      "CHILLOS": 5,
+      "CONDADO": 5,
+      "CALDERON": 15,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 5
      },
      "r": 84
     },
     {
      "p": "GUANTES QUIRURGICOS ESTERIL N°7",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.46,
      "c": {
-      "SUR": 2,
-      "PRADERA": 15,
-      "RIBERA": 5,
-      "COLINA": 7,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 10
+      "ALBORADA": 2,
+      "CAROLINA": 15,
+      "CONDADO": 5,
+      "CALDERON": 7,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 10
      },
      "r": 85
     },
     {
      "p": "GUANTES QUIRURGICOS ESTERIL N°7 1/2",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.46,
      "c": {
-      "PARAISO": 10,
-      "SUR": 10,
-      "NORTE": 2,
-      "RIBERA": 3,
-      "COLINA": 8,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 10
+      "CUMBAYA": 10,
+      "ALBORADA": 10,
+      "AMAZONAS": 2,
+      "CONDADO": 3,
+      "CALDERON": 8,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 10
      },
      "r": 86
     },
     {
      "p": "GUANTES QUIRURGICOS ESTERIL N°8",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 0.46,
      "c": {
-      "PARAISO": 5,
-      "PRADERA": 15,
-      "LAGUNA": 5,
-      "COLINA": 2,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 10
+      "CUMBAYA": 5,
+      "CAROLINA": 15,
+      "CHILLOS": 5,
+      "CALDERON": 2,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 10
      },
      "r": 87
     },
     {
      "p": "GUARDIAN PARA CORTOPUNZANTE 1 LITROS",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.2,
      "c": {
-      "CIUDAD JARDIN": 15
+      "CIUDAD CELESTE": 15
      },
      "r": 88
     },
     {
      "p": "GUARDIAN PARA CORTOPUNZANTE 3 LITROS",
      "u": "UNIDAD",
-     "prov": "Proveedor L",
+     "prov": "Mequimedix",
      "pre": 2.5,
      "c": {
-      "PARAISO": 10,
-      "SUR": 10,
-      "NORTE": 40,
-      "ENDOSCOPIA NORTE": 5,
-      "PRADERA": 30,
-      "LAGUNA": 15,
-      "RIBERA": 10,
-      "VALLE": 15,
-      "Z. NORTE": 25,
-      "COLINA": 15,
-      "MIRADOR": 30
+      "CUMBAYA": 10,
+      "ALBORADA": 10,
+      "AMAZONAS": 40,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CAROLINA": 30,
+      "CHILLOS": 15,
+      "CONDADO": 10,
+      "KENNEDY": 15,
+      "Q. SUR": 25,
+      "CALDERON": 15,
+      "IÑAQUITO": 30
      },
      "r": 89
     },
     {
      "p": "HUMIDIFICADORES",
      "u": "UNIDAD",
-     "prov": "Proveedor L",
+     "prov": "Mequimedix",
      "pre": 3.8,
      "c": {
-      "ENDOSCOPIA PARAISO": 16,
-      "ENDOSCOPIA NORTE": 50,
-      "MIRADOR": 2
+      "ENDOSCOPIA CUMBAYA": 16,
+      "ENDOSCOPIA AMAZONAS": 50,
+      "IÑAQUITO": 2
      },
      "r": 90
     },
     {
      "p": "INDICADORES QUÍMICOS",
      "u": "PAQUETE 200",
-     "prov": "PROVEEDOR S",
+     "prov": "BIO-IN",
      "pre": 10,
      "c": {
-      "SUR": 2,
-      "NORTE": 2,
-      "PRADERA": 1,
-      "RIBERA": 2,
-      "COLINA": 2,
-      "MIRADOR": 3
+      "ALBORADA": 2,
+      "AMAZONAS": 2,
+      "CAROLINA": 1,
+      "CONDADO": 2,
+      "CALDERON": 2,
+      "IÑAQUITO": 3
      },
      "r": 91
     },
     {
      "p": "JERINGUILLA PUNTA CATETER 60ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.45,
      "c": {
-      "PARAISO": 7
+      "CUMBAYA": 7
      },
      "r": 92
     },
     {
      "p": "JERINGUILLAS DE 10 CC",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.1,
      "c": {
-      "ENDOSCOPIA PARAISO": 50,
-      "SUR": 15,
-      "ENDOSCOPIA SUR": 30,
-      "NORTE": 10,
-      "ENDOSCOPIA NORTE": 40,
-      "PRADERA": 50,
-      "RIBERA": 10,
-      "VALLE": 20,
-      "Z. NORTE": 30,
-      "CIUDAD JARDIN": 200
+      "ENDOSCOPIA CUMBAYA": 50,
+      "ALBORADA": 15,
+      "ENDOSCOPIA ALBORADA": 30,
+      "AMAZONAS": 10,
+      "ENDOSCOPIA AMAZONAS": 40,
+      "CAROLINA": 50,
+      "CONDADO": 10,
+      "KENNEDY": 20,
+      "Q. SUR": 30,
+      "CIUDAD CELESTE": 200
      },
      "r": 93
     },
     {
      "p": "JERINGUILLAS DE 20 CC",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.17,
      "c": {
-      "ENDOSCOPIA PARAISO": 50,
-      "SUR": 20,
-      "ENDOSCOPIA SUR": 30,
-      "ENDOSCOPIA NORTE": 40,
-      "PRADERA": 10,
-      "Z. NORTE": 20,
-      "CIUDAD JARDIN": 100
+      "ENDOSCOPIA CUMBAYA": 50,
+      "ALBORADA": 20,
+      "ENDOSCOPIA ALBORADA": 30,
+      "ENDOSCOPIA AMAZONAS": 40,
+      "CAROLINA": 10,
+      "Q. SUR": 20,
+      "CIUDAD CELESTE": 100
      },
      "r": 94
     },
     {
      "p": "JERINGUILLAS DE 3 CC",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.08,
      "c": {
-      "PARAISO": 100,
-      "SUR": 15,
-      "NORTE": 40,
-      "ENDOSCOPIA NORTE": 10,
-      "PRADERA": 60,
-      "RIBERA": 15,
-      "CIUDAD JARDIN": 200
+      "CUMBAYA": 100,
+      "ALBORADA": 15,
+      "AMAZONAS": 40,
+      "ENDOSCOPIA AMAZONAS": 10,
+      "CAROLINA": 60,
+      "CONDADO": 15,
+      "CIUDAD CELESTE": 200
      },
      "r": 95
     },
     {
      "p": "JERINGUILLAS DE 5 CC",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.09,
      "c": {
-      "PARAISO": 100,
-      "SUR": 15,
-      "ENDOSCOPIA SUR": 10,
-      "NORTE": 25,
-      "ENDOSCOPIA NORTE": 10,
-      "LAGUNA": 10,
-      "RIBERA": 15,
-      "CIUDAD JARDIN": 200
+      "CUMBAYA": 100,
+      "ALBORADA": 15,
+      "ENDOSCOPIA ALBORADA": 10,
+      "AMAZONAS": 25,
+      "ENDOSCOPIA AMAZONAS": 10,
+      "CHILLOS": 10,
+      "CONDADO": 15,
+      "CIUDAD CELESTE": 200
      },
      "r": 96
     },
     {
      "p": "JERINGUILLAS DE 60 CC NORMAL CON ROSCA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.45,
      "c": {
-      "ENDOSCOPIA SUR": 10,
-      "NORTE": 2,
-      "PRADERA": 15,
-      "RIBERA": 5,
-      "ENDOSCOPIA ZNORTE": 10,
-      "MIRADOR": 10
+      "ENDOSCOPIA ALBORADA": 10,
+      "AMAZONAS": 2,
+      "CAROLINA": 15,
+      "CONDADO": 5,
+      "ENDOSCOPIA QSUR": 10,
+      "IÑAQUITO": 10
      },
      "r": 97
     },
     {
      "p": "JERINGUILLAS DE INSULINA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.08,
      "c": {
-      "PARAISO": 100,
-      "SUR": 20,
-      "NORTE": 70,
-      "RIBERA": 50,
-      "VALLE": 30,
-      "CIUDAD JARDIN": 100,
-      "MIRADOR": 35
+      "CUMBAYA": 100,
+      "ALBORADA": 20,
+      "AMAZONAS": 70,
+      "CONDADO": 50,
+      "KENNEDY": 30,
+      "CIUDAD CELESTE": 100,
+      "IÑAQUITO": 35
      },
      "r": 98
     },
     {
      "p": "KIT PAPEL SONY UPC-21L",
      "u": "PAQUETE X 4",
-     "prov": "Proveedor M",
+     "prov": "Fibamedica",
      "pre": 165,
      "c": {},
      "r": 99
@@ -3082,106 +3082,106 @@ window.MATRIZ_DATOS = {
     {
      "p": "KY LUBRICANTE 100 G",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 9.3,
      "c": {
-      "PARAISO": 5,
-      "SUR": 1,
-      "ENDOSCOPIA SUR": 5,
-      "NORTE": 7,
-      "ENDOSCOPIA NORTE": 5,
-      "PRADERA": 6,
-      "LAGUNA": 4,
-      "RIBERA": 3,
-      "ENDOSCOPIA ZNORTE": 5,
-      "COLINA": 1,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 4
+      "CUMBAYA": 5,
+      "ALBORADA": 1,
+      "ENDOSCOPIA ALBORADA": 5,
+      "AMAZONAS": 7,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CAROLINA": 6,
+      "CHILLOS": 4,
+      "CONDADO": 3,
+      "ENDOSCOPIA QSUR": 5,
+      "CALDERON": 1,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 4
      },
      "r": 100
     },
     {
      "p": "LLAVES DE TRES VIAS",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {
-      "PARAISO": 8,
-      "ENDOSCOPIA PARAISO": 25,
-      "SUR": 10,
-      "ENDOSCOPIA SUR": 60,
-      "NORTE": 4,
-      "ENDOSCOPIA NORTE": 100,
-      "PRADERA": 50,
-      "ENDOSCOPIA ZNORTE": 50,
-      "CIUDAD JARDIN": 5
+      "CUMBAYA": 8,
+      "ENDOSCOPIA CUMBAYA": 25,
+      "ALBORADA": 10,
+      "ENDOSCOPIA ALBORADA": 60,
+      "AMAZONAS": 4,
+      "ENDOSCOPIA AMAZONAS": 100,
+      "CAROLINA": 50,
+      "ENDOSCOPIA QSUR": 50,
+      "CIUDAD CELESTE": 5
      },
      "r": 101
     },
     {
      "p": "LUGOL",
      "u": "FRASCO",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 28,
      "c": {
-      "VALLE": 1
+      "KENNEDY": 1
      },
      "r": 102
     },
     {
      "p": "MASCARILLAS DE OXÍGENO ADULTO",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1,
      "c": {
-      "ENDOSCOPIA ZNORTE": 2,
-      "CIUDAD JARDIN": 2
+      "ENDOSCOPIA QSUR": 2,
+      "CIUDAD CELESTE": 2
      },
      "r": 103
     },
     {
      "p": "MASCARILLAS DE OXÍGENO PEDIÁTRICO",
      "u": "CAJA X 50",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1,
      "c": {
-      "CIUDAD JARDIN": 2
+      "CIUDAD CELESTE": 2
      },
      "r": 104
     },
     {
      "p": "MASCARILLAS N95 3M",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR T",
+     "prov": "DEGSO",
      "pre": 0.9,
      "c": {
-      "CIUDAD JARDIN": 20,
-      "MIRADOR": 1
+      "CIUDAD CELESTE": 20,
+      "IÑAQUITO": 1
      },
      "r": 105
     },
     {
      "p": "MASCARILLAS QUIRURGICAS CAJA X 50",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.2,
      "c": {
-      "ENDOSCOPIA PARAISO": 2,
-      "SUR": 4,
-      "ENDOSCOPIA SUR": 2,
-      "NORTE": 4,
-      "ENDOSCOPIA NORTE": 2,
-      "LAGUNA": 2,
-      "RIBERA": 5,
-      "CIUDAD JARDIN": 25,
-      "MIRADOR": 10
+      "ENDOSCOPIA CUMBAYA": 2,
+      "ALBORADA": 4,
+      "ENDOSCOPIA ALBORADA": 2,
+      "AMAZONAS": 4,
+      "ENDOSCOPIA AMAZONAS": 2,
+      "CHILLOS": 2,
+      "CONDADO": 5,
+      "CIUDAD CELESTE": 25,
+      "IÑAQUITO": 10
      },
      "r": 106
     },
     {
      "p": "MICRONEBULIZADORES ADULTOS",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.2,
      "c": {},
      "r": 107
@@ -3189,7 +3189,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "MICRONEBULIZADORES PEDIATRICOS",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.2,
      "c": {},
      "r": 108
@@ -3197,7 +3197,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "MONOLYNON ETHILON 2-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.95,
      "c": {},
      "r": 109
@@ -3205,51 +3205,51 @@ window.MATRIZ_DATOS = {
     {
      "p": "MONOLYNON ETHILON 3-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.95,
      "c": {
-      "PARAISO": 5,
-      "RIBERA": 10
+      "CUMBAYA": 5,
+      "CONDADO": 10
      },
      "r": 110
     },
     {
      "p": "MONOLYNON ETHILON 4-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.95,
      "c": {
-      "PARAISO": 8,
-      "RIBERA": 5
+      "CUMBAYA": 8,
+      "CONDADO": 5
      },
      "r": 111
     },
     {
      "p": "MONOLYNON ETHILON 5-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.95,
      "c": {
-      "PARAISO": 5,
-      "LAGUNA": 5
+      "CUMBAYA": 5,
+      "CHILLOS": 5
      },
      "r": 112
     },
     {
      "p": "MONOLYNON ETHILON 6-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3.5,
      "c": {
-      "PARAISO": 5,
-      "VALLE": 3
+      "CUMBAYA": 5,
+      "KENNEDY": 3
      },
      "r": 113
     },
     {
      "p": "MONOS ENTERIZOS",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR I",
+     "prov": "YOLANDA VASQUEZ",
      "pre": 3.8,
      "c": {},
      "r": 114
@@ -3257,56 +3257,56 @@ window.MATRIZ_DATOS = {
     {
      "p": "NITRATO DE PLATA (PALILLO)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 2.8,
      "c": {
-      "PARAISO": 5,
-      "NORTE": 15,
-      "VALLE": 5,
-      "MIRADOR": 5
+      "CUMBAYA": 5,
+      "AMAZONAS": 15,
+      "KENNEDY": 5,
+      "IÑAQUITO": 5
      },
      "r": 115
     },
     {
      "p": "NOVOSYN 4-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3.8,
      "c": {
-      "VALLE": 3,
-      "MIRADOR": 5
+      "KENNEDY": 3,
+      "IÑAQUITO": 5
      },
      "r": 116
     },
     {
      "p": "NOVOSYN 5-0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3.8,
      "c": {
-      "VALLE": 3,
-      "MIRADOR": 5
+      "KENNEDY": 3,
+      "IÑAQUITO": 5
      },
      "r": 117
     },
     {
      "p": "OPA SOLUCIÓN",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR K",
+     "prov": "TEXTIQUIM",
      "pre": 36,
      "c": {
-      "PARAISO": 2,
-      "ENDOSCOPIA PARAISO": 8,
-      "ENDOSCOPIA SUR": 4,
-      "ENDOSCOPIA NORTE": 8,
-      "ENDOSCOPIA ZNORTE": 8
+      "CUMBAYA": 2,
+      "ENDOSCOPIA CUMBAYA": 8,
+      "ENDOSCOPIA ALBORADA": 4,
+      "ENDOSCOPIA AMAZONAS": 8,
+      "ENDOSCOPIA QSUR": 8
      },
      "r": 118
     },
     {
      "p": "Papel para electrocardiograma cuadrado For Schiller",
      "u": "UNIDAD",
-     "prov": "Proveedor M",
+     "prov": "Fibamedica",
      "pre": 6,
      "c": {},
      "r": 119
@@ -3314,7 +3314,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "PAPEL. PARA EKG 80x70",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR U",
+     "prov": "BOREAL",
      "pre": 9.5,
      "c": {},
      "r": 120
@@ -3322,40 +3322,40 @@ window.MATRIZ_DATOS = {
     {
      "p": "PAQUETE DE STERI-STRIP 3MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 3.2,
      "c": {
-      "PARAISO": 2,
-      "MIRADOR": 10
+      "CUMBAYA": 2,
+      "IÑAQUITO": 10
      },
      "r": 121
     },
     {
      "p": "PAQUETE DE STERI-STRIP 6MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR E",
+     "prov": "CABRERA",
      "pre": 3.2,
      "c": {
-      "PARAISO": 2,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 10
+      "CUMBAYA": 2,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 10
      },
      "r": 122
     },
     {
      "p": "PAQUETE DE TORUNDAS SECAS",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 7.5,
      "c": {
-      "SUR": 1
+      "ALBORADA": 1
      },
      "r": 123
     },
     {
      "p": "PAQUETES DE FUNDAS RECOLECTORAS DE ORINA PARA NIÑA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 12.9,
      "c": {},
      "r": 124
@@ -3363,7 +3363,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "PAQUETES DE FUNDAS RECOLECTORAS DE ORINA PARA NIÑO",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 12.9,
      "c": {},
      "r": 125
@@ -3371,45 +3371,45 @@ window.MATRIZ_DATOS = {
     {
      "p": "POVIDINE DE 100 ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.8,
      "c": {
-      "PARAISO": 2,
-      "SUR": 2,
-      "NORTE": 5,
-      "PRADERA": 4,
-      "CIUDAD JARDIN": 10
+      "CUMBAYA": 2,
+      "ALBORADA": 2,
+      "AMAZONAS": 5,
+      "CAROLINA": 4,
+      "CIUDAD CELESTE": 10
      },
      "r": 126
     },
     {
      "p": "PRESERVATIVOS GRANEL PAQUETE X 72",
      "u": "PAQUETE X 72",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 15.84,
      "c": {
-      "NORTE": 2,
-      "RIBERA": 5,
-      "Z. NORTE": 3,
-      "CIUDAD JARDIN": 3
+      "AMAZONAS": 2,
+      "CONDADO": 5,
+      "Q. SUR": 3,
+      "CIUDAD CELESTE": 3
      },
      "r": 127
     },
     {
      "p": "PROTECTORES DE CAMILLA",
      "u": "PAQUETE X 10",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 9.3,
      "c": {
-      "ENDOSCOPIA SUR": 2,
-      "CIUDAD JARDIN": 5
+      "ENDOSCOPIA ALBORADA": 2,
+      "CIUDAD CELESTE": 5
      },
      "r": 128
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 1MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {},
      "r": 129
@@ -3417,119 +3417,119 @@ window.MATRIZ_DATOS = {
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 2MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "RIBERA": 1,
-      "MIRADOR": 5
+      "CONDADO": 1,
+      "IÑAQUITO": 5
      },
      "r": 130
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 3,5MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "PARAISO": 5,
-      "RIBERA": 1,
-      "COLINA": 3,
-      "MIRADOR": 5
+      "CUMBAYA": 5,
+      "CONDADO": 1,
+      "CALDERON": 3,
+      "IÑAQUITO": 5
      },
      "r": 131
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 3MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "PARAISO": 5,
-      "NORTE": 2,
-      "PRADERA": 2,
-      "RIBERA": 1,
-      "COLINA": 2,
-      "MIRADOR": 5
+      "CUMBAYA": 5,
+      "AMAZONAS": 2,
+      "CAROLINA": 2,
+      "CONDADO": 1,
+      "CALDERON": 2,
+      "IÑAQUITO": 5
      },
      "r": 132
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 4MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "NORTE": 4,
-      "PRADERA": 2,
-      "RIBERA": 3,
-      "COLINA": 2,
-      "MIRADOR": 5
+      "AMAZONAS": 4,
+      "CAROLINA": 2,
+      "CONDADO": 3,
+      "CALDERON": 2,
+      "IÑAQUITO": 5
      },
      "r": 133
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 5MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "NORTE": 4,
-      "RIBERA": 3,
-      "COLINA": 10,
-      "MIRADOR": 5
+      "AMAZONAS": 4,
+      "CONDADO": 3,
+      "CALDERON": 10,
+      "IÑAQUITO": 5
      },
      "r": 134
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 6MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "RIBERA": 3,
-      "COLINA": 10,
-      "MIRADOR": 5
+      "CONDADO": 3,
+      "CALDERON": 10,
+      "IÑAQUITO": 5
      },
      "r": 135
     },
     {
      "p": "PUNCH DERMATOLÓGICO PARA BIOPSIA 8MM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR G",
+     "prov": "MEDIAIR",
      "pre": 8.5,
      "c": {
-      "MIRADOR": 5
+      "IÑAQUITO": 5
      },
      "r": 136
     },
     {
      "p": "RASURADORA",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR B",
+     "prov": "SOCI",
      "pre": 1,
      "c": {
-      "SUR": 5,
-      "NORTE": 2,
-      "CIUDAD JARDIN": 10,
-      "MIRADOR": 5
+      "ALBORADA": 5,
+      "AMAZONAS": 2,
+      "CIUDAD CELESTE": 10,
+      "IÑAQUITO": 5
      },
      "r": 137
     },
     {
      "p": "ROLLO DE PAPEL SONY UPP-110HG( ULTRASONIDO)",
      "u": "ROLLO",
-     "prov": "Proveedor M",
+     "prov": "Fibamedica",
      "pre": 18,
      "c": {
-      "PRADERA": 5,
-      "MIRADOR": 5
+      "CAROLINA": 5,
+      "IÑAQUITO": 5
      },
      "r": 138
     },
     {
-     "p": "ROLLO DE PAPEL. PARA EKG CARDIOFAX ( RIBERA)",
+     "p": "ROLLO DE PAPEL. PARA EKG CARDIOFAX ( CONDADO)",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 14,
      "c": {},
      "r": 139
@@ -3537,88 +3537,88 @@ window.MATRIZ_DATOS = {
     {
      "p": "ROLLO PARA TEST DESFIBRILADOR (PHILIPS)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR V",
+     "prov": "PERFECTECH",
      "pre": 16.5,
      "c": {
-      "LAGUNA": 1,
-      "RIBERA": 1
+      "CHILLOS": 1,
+      "CONDADO": 1
      },
      "r": 140
     },
     {
      "p": "ROXICAINA 2% CON EPINEFRINA X 20 ML FRASCO NO AMPOLLA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 7,
      "c": {
-      "PRADERA": 1,
-      "COLINA": 1,
-      "CIUDAD JARDIN": 2,
-      "MIRADOR": 1
+      "CAROLINA": 1,
+      "CALDERON": 1,
+      "CIUDAD CELESTE": 2,
+      "IÑAQUITO": 1
      },
      "r": 141
     },
     {
      "p": "ROXICAINA 2% SIN EPINEFRINA X 20 ML FRASCO NO AMPOLLA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3,
      "c": {
-      "PARAISO": 3,
-      "ENDOSCOPIA PARAISO": 1,
-      "NORTE": 3,
-      "PRADERA": 6,
-      "LAGUNA": 2,
-      "RIBERA": 2,
-      "ENDOSCOPIA ZNORTE": 2,
-      "COLINA": 4,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 2
+      "CUMBAYA": 3,
+      "ENDOSCOPIA CUMBAYA": 1,
+      "AMAZONAS": 3,
+      "CAROLINA": 6,
+      "CHILLOS": 2,
+      "CONDADO": 2,
+      "ENDOSCOPIA QSUR": 2,
+      "CALDERON": 4,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 2
      },
      "r": 142
     },
     {
      "p": "ROXICAINA 2% SPRAY",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 12.5,
      "c": {
-      "PARAISO": 3,
-      "ENDOSCOPIA PARAISO": 1,
-      "MIRADOR": 1
+      "CUMBAYA": 3,
+      "ENDOSCOPIA CUMBAYA": 1,
+      "IÑAQUITO": 1
      },
      "r": 143
     },
     {
      "p": "ROXICAINA JALEA 2 % TUBO X 30 ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3.3,
      "c": {
-      "PARAISO": 3,
-      "ENDOSCOPIA PARAISO": 1,
-      "NORTE": 1,
-      "CIUDAD JARDIN": 5
+      "CUMBAYA": 3,
+      "ENDOSCOPIA CUMBAYA": 1,
+      "AMAZONAS": 1,
+      "CIUDAD CELESTE": 5
      },
      "r": 144
     },
     {
      "p": "SOLUCIÓN DE CLOREXIDINA 2%",
      "u": "FRASCO",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 2,
      "c": {
-      "VALLE": 1,
-      "COLINA": 1,
-      "CIUDAD JARDIN": 1,
-      "MIRADOR": 1
+      "KENNEDY": 1,
+      "CALDERON": 1,
+      "CIUDAD CELESTE": 1,
+      "IÑAQUITO": 1
      },
      "r": 145
     },
     {
      "p": "SOLUCIÓN DEXTROSA AL 10% 1000ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.4,
      "c": {},
      "r": 146
@@ -3626,28 +3626,28 @@ window.MATRIZ_DATOS = {
     {
      "p": "SOLUCIÓN DEXTROSA AL 50% 100ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.8,
      "c": {
-      "SUR": 30,
-      "PRADERA": 2
+      "ALBORADA": 30,
+      "CAROLINA": 2
      },
      "r": 147
     },
     {
      "p": "SOLUCIÓN DEXTROSA EN AGUA 5% X 500 ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.4,
      "c": {
-      "PARAISO": 1
+      "CUMBAYA": 1
      },
      "r": 148
     },
     {
      "p": "SOLUCIÓN FISIOLÓGICA FRASCO DE 1000 ML",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 2.6,
      "c": {},
      "r": 149
@@ -3655,123 +3655,123 @@ window.MATRIZ_DATOS = {
     {
      "p": "SOLUCIÓN LACTATO DE RINGER X 1000 cc",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.28,
      "c": {
-      "NORTE": 2
+      "AMAZONAS": 2
      },
      "r": 150
     },
     {
      "p": "SOLUCION SALINA 0.9 % X 250 ML",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.75,
      "c": {
-      "NORTE": 2,
-      "PRADERA": 8,
-      "CIUDAD JARDIN": 5
+      "AMAZONAS": 2,
+      "CAROLINA": 8,
+      "CIUDAD CELESTE": 5
      },
      "r": 151
     },
     {
      "p": "SOLUCIÓN SALINA 0.9% X 100 ML",
      "u": "uNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.85,
      "c": {
-      "NORTE": 12,
-      "PRADERA": 20,
-      "RIBERA": 5,
-      "CIUDAD JARDIN": 5,
-      "MIRADOR": 7
+      "AMAZONAS": 12,
+      "CAROLINA": 20,
+      "CONDADO": 5,
+      "CIUDAD CELESTE": 5,
+      "IÑAQUITO": 7
      },
      "r": 152
     },
     {
      "p": "SOLUCIÓN SALINA 0.9% X 500 CC",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.9,
      "c": {
-      "ENDOSCOPIA PARAISO": 50,
-      "ENDOSCOPIA SUR": 60,
-      "ENDOSCOPIA NORTE": 75,
-      "ENDOSCOPIA ZNORTE": 50,
-      "COLINA": 4,
-      "CIUDAD JARDIN": 5
+      "ENDOSCOPIA CUMBAYA": 50,
+      "ENDOSCOPIA ALBORADA": 60,
+      "ENDOSCOPIA AMAZONAS": 75,
+      "ENDOSCOPIA QSUR": 50,
+      "CALDERON": 4,
+      "CIUDAD CELESTE": 5
      },
      "r": 153
     },
     {
      "p": "SOLUCIÓN SALINA 0.9% X/1000 cc",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.25,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 154
     },
     {
      "p": "SUERO FISIOLÓGICO 120ML",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.65,
      "c": {
-      "MIRADOR": 2
+      "IÑAQUITO": 2
      },
      "r": 155
     },
     {
      "p": "TEGADERM + PAD 6 X 10 CM",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.6,
      "c": {
-      "NORTE": 4
+      "AMAZONAS": 4
      },
      "r": 156
     },
     {
      "p": "TEGADERM 3M IV",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.85,
      "c": {
-      "ENDOSCOPIA PARAISO": 25,
-      "ENDOSCOPIA NORTE": 100,
-      "Z. NORTE": 25,
-      "ENDOSCOPIA ZNORTE": 100
+      "ENDOSCOPIA CUMBAYA": 25,
+      "ENDOSCOPIA AMAZONAS": 100,
+      "Q. SUR": 25,
+      "ENDOSCOPIA QSUR": 100
      },
      "r": 157
     },
     {
      "p": "TENSOPLAS 10\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 25.5,
      "c": {
-      "PARAISO": 2,
-      "VALLE": 2
+      "CUMBAYA": 2,
+      "KENNEDY": 2
      },
      "r": 158
     },
     {
      "p": "TENSOPLAST 4.5\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 19.2,
      "c": {
-      "PARAISO": 2,
-      "VALLE": 2
+      "CUMBAYA": 2,
+      "KENNEDY": 2
      },
      "r": 159
     },
     {
      "p": "TIRILLAS ACCU CHEK",
      "u": "FRASCO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 36.5,
      "c": {},
      "r": 160
@@ -3779,31 +3779,31 @@ window.MATRIZ_DATOS = {
     {
      "p": "TIRILLAS GMATE",
      "u": "FRASCO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 36.5,
      "c": {
-      "ENDOSCOPIA NORTE": 1
+      "ENDOSCOPIA AMAZONAS": 1
      },
      "r": 161
     },
     {
      "p": "TORNIQUETE",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 1.5,
      "c": {
-      "PARAISO": 2,
-      "SUR": 1,
-      "PRADERA": 1,
-      "LAGUNA": 1,
-      "CIUDAD JARDIN": 1
+      "CUMBAYA": 2,
+      "ALBORADA": 1,
+      "CAROLINA": 1,
+      "CHILLOS": 1,
+      "CIUDAD CELESTE": 1
      },
      "r": 162
     },
     {
      "p": "TRAJES DESCARTABLES",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR I",
+     "prov": "YOLANDA VASQUEZ",
      "pre": 4.25,
      "c": {},
      "r": 163
@@ -3811,7 +3811,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "TUBO ENDOTRAQUIAL N°7",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.5,
      "c": {},
      "r": 164
@@ -3819,255 +3819,255 @@ window.MATRIZ_DATOS = {
     {
      "p": "VENDA DE FIBRA DE VIDRIO 2\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3.8,
      "c": {
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 165
     },
     {
      "p": "VENDA DE FIBRA DE VIDRIO 3\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 5.5,
      "c": {
-      "RIBERA": 10,
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CONDADO": 10,
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 166
     },
     {
      "p": "VENDA DE FIBRA DE VIDRIO 4\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 7,
      "c": {
-      "RIBERA": 6,
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CONDADO": 6,
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 167
     },
     {
      "p": "VENDA DE FIBRA DE VIDRIO 6\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 8.5,
      "c": {
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 168
     },
     {
      "p": "VENDA DE FIBRA DE VIDRIO 8\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 8.5,
      "c": {
-      "PARAISO": 2,
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CUMBAYA": 2,
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 169
     },
     {
      "p": "VENDA DE GASA 2\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.3,
      "c": {
-      "PARAISO": 6,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 6,
+      "CIUDAD CELESTE": 6
      },
      "r": 170
     },
     {
      "p": "VENDA DE GASA 3\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.4,
      "c": {
-      "PARAISO": 6,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 6,
+      "CIUDAD CELESTE": 6
      },
      "r": 171
     },
     {
      "p": "VENDA DE GASA 4\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.5,
      "c": {
-      "PARAISO": 5,
-      "NORTE": 5,
-      "PRADERA": 12,
-      "VALLE": 4,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 5,
+      "AMAZONAS": 5,
+      "CAROLINA": 12,
+      "KENNEDY": 4,
+      "CIUDAD CELESTE": 6
      },
      "r": 172
     },
     {
      "p": "VENDA DE GASA 6\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.6,
      "c": {
-      "PARAISO": 2,
-      "PRADERA": 12,
-      "RIBERA": 10,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 2,
+      "CAROLINA": 12,
+      "CONDADO": 10,
+      "CIUDAD CELESTE": 6
      },
      "r": 173
     },
     {
      "p": "VENDA DE WATA 4\"",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR C",
+     "prov": "NOVAMEDIC",
      "pre": 0.5,
      "c": {
-      "PARAISO": 4,
-      "NORTE": 5,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 4,
+      "AMAZONAS": 5,
+      "CIUDAD CELESTE": 6
      },
      "r": 174
     },
     {
      "p": "VENDA DE WATA 6\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.6,
      "c": {
-      "PARAISO": 2,
-      "NORTE": 5,
-      "PRADERA": 6,
-      "RIBERA": 5,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 2,
+      "AMAZONAS": 5,
+      "CAROLINA": 6,
+      "CONDADO": 5,
+      "CIUDAD CELESTE": 6
      },
      "r": 175
     },
     {
      "p": "VENDA DE WATA 8\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.7,
      "c": {
-      "CIUDAD JARDIN": 6
+      "CIUDAD CELESTE": 6
      },
      "r": 176
     },
     {
      "p": "VENDA DE YESO 4\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.2,
      "c": {
-      "PARAISO": 4,
-      "PRADERA": 10,
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CUMBAYA": 4,
+      "CAROLINA": 10,
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 177
     },
     {
      "p": "VENDA DE YESO 6\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.4,
      "c": {
-      "PRADERA": 10,
-      "RIBERA": 10,
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CAROLINA": 10,
+      "CONDADO": 10,
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 178
     },
     {
      "p": "VENDA DE YESO 8\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.8,
      "c": {
-      "CIUDAD JARDIN": 6,
-      "MIRADOR": 3
+      "CIUDAD CELESTE": 6,
+      "IÑAQUITO": 3
      },
      "r": 179
     },
     {
      "p": "VENDA ELÁSTICA 2\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.6,
      "c": {
-      "CIUDAD JARDIN": 6
+      "CIUDAD CELESTE": 6
      },
      "r": 180
     },
     {
      "p": "VENDA ELÁSTICA 3\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.7,
      "c": {
-      "NORTE": 2,
-      "CIUDAD JARDIN": 6
+      "AMAZONAS": 2,
+      "CIUDAD CELESTE": 6
      },
      "r": 181
     },
     {
      "p": "VENDA ELÁSTICA 4\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.8,
      "c": {
-      "PARAISO": 6,
-      "NORTE": 4,
-      "PRADERA": 10,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 6,
+      "AMAZONAS": 4,
+      "CAROLINA": 10,
+      "CIUDAD CELESTE": 6
      },
      "r": 182
     },
     {
      "p": "VENDA ELÁSTICA 6\"",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.2,
      "c": {
-      "PARAISO": 6,
-      "NORTE": 5,
-      "PRADERA": 10,
-      "RIBERA": 5,
-      "VALLE": 3,
-      "CIUDAD JARDIN": 6
+      "CUMBAYA": 6,
+      "AMAZONAS": 5,
+      "CAROLINA": 10,
+      "CONDADO": 5,
+      "KENNEDY": 3,
+      "CIUDAD CELESTE": 6
      },
      "r": 183
     },
     {
      "p": "VENDAPLAS 7,5 CM",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 18.1,
      "c": {
-      "PARAISO": 1,
-      "RIBERA": 5
+      "CUMBAYA": 1,
+      "CONDADO": 5
      },
      "r": 184
     },
     {
      "p": "ZAPATONES",
      "u": "PAQUETE X 50",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 16,
      "c": {
-      "ENDOSCOPIA SUR": 1,
-      "NORTE": 3,
-      "ENDOSCOPIA NORTE": 2,
-      "RIBERA": 2,
-      "ENDOSCOPIA ZNORTE": 2,
-      "CIUDAD JARDIN": 1
+      "ENDOSCOPIA ALBORADA": 1,
+      "AMAZONAS": 3,
+      "ENDOSCOPIA AMAZONAS": 2,
+      "CONDADO": 2,
+      "ENDOSCOPIA QSUR": 2,
+      "CIUDAD CELESTE": 1
      },
      "r": 185
     }
@@ -4082,38 +4082,38 @@ window.MATRIZ_DATOS = {
    "icono": "4",
    "hdr": 3,
    "destinos": [
-    "Z. NORTE",
-    "PARAÍSO",
-    "ENDOSCOPIA PARAISO",
+    "Q. SUR",
+    "CUMBAYÁ",
+    "ENDOSCOPIA CUMBAYA",
     "Home care",
-    "VALLE",
-    "ENDOSCOPIA SUR",
-    "NORTE",
-    "ENDOSCOPIA NORTE",
-    "PRADERA",
-    "LAGUNA",
-    "RIBERA",
-    "SUR",
-    "ENDOSCOPIA ZNORTE",
-    "COLINA",
-    "CIUDAD JARDIN",
-    "MIRADOR"
+    "KENNEDY",
+    "ENDOSCOPIA ALBORADA",
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS",
+    "CAROLINA",
+    "CHILLOS",
+    "CONDADO",
+    "ALBORADA",
+    "ENDOSCOPIA QSUR",
+    "CALDERON",
+    "CIUDAD CELESTE",
+    "IÑAQUITO"
    ],
    "prods": [
     {
      "p": "ADRENALINA 1mg",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 4
     },
     {
      "p": "ADRENALINA RASCEMICA AMP 0.5 ML (RACEPINEFRINA)",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 4.2,
      "c": {},
      "r": 5
@@ -4121,19 +4121,19 @@ window.MATRIZ_DATOS = {
     {
      "p": "ALCAINE 0,5 % SOLUCION OFTÁLMICA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 5.3,
      "c": {
-      "PARAÍSO": 2,
-      "COLINA": 2,
-      "MIRADOR": 3
+      "CUMBAYÁ": 2,
+      "CALDERON": 2,
+      "IÑAQUITO": 3
      },
      "r": 6
     },
     {
      "p": "AMBROXOL AMP. 15 MG/2ML (MUCOSOLVAN)",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.85,
      "c": {},
      "r": 7
@@ -4141,7 +4141,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "AMIODARONA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.2,
      "c": {},
      "r": 8
@@ -4149,18 +4149,18 @@ window.MATRIZ_DATOS = {
     {
      "p": "ATROPINA 1mg/ml",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.32,
      "c": {
-      "ENDOSCOPIA SUR": 5,
-      "CIUDAD JARDIN": 5
+      "ENDOSCOPIA ALBORADA": 5,
+      "CIUDAD CELESTE": 5
      },
      "r": 9
     },
     {
      "p": "BICARBONATO DE SODIO",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.5,
      "c": {},
      "r": 10
@@ -4168,7 +4168,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "BROMURO DE ROCURONIO 50MG/5ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 7,
      "c": {},
      "r": 11
@@ -4176,28 +4176,28 @@ window.MATRIZ_DATOS = {
     {
      "p": "BUVITAL (N-BUTIL BROMURO DE HISINA)",
      "u": "FRASCO AMPOLLA",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {
-      "ENDOSCOPIA PARAISO": 5
+      "ENDOSCOPIA CUMBAYA": 5
      },
      "r": 12
     },
     {
      "p": "DEXAMETASONA 8MG/2ML",
      "u": "UNIDAD",
-     "prov": "proveedor A",
+     "prov": "fausto",
      "pre": 0.38,
      "c": {
-      "ENDOSCOPIA SUR": 5,
-      "CIUDAD JARDIN": 5
+      "ENDOSCOPIA ALBORADA": 5,
+      "CIUDAD CELESTE": 5
      },
      "r": 13
     },
     {
      "p": "DIAZEPAM",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.8,
      "c": {},
      "r": 14
@@ -4205,69 +4205,69 @@ window.MATRIZ_DATOS = {
     {
      "p": "EFEDRINA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {
-      "ENDOSCOPIA PARAISO": 5,
-      "ENDOSCOPIA NORTE": 5,
-      "CIUDAD JARDIN": 5
+      "ENDOSCOPIA CUMBAYA": 5,
+      "ENDOSCOPIA AMAZONAS": 5,
+      "CIUDAD CELESTE": 5
      },
      "r": 15
     },
     {
      "p": "FENTANILO",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.3,
      "c": {
-      "ENDOSCOPIA SUR": 5
+      "ENDOSCOPIA ALBORADA": 5
      },
      "r": 16
     },
     {
      "p": "FLUMAZENIL AMP 0,5 MG / 5 ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 20,
      "c": {
-      "ENDOSCOPIA SUR": 5
+      "ENDOSCOPIA ALBORADA": 5
      },
      "r": 17
     },
     {
      "p": "FUROSEMIDA",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.24,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 18
     },
     {
      "p": "HIDROCORTISONA 500MG",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3.8,
      "c": {
-      "CIUDAD JARDIN": 2
+      "CIUDAD CELESTE": 2
      },
      "r": 19
     },
     {
      "p": "KETOROLACO 30MG",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.55,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 20
     },
     {
      "p": "METILPREDNISOLONA 125mg",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 8.26,
      "c": {},
      "r": 21
@@ -4275,7 +4275,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "METILPREDNISOLONA 250mg",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 12,
      "c": {},
      "r": 22
@@ -4283,69 +4283,69 @@ window.MATRIZ_DATOS = {
     {
      "p": "METOCLOPRAMIDA 10 MG INYECTABLE",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.28,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 23
     },
     {
      "p": "MIDAZOLAM",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.6,
      "c": {
-      "ENDOSCOPIA SUR": 5
+      "ENDOSCOPIA ALBORADA": 5
      },
      "r": 24
     },
     {
      "p": "OMEPREAZOL 40mg",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.4,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 25
     },
     {
      "p": "ONDASETRON 8mg/ 4ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1,
      "c": {
-      "CIUDAD JARDIN": 5
+      "CIUDAD CELESTE": 5
      },
      "r": 26
     },
     {
      "p": "PARACETAMOL AMP.",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.5,
      "c": {
-      "CIUDAD JARDIN": 4
+      "CIUDAD CELESTE": 4
      },
      "r": 27
     },
     {
      "p": "PROPOFOL AMPO 10 MG X 20ML",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 4.5,
      "c": {
-      "ENDOSCOPIA PARAISO": 60,
-      "ENDOSCOPIA SUR": 60,
-      "ENDOSCOPIA NORTE": 100
+      "ENDOSCOPIA CUMBAYA": 60,
+      "ENDOSCOPIA ALBORADA": 60,
+      "ENDOSCOPIA AMAZONAS": 100
      },
      "r": 28
     },
     {
      "p": "RANITIDINA 50 MG/AMPOLLAS",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 6.79,
      "c": {},
      "r": 29
@@ -4353,56 +4353,56 @@ window.MATRIZ_DATOS = {
     {
      "p": "SALBUTAMOL 0.5% FRASCO 10 ML (VENTOLÍN)",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 5,
      "c": {
-      "PARAÍSO": 3
+      "CUMBAYÁ": 3
      },
      "r": 30
     },
     {
      "p": "SALBUTAMOL INHALADOR DE 200 DOSIS",
      "u": "FRASCO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 4.2,
      "c": {
-      "PARAÍSO": 3
+      "CUMBAYÁ": 3
      },
      "r": 31
     },
     {
      "p": "SIMETICONA EN GOTAS",
      "u": "FRASCO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 5.6,
      "c": {
-      "ENDOSCOPIA NORTE": 6
+      "ENDOSCOPIA AMAZONAS": 6
      },
      "r": 32
     },
     {
      "p": "SOLUCION OFTALMICA FLUORESCEINA",
      "u": "FRASCO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 5,
      "c": {
-      "PARAÍSO": 2,
-      "COLINA": 2,
-      "MIRADOR": 3
+      "CUMBAYÁ": 2,
+      "CALDERON": 2,
+      "IÑAQUITO": 3
      },
      "r": 33
     },
     {
      "p": "TROPICAMIDA 1 % (MYDRIACIL 15ML) SOLUCIÓN OFTÁLMICA",
      "u": "FRASCO",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 14.5,
      "c": {
-      "VALLE": 1,
-      "PRADERA": 3,
-      "SUR": 1,
-      "COLINA": 2,
-      "MIRADOR": 3
+      "KENNEDY": 1,
+      "CAROLINA": 3,
+      "ALBORADA": 1,
+      "CALDERON": 2,
+      "IÑAQUITO": 3
      },
      "r": 34
     }
@@ -4417,25 +4417,25 @@ window.MATRIZ_DATOS = {
    "icono": "5",
    "hdr": 3,
    "destinos": [
-    "ENDOSCOPIA Z. NORTE",
-    "PRADERA",
-    "ENDOSCOPIA PARAISO",
+    "ENDOSCOPIA Q. SUR",
+    "CAROLINA",
+    "ENDOSCOPIA CUMBAYA",
     "Home care",
-    "SUR",
-    "ENDOSCOPIA SUR",
-    "NORTE",
-    "ENDOSCOPIA NORTE",
-    "PRADERA",
-    "PARAISO",
-    "RIBERA",
-    "VALLE",
+    "ALBORADA",
+    "ENDOSCOPIA ALBORADA",
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS",
+    "CAROLINA",
+    "CUMBAYA",
+    "CONDADO",
+    "KENNEDY",
     "HOME CARE"
    ],
    "prods": [
     {
      "p": "Asa fría de 10 mm",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {},
      "r": 4
@@ -4443,7 +4443,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Asa fría de 15 mm",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {},
      "r": 5
@@ -4451,7 +4451,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Asa fría de 25 mm",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {},
      "r": 6
@@ -4459,17 +4459,17 @@ window.MATRIZ_DATOS = {
     {
      "p": "Asa fría y caliente de 6 mm",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {
-      "ENDOSCOPIA NORTE": 1
+      "ENDOSCOPIA AMAZONAS": 1
      },
      "r": 7
     },
     {
      "p": "Aza fría de 15 mm",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {},
      "r": 8
@@ -4477,19 +4477,19 @@ window.MATRIZ_DATOS = {
     {
      "p": "Cepillos para limpieza de endoscopio - colonoscopio",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 5.1,
      "c": {
-      "ENDOSCOPIA Z. NORTE": 8,
-      "ENDOSCOPIA PARAISO": 8,
-      "ENDOSCOPIA SUR": 5
+      "ENDOSCOPIA Q. SUR": 8,
+      "ENDOSCOPIA CUMBAYA": 8,
+      "ENDOSCOPIA ALBORADA": 5
      },
      "r": 9
     },
     {
      "p": "Clips hemostáticos",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 110,
      "c": {},
      "r": 10
@@ -4497,39 +4497,39 @@ window.MATRIZ_DATOS = {
     {
      "p": "Inyector 180 (Agujas de escloresis)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {
-      "ENDOSCOPIA NORTE": 1
+      "ENDOSCOPIA AMAZONAS": 1
      },
      "r": 11
     },
     {
      "p": "Inyector 230 (Agujas de esclorosis)",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {
-      "ENDOSCOPIA NORTE": 1
+      "ENDOSCOPIA AMAZONAS": 1
      },
      "r": 12
     },
     {
      "p": "Manguera de succión 1,8m",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 1.5,
      "c": {
-      "ENDOSCOPIA PARAISO": 2,
-      "ENDOSCOPIA SUR": 6,
-      "ENDOSCOPIA NORTE": 50
+      "ENDOSCOPIA CUMBAYA": 2,
+      "ENDOSCOPIA ALBORADA": 6,
+      "ENDOSCOPIA AMAZONAS": 50
      },
      "r": 13
     },
     {
      "p": "Manguera de succión 3,7m",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 3,
      "c": {},
      "r": 14
@@ -4537,7 +4537,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Manguera laringea 5,0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 8.25,
      "c": {},
      "r": 15
@@ -4545,42 +4545,42 @@ window.MATRIZ_DATOS = {
     {
      "p": "Mordedores",
      "u": "UNIDAD",
-     "prov": "proveedor U",
+     "prov": "boreal",
      "pre": 7,
      "c": {
-      "ENDOSCOPIA Z. NORTE": 50,
-      "ENDOSCOPIA SUR": 5,
-      "ENDOSCOPIA NORTE": 30
+      "ENDOSCOPIA Q. SUR": 50,
+      "ENDOSCOPIA ALBORADA": 5,
+      "ENDOSCOPIA AMAZONAS": 30
      },
      "r": 16
     },
     {
      "p": "Pinza de biopsia de 180",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 23,
      "c": {
-      "ENDOSCOPIA PARAISO": 4,
-      "ENDOSCOPIA SUR": 5,
-      "ENDOSCOPIA NORTE": 1
+      "ENDOSCOPIA CUMBAYA": 4,
+      "ENDOSCOPIA ALBORADA": 5,
+      "ENDOSCOPIA AMAZONAS": 1
      },
      "r": 17
     },
     {
      "p": "Pinza de biopsia de 230",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 28,
      "c": {
-      "ENDOSCOPIA PARAISO": 4,
-      "ENDOSCOPIA SUR": 5
+      "ENDOSCOPIA CUMBAYA": 4,
+      "ENDOSCOPIA ALBORADA": 5
      },
      "r": 18
     },
     {
      "p": "Pinza hemostática de 230",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 23,
      "c": {},
      "r": 19
@@ -4588,7 +4588,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Sonda de succión # 8",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {},
      "r": 20
@@ -4596,7 +4596,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Sonda de succión #10",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {},
      "r": 21
@@ -4604,7 +4604,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Sonda de succión #14",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {},
      "r": 22
@@ -4612,7 +4612,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Sonda de succión #18",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.48,
      "c": {},
      "r": 23
@@ -4620,7 +4620,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Sonda foley #14",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 12,
      "c": {},
      "r": 24
@@ -4628,7 +4628,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Sonda foley #18",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 0.42,
      "c": {},
      "r": 25
@@ -4636,7 +4636,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Trampa de Pólipos",
      "u": "UNIDAD",
-     "prov": "PROVEEDOR F",
+     "prov": "VANBIOMEDICAL",
      "pre": 9,
      "c": {},
      "r": 26
@@ -4644,7 +4644,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Tubo Endotraquial 3.0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.55,
      "c": {},
      "r": 27
@@ -4652,7 +4652,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Tubo Endotraquial 4.0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.55,
      "c": {},
      "r": 28
@@ -4660,7 +4660,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Tubo Endotraquial 4.5",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.55,
      "c": {},
      "r": 29
@@ -4668,7 +4668,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Tubo Endotraquial 5.5",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.55,
      "c": {},
      "r": 30
@@ -4676,7 +4676,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Tubo Endotraquial 6.0",
      "u": "UNIDAD",
-     "prov": "Proveedor A",
+     "prov": "Fausto",
      "pre": 2.55,
      "c": {},
      "r": 31
@@ -4692,26 +4692,26 @@ window.MATRIZ_DATOS = {
    "icono": "6",
    "hdr": 6,
    "destinos": [
-    "PONIENTE",
-    "PARAISO",
-    "ENDOSCOPIA PARAISO",
-    "VALLE",
-    "NORTE",
-    "ENDOSCOPIA NORTE",
-    "LAGUNA",
-    "PRADERA",
-    "RIBERA",
-    "SUR",
+    "CARCELEN",
+    "CUMBAYA",
+    "ENDOSCOPIA CUMBAYA",
+    "KENNEDY",
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS",
+    "CHILLOS",
+    "CAROLINA",
+    "CONDADO",
+    "ALBORADA",
     "ADMINISTRACIÓN",
-    "CIUDAD JARDIN",
-    "ZNORTE",
-    "COLINA"
+    "CIUDAD CELESTE",
+    "QSUR",
+    "CALDERON"
    ],
    "prods": [
     {
      "p": "CABEZALES PARA IMPRESORA SMARK TANK PAR",
      "u": "",
-     "prov": "PROVEEDOR W",
+     "prov": "INFOLINK",
      "pre": 72,
      "c": {},
      "r": 7
@@ -4719,19 +4719,19 @@ window.MATRIZ_DATOS = {
     {
      "p": "HP 147",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 243.5,
      "c": {
-      "RIBERA": 3,
-      "ZNORTE": 2,
-      "COLINA": 1
+      "CONDADO": 3,
+      "QSUR": 2,
+      "CALDERON": 1
      },
      "r": 8
     },
     {
      "p": "Hp 17A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 35,
      "c": {},
      "r": 9
@@ -4739,7 +4739,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Hp PRO M 414 Black",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 119,
      "c": {},
      "r": 10
@@ -4747,7 +4747,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Hp PRO M 414 Cyan",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 138,
      "c": {},
      "r": 11
@@ -4755,7 +4755,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Hp PRO M 414 Magent",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 138,
      "c": {},
      "r": 12
@@ -4763,7 +4763,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "Hp PRO M 414 S W2022",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 138,
      "c": {},
      "r": 13
@@ -4771,29 +4771,29 @@ window.MATRIZ_DATOS = {
     {
      "p": "JUEGO DE TINTAS HP SMART TANK",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 42,
      "c": {
-      "NORTE": 1,
-      "RIBERA": 2
+      "AMAZONAS": 1,
+      "CONDADO": 2
      },
      "r": 14
     },
     {
      "p": "Juego de tintas para recarga epson",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 42,
      "c": {
-      "RIBERA": 5,
-      "COLINA": 1
+      "CONDADO": 5,
+      "CALDERON": 1
      },
      "r": 15
     },
     {
      "p": "Neverstop 1200 103A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 27.99,
      "c": {},
      "r": 16
@@ -4801,34 +4801,34 @@ window.MATRIZ_DATOS = {
     {
      "p": "ROLLO DE ETIQUETAS",
      "u": "",
-     "prov": "PROVEEDOR X",
+     "prov": "CODIPEG",
      "pre": 4.36,
      "c": {
-      "PARAISO": 2,
-      "NORTE": 5,
-      "PRADERA": 5,
-      "RIBERA": 5,
-      "SUR": 5,
-      "ZNORTE": 2
+      "CUMBAYA": 2,
+      "AMAZONAS": 5,
+      "CAROLINA": 5,
+      "CONDADO": 5,
+      "ALBORADA": 5,
+      "QSUR": 2
      },
      "r": 17
     },
     {
      "p": "Rollo de etiquetas Zebra",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 22,
      "c": {
-      "PRADERA": 5,
-      "RIBERA": 5,
-      "SUR": 1
+      "CAROLINA": 5,
+      "CONDADO": 5,
+      "ALBORADA": 1
      },
      "r": 18
     },
     {
      "p": "Tinta negra GT53 HP",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 23,
      "c": {},
      "r": 19
@@ -4836,38 +4836,38 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER 105A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 38.9,
      "c": {
-      "NORTE": 5,
-      "LAGUNA": 4
+      "AMAZONAS": 5,
+      "CHILLOS": 4
      },
      "r": 20
     },
     {
      "p": "TONER 12A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 23,
      "c": {
-      "PRADERA": 2
+      "CAROLINA": 2
      },
      "r": 21
     },
     {
      "p": "TONER 136 A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 69,
      "c": {
-      "ZNORTE": 1
+      "QSUR": 1
      },
      "r": 22
     },
     {
      "p": "TONER 26A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 35,
      "c": {},
      "r": 23
@@ -4875,7 +4875,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER 30 A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 35,
      "c": {},
      "r": 24
@@ -4883,7 +4883,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER 35A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 23,
      "c": {},
      "r": 25
@@ -4891,19 +4891,19 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER 58A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 147,
      "c": {
-      "NORTE": 1,
-      "LAGUNA": 4,
-      "SUR": 4
+      "AMAZONAS": 1,
+      "CHILLOS": 4,
+      "ALBORADA": 4
      },
      "r": 26
     },
     {
      "p": "TONER 58AX",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 60,
      "c": {},
      "r": 27
@@ -4911,7 +4911,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER 78 A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 28,
      "c": {},
      "r": 28
@@ -4919,27 +4919,27 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER 83 A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 23,
      "c": {
-      "RIBERA": 2
+      "CONDADO": 2
      },
      "r": 29
     },
     {
      "p": "TONER 85 A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 23,
      "c": {
-      "NORTE": 3
+      "AMAZONAS": 3
      },
      "r": 30
     },
     {
      "p": "TONER HP 145A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 85.8,
      "c": {},
      "r": 31
@@ -4947,18 +4947,18 @@ window.MATRIZ_DATOS = {
     {
      "p": "TONER HP 1510A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 74,
      "c": {
-      "VALLE": 1,
-      "SUR": 1
+      "KENNEDY": 1,
+      "ALBORADA": 1
      },
      "r": 32
     },
     {
      "p": "TONER HP 19A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 75,
      "c": {},
      "r": 33
@@ -4966,7 +4966,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "UNIDAD DE IMAGEN 19A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 35,
      "c": {},
      "r": 34
@@ -4974,7 +4974,7 @@ window.MATRIZ_DATOS = {
     {
      "p": "UNIDAD DE IMAGEN 32A",
      "u": "",
-     "prov": "Proveedor D",
+     "prov": "Marlene",
      "pre": 24,
      "c": {},
      "r": 35
@@ -4990,14 +4990,14 @@ window.MATRIZ_DATOS = {
    "icono": "",
    "hdr": 3,
    "destinos": [
-    "PONIENTE",
-    "PARAISO",
-    "VALLE",
-    "NORTE",
-    "SUR",
-    "LAGUNA",
-    "PRADERA",
-    "RIBERA",
+    "CARCELEN",
+    "CUMBAYA",
+    "KENNEDY",
+    "AMAZONAS",
+    "ALBORADA",
+    "CHILLOS",
+    "CAROLINA",
+    "CONDADO",
     "SSO",
     "HOME CARE",
     "CALL CENTER",
@@ -5018,13 +5018,13 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 10.15,
      "c": {
-      "PARAISO": 1,
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "CUMBAYA": 1,
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 5
     },
@@ -5034,7 +5034,7 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.937,
      "c": {
-      "PARAISO": 1
+      "CUMBAYA": 1
      },
      "r": 6
     },
@@ -5044,12 +5044,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 5.42,
      "c": {
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 7
     },
@@ -5067,12 +5067,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.35,
      "c": {
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 9
     },
@@ -5082,12 +5082,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.54,
      "c": {
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 10
     },
@@ -5097,12 +5097,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.71,
      "c": {
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 11
     },
@@ -5112,12 +5112,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 0.546,
      "c": {
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 12
     },
@@ -5127,12 +5127,12 @@ window.MATRIZ_DATOS = {
      "prov": "",
      "pre": 1.07,
      "c": {
-      "VALLE": 1,
-      "NORTE": 1,
-      "SUR": 1,
-      "LAGUNA": 1,
-      "PRADERA": 1,
-      "RIBERA": 1
+      "KENNEDY": 1,
+      "AMAZONAS": 1,
+      "ALBORADA": 1,
+      "CHILLOS": 1,
+      "CAROLINA": 1,
+      "CONDADO": 1
      },
      "r": 13
     }
@@ -5145,12 +5145,12 @@ window.MATRIZ_DATOS = {
  ],
  "ceroPapeles": {
   "destinos": [
-   "RIBERA",
-   "PRADERA",
-   "PORTAL",
-   "LAGUNA",
-   "AVENIDA",
-   "LITORAL"
+   "CONDADO",
+   "CAROLINA",
+   "PLAZA",
+   "CHILLOS",
+   "REPUBLICA",
+   "GUAYAQUIL"
   ],
   "items": [
    "etiquetas",
@@ -5159,8 +5159,8 @@ window.MATRIZ_DATOS = {
  },
  "destinos": [
   {
-   "nom": "RIBERA",
-   "norm": "RIBERA",
+   "nom": "CONDADO",
+   "norm": "CONDADO",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5170,11 +5170,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 4221.91,
    "lineas": 125,
-   "centroKardex": "CM RIBERA"
+   "centroKardex": "CM CONDADO"
   },
   {
-   "nom": "MIRADOR",
-   "norm": "MIRADOR",
+   "nom": "IÑAQUITO",
+   "norm": "INAQUITO",
    "hojas": [
     "LIMPIEZA",
     "MEDICINA",
@@ -5183,11 +5183,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 4115.78,
    "lineas": 155,
-   "centroKardex": "CM MIRADOR"
+   "centroKardex": "CM IÑAQUITO"
   },
   {
-   "nom": "NORTE",
-   "norm": "NORTE",
+   "nom": "AMAZONAS",
+   "norm": "AMAZONAS",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5197,11 +5197,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 3756.07,
    "lineas": 110,
-   "centroKardex": "CM NORTE"
+   "centroKardex": "CM AMAZONAS"
   },
   {
-   "nom": "PRADERA",
-   "norm": "PRADERA",
+   "nom": "CAROLINA",
+   "norm": "CAROLINA",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5212,11 +5212,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 2803.04,
    "lineas": 95,
-   "centroKardex": "CM PRADERA"
+   "centroKardex": "CM CAROLINA"
   },
   {
-   "nom": "CIUDAD JARDIN",
-   "norm": "CIUDAD JARDIN",
+   "nom": "CIUDAD CELESTE",
+   "norm": "CIUDAD CELESTE",
    "hojas": [
     "LIMPIEZA",
     "MEDICINA",
@@ -5225,11 +5225,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 2447.34,
    "lineas": 137,
-   "centroKardex": "CM CIUDAD JARDIN"
+   "centroKardex": "CM CIUDAD CELESTE"
   },
   {
-   "nom": "ENDOSCOPIA NORTE",
-   "norm": "ENDOSCOPIA NORTE",
+   "nom": "ENDOSCOPIA AMAZONAS",
+   "norm": "ENDOSCOPIA AMAZONAS",
    "hojas": [
     "ENDOSCOPIA",
     "MEDICINA",
@@ -5241,8 +5241,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "SUR",
-   "norm": "SUR",
+   "nom": "ALBORADA",
+   "norm": "ALBORADA",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5253,11 +5253,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 2249.51,
    "lineas": 110,
-   "centroKardex": "CM SUR"
+   "centroKardex": "CM ALBORADA"
   },
   {
-   "nom": "LAGUNA",
-   "norm": "LAGUNA",
+   "nom": "CHILLOS",
+   "norm": "CHILLOS",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5267,11 +5267,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 2118.17,
    "lineas": 72,
-   "centroKardex": "CM LAGUNA"
+   "centroKardex": "CM CHILLOS"
   },
   {
-   "nom": "COLINA",
-   "norm": "COLINA",
+   "nom": "CALDERON",
+   "norm": "CALDERON",
    "hojas": [
     "LIMPIEZA",
     "MEDICINA",
@@ -5281,11 +5281,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 1986.66,
    "lineas": 81,
-   "centroKardex": "CM COLINA"
+   "centroKardex": "CM CALDERON"
   },
   {
-   "nom": "PARAISO",
-   "norm": "PARAISO",
+   "nom": "CUMBAYA",
+   "norm": "CUMBAYA",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5295,11 +5295,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 1733.55,
    "lineas": 96,
-   "centroKardex": "CM PARAISO"
+   "centroKardex": "CM CUMBAYA"
   },
   {
-   "nom": "ENDOSCOPIA SUR",
-   "norm": "ENDOSCOPIA SUR",
+   "nom": "ENDOSCOPIA ALBORADA",
+   "norm": "ENDOSCOPIA ALBORADA",
    "hojas": [
     "ENDOSCOPIA",
     "MEDICINA",
@@ -5311,8 +5311,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "Z. NORTE",
-   "norm": "Z NORTE",
+   "nom": "Q. SUR",
+   "norm": "Q SUR",
    "hojas": [
     "LIMPIEZA",
     "OFICINA",
@@ -5323,8 +5323,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "VALLE",
-   "norm": "VALLE",
+   "nom": "KENNEDY",
+   "norm": "KENNEDY",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5335,11 +5335,11 @@ window.MATRIZ_DATOS = {
    ],
    "valor": 1345.39,
    "lineas": 79,
-   "centroKardex": "CM VALLE"
+   "centroKardex": "CM KENNEDY"
   },
   {
-   "nom": "ENDOSCOPIA ZNORTE",
-   "norm": "ENDOSCOPIA ZNORTE",
+   "nom": "ENDOSCOPIA QSUR",
+   "norm": "ENDOSCOPIA QSUR",
    "hojas": [
     "OFICINA",
     "SUMINISTROS"
@@ -5349,8 +5349,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "ENDOSCOPIA PARAISO",
-   "norm": "ENDOSCOPIA PARAISO",
+   "nom": "ENDOSCOPIA CUMBAYA",
+   "norm": "ENDOSCOPIA CUMBAYA",
    "hojas": [
     "ENDOSCOPIA",
     "MEDICINA",
@@ -5362,18 +5362,18 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "ZNORTE",
-   "norm": "ZNORTE",
+   "nom": "QSUR",
+   "norm": "QSUR",
    "hojas": [
     "TONER"
    ],
    "valor": 564.72,
    "lineas": 3,
-   "centroKardex": "CM ZNORTE"
+   "centroKardex": "CM QSUR"
   },
   {
-   "nom": "ENDOSCOPIA Z. NORTE",
-   "norm": "ENDOSCOPIA Z NORTE",
+   "nom": "ENDOSCOPIA Q. SUR",
+   "norm": "ENDOSCOPIA Q SUR",
    "hojas": [
     "ENDOSCOPIA"
    ],
@@ -5392,14 +5392,14 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "PARAÍSO",
-   "norm": "PARAISO",
+   "nom": "CUMBAYÁ",
+   "norm": "CUMBAYA",
    "hojas": [
     "MEDICINA"
    ],
    "valor": 48.2,
    "lineas": 4,
-   "centroKardex": "CM PARAISO"
+   "centroKardex": "CM CUMBAYA"
   },
   {
    "nom": "CALL CENTER",
@@ -5412,8 +5412,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "PONIENTE",
-   "norm": "PONIENTE",
+   "nom": "CARCELEN",
+   "norm": "CARCELEN",
    "hojas": [
     "Cafetería",
     "LIMPIEZA",
@@ -5426,8 +5426,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "COVID PRADERA",
-   "norm": "COVID PRADERA",
+   "nom": "COVID CAROLINA",
+   "norm": "COVID CAROLINA",
    "hojas": [
     "LIMPIEZA"
    ],
@@ -5458,8 +5458,8 @@ window.MATRIZ_DATOS = {
    "centroKardex": ""
   },
   {
-   "nom": "SAN MARCOS",
-   "norm": "SAN MARCOS",
+   "nom": "SAN LUIS",
+   "norm": "SAN LUIS",
    "hojas": [
     "OFICINA",
     "SUMINISTROS"
@@ -5481,10 +5481,10 @@ window.MATRIZ_DATOS = {
  ],
  "grafias": [
   {
-   "base": "PARAISO",
+   "base": "CUMBAYA",
    "formas": [
-    "PARAISO",
-    "PARAÍSO"
+    "CUMBAYA",
+    "CUMBAYÁ"
    ],
    "valor": 1781.75
   },
@@ -5499,37 +5499,37 @@ window.MATRIZ_DATOS = {
  ],
  "familias": [
   {
-   "base": "NORTE",
+   "base": "AMAZONAS",
    "formas": [
-    "NORTE",
-    "ENDOSCOPIA NORTE"
+    "AMAZONAS",
+    "ENDOSCOPIA AMAZONAS"
    ],
    "valor": 6112.63
   },
   {
-   "base": "SUR",
+   "base": "ALBORADA",
    "formas": [
-    "SUR",
-    "ENDOSCOPIA SUR"
+    "ALBORADA",
+    "ENDOSCOPIA ALBORADA"
    ],
    "valor": 3866.6
   },
   {
-   "base": "ZNORTE",
+   "base": "QSUR",
    "formas": [
-    "Z. NORTE",
-    "ENDOSCOPIA ZNORTE",
-    "ZNORTE",
-    "ENDOSCOPIA Z. NORTE"
+    "Q. SUR",
+    "ENDOSCOPIA QSUR",
+    "QSUR",
+    "ENDOSCOPIA Q. SUR"
    ],
    "valor": 3471.45
   },
   {
-   "base": "PARAISO",
+   "base": "CUMBAYA",
    "formas": [
-    "PARAISO",
-    "ENDOSCOPIA PARAISO",
-    "PARAÍSO"
+    "CUMBAYA",
+    "ENDOSCOPIA CUMBAYA",
+    "CUMBAYÁ"
    ],
    "valor": 2910.0
   },
@@ -5545,7 +5545,7 @@ window.MATRIZ_DATOS = {
  "dupDestino": [
   {
    "hoja": "ENDOSCOPIA",
-   "destino": "PRADERA",
+   "destino": "CAROLINA",
    "cols": [
     "H",
     "V"
@@ -5614,7 +5614,7 @@ window.MATRIZ_DATOS = {
    "fila": 58,
    "celda": "Z58",
    "p": "FÉRULA NASAL",
-   "destino": "VALLE",
+   "destino": "KENNEDY",
    "cant": 1,
    "precio": 15,
    "sub": 0,
@@ -5626,7 +5626,7 @@ window.MATRIZ_DATOS = {
    "fila": 91,
    "celda": "L91",
    "p": "INDICADORES QUÍMICOS",
-   "destino": "SUR",
+   "destino": "ALBORADA",
    "cant": 2,
    "precio": 10,
    "sub": 0,
@@ -5638,7 +5638,7 @@ window.MATRIZ_DATOS = {
    "fila": 91,
    "celda": "P91",
    "p": "INDICADORES QUÍMICOS",
-   "destino": "NORTE",
+   "destino": "AMAZONAS",
    "cant": 2,
    "precio": 10,
    "sub": 0,
@@ -5650,7 +5650,7 @@ window.MATRIZ_DATOS = {
    "fila": 4,
    "celda": "AI4",
    "p": "ADRENALINA 1mg",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.48,
    "sub": 0,
@@ -5662,7 +5662,7 @@ window.MATRIZ_DATOS = {
    "fila": 6,
    "celda": "AK6",
    "p": "ALCAINE 0,5 % SOLUCION OFTÁLMICA",
-   "destino": "MIRADOR",
+   "destino": "IÑAQUITO",
    "cant": 3,
    "precio": 5.3,
    "sub": 31.8,
@@ -5674,7 +5674,7 @@ window.MATRIZ_DATOS = {
    "fila": 9,
    "celda": "AI9",
    "p": "ATROPINA 1mg/ml",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.32,
    "sub": 0,
@@ -5686,7 +5686,7 @@ window.MATRIZ_DATOS = {
    "fila": 13,
    "celda": "AI13",
    "p": "DEXAMETASONA 8MG/2ML",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.38,
    "sub": 0,
@@ -5698,7 +5698,7 @@ window.MATRIZ_DATOS = {
    "fila": 15,
    "celda": "AI15",
    "p": "EFEDRINA",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.48,
    "sub": 0,
@@ -5710,7 +5710,7 @@ window.MATRIZ_DATOS = {
    "fila": 18,
    "celda": "AI18",
    "p": "FUROSEMIDA",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.24,
    "sub": 0,
@@ -5722,7 +5722,7 @@ window.MATRIZ_DATOS = {
    "fila": 19,
    "celda": "AI19",
    "p": "HIDROCORTISONA 500MG",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 2,
    "precio": 3.8,
    "sub": 0,
@@ -5734,7 +5734,7 @@ window.MATRIZ_DATOS = {
    "fila": 20,
    "celda": "AI20",
    "p": "KETOROLACO 30MG",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.55,
    "sub": 0,
@@ -5746,7 +5746,7 @@ window.MATRIZ_DATOS = {
    "fila": 23,
    "celda": "AI23",
    "p": "METOCLOPRAMIDA 10 MG INYECTABLE",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 0.28,
    "sub": 0,
@@ -5758,7 +5758,7 @@ window.MATRIZ_DATOS = {
    "fila": 25,
    "celda": "AI25",
    "p": "OMEPREAZOL 40mg",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 1.4,
    "sub": 0,
@@ -5770,7 +5770,7 @@ window.MATRIZ_DATOS = {
    "fila": 26,
    "celda": "AI26",
    "p": "ONDASETRON 8mg/ 4ML",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 5,
    "precio": 1,
    "sub": 0,
@@ -5782,7 +5782,7 @@ window.MATRIZ_DATOS = {
    "fila": 27,
    "celda": "AI27",
    "p": "PARACETAMOL AMP.",
-   "destino": "CIUDAD JARDIN",
+   "destino": "CIUDAD CELESTE",
    "cant": 4,
    "precio": 2.5,
    "sub": 0,
@@ -5794,7 +5794,7 @@ window.MATRIZ_DATOS = {
    "fila": 33,
    "celda": "AK33",
    "p": "SOLUCION OFTALMICA FLUORESCEINA",
-   "destino": "MIRADOR",
+   "destino": "IÑAQUITO",
    "cant": 3,
    "precio": 5,
    "sub": 30,
@@ -5806,7 +5806,7 @@ window.MATRIZ_DATOS = {
    "fila": 34,
    "celda": "AK34",
    "p": "TROPICAMIDA 1 % (MYDRIACIL 15ML) SOLUCIÓN OFTÁLMICA",
-   "destino": "MIRADOR",
+   "destino": "IÑAQUITO",
    "cant": 3,
    "precio": 14.5,
    "sub": 0,
@@ -6050,111 +6050,111 @@ window.MATRIZ_DATOS = {
  ],
  "proveedores": [
   {
-   "p": "Proveedor A",
+   "p": "Fausto",
    "n": 104
   },
   {
-   "p": "PROVEEDOR B",
+   "p": "SOCI",
    "n": 79
   },
   {
-   "p": "PROVEEDOR C",
+   "p": "NOVAMEDIC",
    "n": 67
   },
   {
-   "p": "Proveedor D",
+   "p": "Marlene",
    "n": 27
   },
   {
-   "p": "PROVEEDOR E",
+   "p": "CABRERA",
    "n": 22
   },
   {
-   "p": "PROVEEDOR F",
+   "p": "VANBIOMEDICAL",
    "n": 13
   },
   {
-   "p": "PROVEEDOR G",
+   "p": "MEDIAIR",
    "n": 8
   },
   {
-   "p": "proveedor B",
+   "p": "soci",
    "n": 7
   },
   {
-   "p": "PROVEEDOR H",
+   "p": "FESA",
    "n": 4
   },
   {
-   "p": "PROVEEDOR I",
+   "p": "YOLANDA VASQUEZ",
    "n": 3
   },
   {
-   "p": "PROVEEDOR J",
+   "p": "INTERMÉDICA",
    "n": 3
   },
   {
-   "p": "PROVEEDOR K",
+   "p": "TEXTIQUIM",
    "n": 3
   },
   {
-   "p": "Proveedor L",
+   "p": "Mequimedix",
    "n": 3
   },
   {
-   "p": "Proveedor M",
+   "p": "Fibamedica",
    "n": 3
   },
   {
-   "p": "PROVEEDOR N",
+   "p": "SEREC",
    "n": 2
   },
   {
-   "p": "PROVEEDOR O",
+   "p": "DT MEDICAL",
    "n": 2
   },
   {
-   "p": "PROVEEDOR P",
+   "p": "IESTUDIO",
    "n": 1
   },
   {
-   "p": "PROVEEDOR Q",
+   "p": "NIPRO",
    "n": 1
   },
   {
-   "p": "PROVEEDOR R",
+   "p": "MERCHAN",
    "n": 1
   },
   {
-   "p": "PROVEEDOR S",
+   "p": "BIO-IN",
    "n": 1
   },
   {
-   "p": "PROVEEDOR T",
+   "p": "DEGSO",
    "n": 1
   },
   {
-   "p": "PROVEEDOR U",
+   "p": "BOREAL",
    "n": 1
   },
   {
-   "p": "PROVEEDOR V",
+   "p": "PERFECTECH",
    "n": 1
   },
   {
-   "p": "proveedor A",
+   "p": "fausto",
    "n": 1
   },
   {
-   "p": "proveedor U",
+   "p": "boreal",
    "n": 1
   },
   {
-   "p": "PROVEEDOR W",
+   "p": "INFOLINK",
    "n": 1
   },
   {
-   "p": "PROVEEDOR X",
+   "p": "CODIPEG",
    "n": 1
   }
  ],
@@ -6171,17 +6171,17 @@ window.MATRIZ_DATOS = {
  "totalValor": 35729.79,
  "totalProductos": 417,
  "centrosKardex": [
-  "CM NORTE",
-  "CM SUR",
-  "CM CIUDAD JARDIN",
-  "CM MIRADOR",
-  "CM COLINA",
-  "CM PRADERA",
-  "CM RIBERA",
-  "CM LAGUNA",
-  "CM PARAISO",
-  "CM VALLE",
-  "CM ZNORTE",
-  "TOMA DE MUESTRAS PONIENTE"
+  "CM AMAZONAS",
+  "CM ALBORADA",
+  "CM CIUDAD CELESTE",
+  "CM IÑAQUITO",
+  "CM CALDERON",
+  "CM CAROLINA",
+  "CM CONDADO",
+  "CM CHILLOS",
+  "CM CUMBAYA",
+  "CM KENNEDY",
+  "CM QSUR",
+  "TOMA DE MUESTRAS CARCELÉN"
  ]
 };

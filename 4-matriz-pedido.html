@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paso 4 · Pedido de compra — Kardex Demo</title>
+<title>Paso 4 · Pedido de compra — Kardex Metrored</title>
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="extra.css">
 <style>
@@ -434,7 +434,7 @@ details.hz .cuerpo code{
         <select id="fSitio"></select></div>
       <div><label for="fProv">Proveedor
         <i class="ayu" data-t="Los nombres repetidos">Los que están escritos de dos formas
-          («PROVEEDOR B» y «proveedor B») se juntan aquí en uno solo, marcados con ⚠.</i></label>
+          («SOCI» y «soci») se juntan aquí en uno solo, marcados con ⚠.</i></label>
         <select id="fProv"></select></div>
       <div><label for="fQ">Buscar producto</label>
         <input id="fQ" type="search" placeholder="Parte del nombre…"></div>
@@ -533,7 +533,7 @@ details.hz .cuerpo code{
   </div>
   <div class="card card-p" style="margin-bottom:16px">
     <ol class="decidir">
-      <li><b>¿«ENDOSCOPIA PARAÍSO» es un centro aparte o un servicio dentro de CM Paraíso?</b>
+      <li><b>¿«ENDOSCOPIA CUMBAYÁ» es un centro aparte o un servicio dentro de CM Cumbayá?</b>
         En el kardex, Endoscopía es una hoja; en el pedido es un sitio que pide. No puede ser
         las dos cosas a la vez.</li>
       <li><b>¿Administración, Call Center, SSO y Home Care llevan kardex, o solo piden?</b>
@@ -1223,13 +1223,13 @@ $("#detalleCruce").innerHTML =
       <summary>
         <span class="sev">📄</span><span class="cnt">3</span>
         <span class="tx"><b>«cero papeles» usa sitios que no existen en ningún otro lado</b>
-          <small>Portal, Avenida y Litoral</small></span>
+          <small>Plaza, República y Guayaquil</small></span>
         <span class="abrir">Ver detalle ▾</span>
       </summary>
       <div class="cuerpo">
         <p>Esa hoja pide ${enumera(M.ceroPapeles.items.map(i => "<b>" + esc(i) + "</b>"))} para
           ${enumera(M.ceroPapeles.destinos.map(d => "<b>" + esc(d) + "</b>"))}.</p>
-        <p><b>Portal</b>, <b>Avenida</b> y <b>Litoral</b> no aparecen en ninguna otra hoja ni en el
+        <p><b>Plaza</b>, <b>República</b> y <b>Guayaquil</b> no aparecen en ninguna otra hoja ni en el
           kardex. ¿Son centros, bodegas, o algo más?</p>
       </div>
     </details>` : "");

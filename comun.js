@@ -1,5 +1,5 @@
 /* ============================================================
-   Kardex Demo — base común de la entrega a Compras.
+   Kardex Metrored — base común de la entrega a Compras.
    Todo lo que comparten las cinco pantallas: cálculos del kardex,
    ayudas contextuales, navegación y hoja de validación.
    Funciona sin internet: no usa ninguna librería externa.
@@ -12,9 +12,9 @@
   const CLAVE_VAL  = "kx_entrega_valida_v1"; // las respuestas de la validación
   const CLAVE_AY   = "kx_entrega_ayudas";    // si el modo ayuda está encendido
 
-  const CENTRO_DEMO = "CM PARAISO";
+  const CENTRO_DEMO = "CM CUMBAYA";
   const MES_DEMO = { anio: 2026, mes: 8, nombre: "AGOSTO" };
-  const RESP_DEMO = "Gabriel Mora";
+  const RESP_DEMO = "Leonardo Atiencia";
 
   const CATS = ["SUMINISTROS", "MEDICINA", "ENDOSCOPIA", "LIMPIEZA", "OFICINA", "TONER"];
   const ICONO = {
@@ -234,7 +234,7 @@
         <div class="glifo">KX</div>
         <div>
           <h1>${esc(titulo)}</h1>
-          <div class="sub">${esc(sub || "Kardex digital de insumos · Red Médica Demo")}</div>
+          <div class="sub">${esc(sub || "Kardex digital de insumos · Metrored")}</div>
         </div>
       </div>
       <div class="der">
@@ -307,7 +307,7 @@
           </div>
         </div>
         <div class="guia-pie">
-          <span>📌 Los números que ve son reales: kardex de CM Paraíso, agosto 2026. Escribir aquí no afecta a ningún sistema.</span>
+          <span>📌 Los números que ve son reales: kardex de CM Cumbayá, agosto 2026. Escribir aquí no afecta a ningún sistema.</span>
           <span style="flex:1"></span>
           <a href="glosario.html">📖 Glosario de términos</a>
           <a href="5-validacion.html">✅ Hoja de validación</a>
@@ -351,7 +351,7 @@
     { id: "c2", g: "C", q: "¿Qué unidad va para Oficina y Tóner?",
       como: "Son 106 productos sin unidad: el Excel no la trae. Hay que definirla antes de arrancar." },
     { id: "c3", g: "C", q: "¿Los 12 centros y los productos que entraron o salieron están bien?",
-      como: "Entraron 46 productos, salieron 22, y aparecieron CM Ciudad Jardín y CM Mirador." },
+      como: "Entraron 46 productos, salieron 22, y aparecieron CM Ciudad Celeste y CM Iñaquito." },
 
     { id: "d1", g: "D", q: "¿Desde qué mes arranca y quién registra en cada centro?",
       como: "El primer mes hay que contar la percha para el saldo inicial. Y cada centro necesita un responsable con su clave." }

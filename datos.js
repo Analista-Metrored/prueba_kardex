@@ -1,36 +1,36 @@
-/* Kardex Demo — datos del catálogo oficial.
-   Catálogo: catalogo-demo.xlsx (leído el 17/09/2026).
-   Movimientos de ejemplo: kardex real de CM Paraíso, agosto 2026.
+/* Kardex Metrored — datos del catálogo oficial.
+   Catálogo: kardex 2026 actualizado.xlsx (leído el 17/09/2026).
+   Movimientos de ejemplo: kardex real de CM Cumbayá, agosto 2026.
    Archivo generado automáticamente: no editar a mano. */
 window.KARDEX_DATOS = {
  "generado": "2026-09-17",
- "fuente": "catalogo-demo.xlsx",
- "fuenteMovs": "kardex-demo-agosto.xlsx (CM Paraíso, agosto 2026)",
+ "fuente": "kardex 2026 actualizado.xlsx",
+ "fuenteMovs": "KARDEX ENDOSCOPIA AGOSTO CUMBAYÁ 2026.xlsx (CM Cumbayá, agosto 2026)",
  "centros": [
-  "CM NORTE",
-  "CM SUR",
-  "CM CIUDAD JARDIN",
-  "CM MIRADOR",
-  "CM COLINA",
-  "CM PRADERA",
-  "CM RIBERA",
-  "CM LAGUNA",
-  "CM PARAISO",
-  "CM VALLE",
-  "CM ZNORTE",
-  "TOMA DE MUESTRAS PONIENTE"
+  "CM AMAZONAS",
+  "CM ALBORADA",
+  "CM CIUDAD CELESTE",
+  "CM IÑAQUITO",
+  "CM CALDERON",
+  "CM CAROLINA",
+  "CM CONDADO",
+  "CM CHILLOS",
+  "CM CUMBAYA",
+  "CM KENNEDY",
+  "CM QSUR",
+  "TOMA DE MUESTRAS CARCELÉN"
  ],
  "supervisoras": [
-  "Lcda. Ana Rivas",
-  "Beatriz Soto",
-  "Lcda. Carmen Ortiz",
-  "Lcda. Diana Peña",
-  "Lcda. Elena Vargas",
-  "Lcda. Fabiola Ruiz",
-  "Gabriel Mora",
-  "Lcda. Helena Nieto",
-  "Lcda. Irene Salas",
-  "Lcda. Julia Ponce"
+  "Lcda. Cindy Camacho",
+  "Verónica Zambrano",
+  "Lcda. Berenice Galvéz",
+  "Lcda. Carla Merchán",
+  "Lcda. Ligia Checa",
+  "Lcda. Cristina Cruz",
+  "Leonardo Atiencia",
+  "Lcda. Evelyn Carrasco",
+  "Lcda. Jasmín Bastidas",
+  "Lcda. Jacqueline Oñate"
  ],
  "meses": [
   "ENERO",
@@ -125,7 +125,7 @@ window.KARDEX_DATOS = {
     "u": ""
    },
    {
-    "p": "CARPETAS AZULES CON LOGO",
+    "p": "CARPETAS AZULES LOGO METRORED",
     "u": ""
    },
    {
@@ -321,7 +321,7 @@ window.KARDEX_DATOS = {
     "u": ""
    },
    {
-    "p": "RECETARIOS RED MEDICA DEMO (100 U)",
+    "p": "RECETARIOS METRORED (100 U)",
     "u": ""
    },
    {
@@ -1141,7 +1141,7 @@ window.KARDEX_DATOS = {
     "u": "ROLLO"
    },
    {
-    "p": "ROLLO DE PAPEL. PARA EKG CARDIOFAX ( RIBERA)",
+    "p": "ROLLO DE PAPEL. PARA EKG CARDIOFAX ( CONDADO)",
     "u": "UNIDAD"
    },
    {
@@ -3320,7 +3320,7 @@ window.KARDEX_DATOS = {
     "CARPETA DE CARTON",
     "CARPETA PLÁSTICA DOBLE ANILLO COLOR AZUL",
     "CARPETA TAPA PLÁSTICA TRANSPARENTE CON BINCHA",
-    "CARPETAS AZULES CON LOGO",
+    "CARPETAS AZULES LOGO METRORED",
     "CARTONES GRANDES PARA ENVIO DOCUMENTACIÓN IESS",
     "CARTONES MEDIANOS PARA ENVIO DOCUMENTACIÓN IESS",
     "CARTULINA BRISTO AZUL A4",
@@ -3369,7 +3369,7 @@ window.KARDEX_DATOS = {
     "POST IT 1 1/2 *2 EAGLE AMARILLO",
     "POST IT 3 X 3 EAGLE AMARILLO",
     "PROTECTOR DE DOCUMENTOS GRUESO",
-    "RECETARIOS RED MEDICA DEMO (100 U)",
+    "RECETARIOS METRORED (100 U)",
     "REGLA PLÁSTICA ARTESCO",
     "RESALTADOR VARIOS COLORES",
     "RESMAS DE PAPEL BOND",

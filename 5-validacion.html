@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paso 5 · Hoja de validación — Kardex Demo</title>
+<title>Paso 5 · Hoja de validación — Kardex Metrored</title>
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="extra.css">
 <style>
@@ -145,7 +145,7 @@ function pintarActa() {
       <div class="logo">MR</div>
       <div style="flex:1;min-width:200px">
         <h2>Kardex digital de insumos — acta de validación</h2>
-        <div class="sub">Red Médica Demo · Centro Médico Ambulatorio Metroambulat S.A.</div>
+        <div class="sub">Metrored · Centro Médico Ambulatorio Metroambulat S.A.</div>
       </div>
       <div style="text-align:right;font-size:11.5px;color:var(--ink-3)">
         <div>Fecha</div><div style="font-weight:800;color:var(--ink)">${KX.hoyTexto()}</div>
@@ -209,7 +209,7 @@ function textoPlano() {
   const v = KX.valLeer(), m = v.meta || {}, r = KX.valResumen();
   const L = [];
   L.push("KARDEX DIGITAL DE INSUMOS — ACTA DE VALIDACIÓN");
-  L.push("Red Médica Demo · " + KX.hoyTexto());
+  L.push("Metrored · " + KX.hoyTexto());
   L.push("Validado por: " + (m.nombre || "—") + (m.cargo ? " (" + m.cargo + ")" : ""));
   L.push(`Resultado: ${r.ok} bien · ${r.no} por corregir · ${r.dd} con dudas · ${r.total - r.resp} sin responder`);
   KX.GRUPOS.forEach(g => {

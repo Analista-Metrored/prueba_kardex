@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paso 3 · Catálogo y unidades de medida — Kardex Demo</title>
+<title>Paso 3 · Catálogo y unidades de medida — Kardex Metrored</title>
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="extra.css">
 <style>
@@ -40,10 +40,10 @@
   <h2 class="sec-h">Lo que trae el archivo actualizado</h2>
   <div class="kpis" id="kpis" style="margin-bottom:10px"></div>
   <p class="explica" style="max-width:82ch">
-    Todo salió de <b>catalogo-demo.xlsx</b>, el último archivo recibido. No se cambió ningún dato.
+    Todo salió de <b>kardex 2026 actualizado.xlsx</b>, el último archivo recibido. No se cambió ningún dato.
     <i class="ayu" data-t="¿Y los saldos?">
       Ese archivo viene <b>en blanco</b>: trae la lista de productos pero ningún saldo ni consumo. Por eso los
-      números de los pasos 1 y 2 son del kardex real de CM Paraíso de agosto.
+      números de los pasos 1 y 2 son del kardex real de CM Cumbayá de agosto.
     </i>
   </p>
 
@@ -218,8 +218,8 @@ if (sinU) {
 }
 alertas.push({
   cls: "ambar", ic: "🏥", t: "Cambiaron los centros médicos",
-  p: `Sumó <b>CM Ciudad Jardín</b> y <b>CM Mirador</b>, y <b>Toma de Muestras Colina</b> pasó a
-      <b>Poniente</b>. Son 12 en vez de 10. ¿Es correcto? ¿Los nuevos arrancan desde el primer mes?`
+  p: `Sumó <b>CM Ciudad Celeste</b> y <b>CM Iñaquito</b>, y <b>Toma de Muestras Calderón</b> pasó a
+      <b>Carcelén</b>. Son 12 en vez de 10. ¿Es correcto? ¿Los nuevos arrancan desde el primer mes?`
 });
 $("#alertas").innerHTML = alertas.map(a => `
   <div class="alerta ${a.cls}"><span class="ic">${a.ic}</span>
@@ -305,8 +305,8 @@ $("#unidades").innerHTML = (D.unidades || []).map(u =>
   `<span class="ojo">SIN DEFINIR<b>${sinU}</b></span>`;
 
 /* ---------- centros ---------- */
-const ANTES = ["CM NORTE", "CM SUR", "CM COLINA", "CM PRADERA", "CM RIBERA",
-  "CM LAGUNA", "CM PARAISO", "CM VALLE", "CM ZNORTE", "TOMA DE MUESTRAS COLINA"];
+const ANTES = ["CM AMAZONAS", "CM ALBORADA", "CM CALDERON", "CM CAROLINA", "CM CONDADO",
+  "CM CHILLOS", "CM CUMBAYA", "CM KENNEDY", "CM QSUR", "TOMA DE MUESTRAS CALDERON"];
 $("#tCentros").innerHTML = D.centros.map((c, i) => {
   const nuevo = !ANTES.some(a => KX.norm(a) === KX.norm(c));
   return `<tr>
