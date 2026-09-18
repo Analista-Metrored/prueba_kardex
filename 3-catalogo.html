@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 3 · Catálogo y unidades de medida — Kardex Demo</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="extra.css">
+<style>
+  .filtros{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;align-items:end}
+  .lista-cambios{columns:2;column-gap:26px;font-size:13.5px;line-height:1.6;color:var(--ink-2);margin:0;padding-left:18px}
+  .lista-cambios li{break-inside:avoid;margin-bottom:2px}
+  @media(max-width:700px){.lista-cambios{columns:1}}
+  .alerta{
+    display:flex;gap:12px;align-items:flex-start;border-radius:var(--r);padding:12px 15px;margin-bottom:11px;
+    border:1px solid var(--line);background:var(--surf);
+  }
+  .alerta.roja{border-color:color-mix(in srgb,var(--crit) 45%,transparent);background:var(--crit-cl)}
+  .alerta.ambar{border-color:color-mix(in srgb,var(--warn) 45%,transparent);background:var(--warn-cl)}
+  .alerta .ic{font-size:19px;flex:none;line-height:1.2}
+  .alerta h4{font-size:14.5px;margin:0 0 3px}
+  .alerta p{margin:0;font-size:13.5px;line-height:1.55;color:var(--ink-2);max-width:82ch}
+  .uni-lista{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .uni-lista span{
+    background:var(--surf-2);border:1px solid var(--line);border-radius:7px;padding:4px 10px;
+    font-size:12.5px;font-weight:700;color:var(--ink-2);
+  }
+  .uni-lista span b{color:var(--ink-3);font-weight:800;margin-left:5px}
+  .uni-lista span.ojo{background:var(--warn-cl);border-color:var(--warn);color:var(--warn)}
+  table.cat td.pr{white-space:normal;min-width:260px;font-weight:600}
+  table.cat td.est{white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="cab"></div>
+
+<div class="wrap">
+  <div id="guia"></div>
+
+  <h2 class="sec-h">Lo que trae el archivo actualizado</h2>
+  <div class="kpis" id="kpis" style="margin-bottom:10px"></div>
+  <p class="explica" style="max-width:82ch">
+    Todo salió de <b>catalogo-demo.xlsx</b>, el último archivo recibido. No se cambió ningún dato.
+    <i class="ayu" data-t="¿Y los saldos?">
+      Ese archivo viene <b>en blanco</b>: trae la lista de productos pero ningún saldo ni consumo. Por eso los
+      números de los pasos 1 y 2 son del kardex real de CM Paraíso de agosto.
+    </i>
+  </p>
+
+  <h2 class="sec-h" style="margin-top:24px">Lo que hay que resolver antes de arrancar</h2>
+  <div id="alertas" style="margin-bottom:8px"></div>
+  <p class="explica" style="max-width:82ch">
+    No son errores del sistema: son <b>decisiones que solo Compras puede tomar</b>.
+  </p>
+
+  <h2 class="sec-h" style="margin-top:24px">El catálogo, producto por producto</h2>
+  <div class="card card-p" style="margin-bottom:14px">
+    <div class="filtros">
+      <div><label for="fCat">Hoja</label><select id="fCat"></select></div>
+      <div><label for="fQ">Buscar producto</label><input id="fQ" type="search" placeholder="Escriba parte del nombre…"></div>
+      <div><label for="fEst">Mostrar</label>
+        <select id="fEst">
+          <option value="">Todos los productos</option>
+          <option value="nuevo">Solo los que entraron</option>
+          <option value="cambio">Solo los que cambiaron de unidad</option>
+          <option value="sinu">Solo los que no tienen unidad</option>
+        </select>
+      </div>
+      <div class="btns">
+        <button class="b-out" onclick="exportar()">⬇️ Bajar la lista a Excel</button>
+      </div>
+    </div>
+    <p class="explica" style="margin:12px 0 0;max-width:82ch">
+      <b>Lo que hay que revisar es la columna «Unidad»:</b> cuando alguien anota un 3, ¿3 de qué?
+      <i class="ayu" data-t="¿Por qué importa tanto?">
+        Si un centro cuenta las mascarillas en <b>cajas</b> y otro en <b>unidades</b>, el consumo no se puede
+        comparar y el pedido sale mal por un factor de 50. Ya pasa hoy: el mismo producto aparece como CAJA
+        en un archivo y como PAQUETE en otro.
+      </i>
+      <i class="ayu" data-t="Las marcas de colores">
+        <b>Entró</b> (verde): no estaba antes. <b>Unidad cambiada</b> (ámbar): confirmar cuál de las dos es
+        la buena. <b>Sin unidad</b> (rojo): el archivo no dice en qué se cuenta.
+      </i>
+      <i class="ayu" data-t="Bajar la lista a Excel">
+        Baja la tabla con dos columnas vacías, <b>UNIDAD CORREGIDA</b> y <b>OBSERVACIÓN</b>, por si prefiere
+        revisarla ahí y devolver el archivo. Sirve igual que responder en pantalla.
+      </i>
+    </p>
+    <p style="font-size:13px;color:var(--ink-3);margin:10px 0 0" id="cuenta"></p>
+  </div>
+  <div class="tabla-wrap" style="max-height:60vh;overflow:auto">
+    <table class="cat">
+      <thead><tr><th>Producto</th><th>Unidad</th><th>Situación</th><th>Antes decía</th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <h2 class="sec-h" style="margin-top:26px">Productos que salieron del catálogo</h2>
+  <div class="card card-p" style="margin-bottom:14px">
+    <p style="margin:0 0 11px;font-size:14px;color:var(--ink-2);max-width:82ch">
+      Estaban antes y ya no aparecen. <b>Confirmar que se retiraron a propósito.</b>
+      <i class="ayu" data-t="¿Por qué importa?">
+        Si se sigue comprando pero no está en la lista, el centro no tiene dónde anotarlo. Y si solo le
+        cambiaron el nombre, el saldo anterior hay que pasarlo al nombre nuevo, no empezar de cero.
+      </i>
+    </p>
+    <div id="quitados"></div>
+  </div>
+
+  <h2 class="sec-h" style="margin-top:26px">Unidades de medida en uso</h2>
+  <div class="card card-p" style="margin-bottom:14px">
+    <p style="margin:0;font-size:14px;color:var(--ink-2);max-width:82ch">
+      Todas las formas de contar que hay hoy, con cuántos productos usa cada una. La propuesta es
+      <b>dejar una sola lista cerrada</b>.
+      <i class="ayu" data-t="¿«Lista cerrada»?">
+        Que la unidad se elija de una lista fija en vez de escribirla a mano, para que no convivan «GALON»,
+        «GALÓN» y «Galon» como si fueran tres cosas distintas.
+      </i>
+    </p>
+    <div class="uni-lista" id="unidades"></div>
+  </div>
+
+  <h2 class="sec-h" style="margin-top:26px">Centros médicos y responsables</h2>
+  <div class="card card-p" style="margin-bottom:14px">
+    <p style="margin:0 0 11px;font-size:14px;color:var(--ink-2);max-width:82ch">
+      Así vinieron en el archivo. <b>Confirme que los 12 centros y sus responsables son correctos.</b>
+      <i class="ayu" data-t="Ojo con las parejas">
+        En el Excel, centros y supervisoras están en dos columnas sueltas, no emparejadas. Aquí se muestran
+        en el orden en que aparecen. <b>Si alguna pareja está cruzada hay que decirlo</b>: saldría mal
+        impresa en el documento oficial.
+      </i>
+    </p>
+    <div class="tabla-wrap">
+      <table><thead><tr><th>#</th><th>Centro médico</th><th>Responsable</th><th>Situación</th></tr></thead>
+      <tbody id="tCentros"></tbody></table>
+    </div>
+  </div>
+
+  <div id="cajaVal"></div>
+</div>
+
+<script src="datos.js"></script>
+<script src="comun.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const D = KX.D;
+
+KX.montar({ paso: 3, titulo: "Catálogo y unidades de medida", sub: "Paso 3 · Lo que hay que confirmar producto por producto", etiqueta: "Paso 3 de 5" });
+
+document.getElementById("guia").innerHTML = KX.panelPantalla({
+  id: "catalogo",
+  resumen: "La lista oficial de productos que el sistema va a controlar, y lo que falta decidir sobre ella.",
+  queEs: `No es una pantalla del sistema: es <b>la materia prima</b> con la que el sistema va a funcionar.
+    El catálogo tal como vino en el archivo actualizado, lo que cambió y lo que quedó pendiente.
+    <b>Es donde más falta hace el criterio de Compras</b>: son decisiones de negocio, no de programación.`,
+  quien: "Compras, con bodega central y la supervisión de enfermería.",
+  cuando: "Una vez, antes de arrancar.",
+  enPantalla: [
+    { q: "Las cajas de colores", d: "Los problemas encontrados en el archivo y qué decisión hace falta." },
+    { q: "La tabla del catálogo", d: "Los 397 productos, con su unidad y qué pasó con cada uno." },
+    { q: "Los productos que salieron", d: "Los que estaban antes y ya no están. Confirmar que fue a propósito." },
+    { q: "Las unidades en uso", d: "Las marcadas en ámbar están escritas de más de una manera." }
+  ],
+  probar: [
+    "Ponga <b>Mostrar</b> en «Solo los que no tienen unidad» y elija la hoja <b>OFICINA</b>.",
+    "Ponga <b>Mostrar</b> en «Solo los que cambiaron de unidad» y mire la columna <b>Antes decía</b>.",
+    "Busque un producto que conozca bien y confirme si la unidad es la correcta."
+  ]
+});
+
+/* ---------- indicadores ---------- */
+const totProd = KX.totalProductos();
+const sinU = (D.alertas || []).filter(a => a.tipo === "sin-unidad").reduce((s, a) => s + a.n, 0);
+let nNuevos = 0, nQuit = 0, nUni = 0;
+KX.CATS.forEach(c => {
+  const x = D.cambios[c] || { nuevos: [], quitados: [], unidad: [] };
+  nNuevos += x.nuevos.length; nQuit += x.quitados.length; nUni += x.unidad.length;
+});
+$("#kpis").innerHTML = `
+  <div class="kpi pri"><div class="n">${totProd}</div><div class="l">Productos en total</div>
+    <div class="h">${KX.CATS.map(c => KX.catalogo(c).length + " en " + c.toLowerCase()).join(" · ")}.</div></div>
+  <div class="kpi ok"><div class="n">${nNuevos}</div><div class="l">Entraron</div>
+    <div class="h">Productos que no estaban en el archivo anterior.</div></div>
+  <div class="kpi warn"><div class="n">${nUni}</div><div class="l">Cambiaron de unidad</div>
+    <div class="h">Ya existían, pero ahora se cuentan de otra forma. Conviene confirmar cuál es la buena.</div></div>
+  <div class="kpi crit"><div class="n">${sinU}</div><div class="l">Sin unidad definida</div>
+    <div class="h">Todos los de Oficina y Tóner: esas hojas del Excel no tienen columna de unidad.</div></div>`;
+
+/* ---------- alertas ---------- */
+const alertas = [];
+(D.alertas || []).forEach(a => {
+  if (a.tipo === "sin-unidad") return; // se agrupan abajo en una sola
+  if (a.tipo === "unidad-varias") {
+    const det = a.items.map(x => "<b>" + x.formas.map(KX.esc).join("</b> y <b>") + "</b>").join("; ");
+    alertas.push({
+      cls: "ambar", ic: "✏️", t: "La misma unidad escrita de dos formas",
+      p: `Aparecen ${det}. Para una persona es lo mismo; <b>para el sistema son dos unidades distintas</b>
+          y los saldos no se suman entre sí.`
+    });
+  }
+  if (a.tipo === "con-consumo-sin-catalogo") {
+    const l = a.items.map(x => `<b>${KX.esc(x.p)}</b> (${KX.esc(x.cat.toLowerCase())})`).join(", ");
+    alertas.push({
+      cls: "ambar", ic: "🔎", t: "Producto con movimiento que ya no está en el catálogo",
+      p: `Hay movimiento de ${l} en agosto, pero ya no aparece en el archivo actualizado. ¿Se retiró a
+          propósito o le cambiaron el nombre?`
+    });
+  }
+});
+if (sinU) {
+  const porHoja = (D.alertas || []).filter(a => a.tipo === "sin-unidad")
+    .map(a => `<b>${a.n}</b> en ${KX.esc(a.cat.toLowerCase())}`).join(" y ");
+  alertas.unshift({
+    cls: "roja", ic: "⚠️", t: `${sinU} productos no tienen unidad de medida`,
+    p: `Son ${porHoja}. Esas dos hojas del Excel no tienen columna de unidad. Mientras no se defina,
+        <b>cuando alguien anote «5» nadie sabrá si son 5 cajas, 5 resmas o 5 hojas.</b>`
+  });
+}
+alertas.push({
+  cls: "ambar", ic: "🏥", t: "Cambiaron los centros médicos",
+  p: `Sumó <b>CM Ciudad Jardín</b> y <b>CM Mirador</b>, y <b>Toma de Muestras Colina</b> pasó a
+      <b>Poniente</b>. Son 12 en vez de 10. ¿Es correcto? ¿Los nuevos arrancan desde el primer mes?`
+});
+$("#alertas").innerHTML = alertas.map(a => `
+  <div class="alerta ${a.cls}"><span class="ic">${a.ic}</span>
+    <div><h4>${a.t}</h4><p>${a.p}</p></div></div>`).join("");
+
+/* ---------- tabla del catálogo ---------- */
+$("#fCat").innerHTML = `<option value="">Todas las hojas</option>` +
+  KX.CATS.map(c => `<option value="${c}">${KX.ICONO[c]} ${c} (${KX.catalogo(c).length})</option>`).join("");
+["fCat", "fQ", "fEst"].forEach(id => { const e = $("#" + id); e.oninput = e.onchange = pintar; });
+
+function estadoDe(cat, p) {
+  const c = D.cambios[cat] || { nuevos: [], unidad: [] };
+  if (!p.u) return "sinu";
+  if (c.nuevos.indexOf(p.p) >= 0) return "nuevo";
+  if (c.unidad.some(x => x.p === p.p)) return "cambio";
+  return "";
+}
+function antesDecia(cat, p) {
+  const c = D.cambios[cat] || { unidad: [] };
+  const f = c.unidad.find(x => x.p === p.p);
+  return f ? (f.antes || "(vacío)") : "";
+}
+
+function listar() {
+  const cat = $("#fCat").value, q = KX.norm($("#fQ").value.trim()), est = $("#fEst").value;
+  const out = [];
+  (cat ? [cat] : KX.CATS).forEach(c => KX.catalogo(c).forEach(p => {
+    const e = estadoDe(c, p);
+    if (q && !KX.norm(p.p).includes(q)) return;
+    if (est === "nuevo" && e !== "nuevo") return;
+    if (est === "cambio" && e !== "cambio") return;
+    if (est === "sinu" && e !== "sinu") return;
+    out.push({ cat: c, p: p.p, u: p.u, e, antes: antesDecia(c, p) });
+  }));
+  return out;
+}
+
+const MARCA = {
+  nuevo: `<span class="chip nuevo">Entró</span>`,
+  cambio: `<span class="chip cambio">Unidad cambiada</span>`,
+  sinu: `<span class="chip fuera">Sin unidad</span>`,
+  "": `<span class="chip igual">Sin cambios</span>`
+};
+
+function pintar() {
+  const arr = listar();
+  $("#cuenta").textContent = `Mostrando ${arr.length} de ${totProd} productos.`;
+  $("#tbody").innerHTML = arr.length ? arr.map(x => `
+    <tr>
+      <td class="pr">${KX.esc(x.p)}<div style="font-size:11px;color:var(--ink-3);font-weight:800;letter-spacing:.05em">${KX.ICONO[x.cat]} ${KX.esc(x.cat)}</div></td>
+      <td class="u${x.u ? "" : " vacia"}">${x.u ? KX.esc(x.u) : "SIN DEFINIR"}</td>
+      <td class="est">${MARCA[x.e]}</td>
+      <td style="color:var(--ink-3)">${x.antes ? KX.esc(x.antes) : ""}</td>
+    </tr>`).join("")
+    : `<tr><td colspan="4" class="vacio">Ningún producto coincide con el filtro.</td></tr>`;
+}
+
+function exportar() {
+  const arr = listar();
+  const out = [["Catálogo del kardex — revisión de Compras"], ["Archivo de origen", D.fuente], []];
+  out.push(["HOJA", "PRODUCTO", "UNIDAD SEGÚN EL ARCHIVO", "SITUACIÓN", "ANTES DECÍA", "UNIDAD CORREGIDA", "OBSERVACIÓN"]);
+  const T = { nuevo: "Entró", cambio: "Unidad cambiada", sinu: "Sin unidad", "": "Sin cambios" };
+  arr.forEach(x => out.push([x.cat, x.p, x.u, T[x.e], x.antes, "", ""]));
+  KX.descargarCSV("Catalogo-kardex-para-revisar.csv", out);
+}
+
+/* ---------- productos que salieron ---------- */
+$("#quitados").innerHTML = KX.CATS.map(c => {
+  const q = (D.cambios[c] || {}).quitados || [];
+  if (!q.length) return "";
+  return `<div style="margin-bottom:14px">
+    <div class="sec-h" style="margin-bottom:6px">${KX.ICONO[c]} ${KX.esc(c)} · ${q.length}</div>
+    <ul class="lista-cambios">${q.map(p => `<li>${KX.esc(p)}</li>`).join("")}</ul>
+  </div>`;
+}).join("") || `<p class="vacio">No salió ningún producto.</p>`;
+
+/* ---------- unidades ---------- */
+const dobles = new Set();
+(D.alertas || []).filter(a => a.tipo === "unidad-varias").forEach(a =>
+  a.items.forEach(x => x.formas.forEach(f => dobles.add(f))));
+$("#unidades").innerHTML = (D.unidades || []).map(u =>
+  `<span class="${dobles.has(u.u) ? "ojo" : ""}">${KX.esc(u.u)}<b>${u.n}</b></span>`).join("") +
+  `<span class="ojo">SIN DEFINIR<b>${sinU}</b></span>`;
+
+/* ---------- centros ---------- */
+const ANTES = ["CM NORTE", "CM SUR", "CM COLINA", "CM PRADERA", "CM RIBERA",
+  "CM LAGUNA", "CM PARAISO", "CM VALLE", "CM ZNORTE", "TOMA DE MUESTRAS COLINA"];
+$("#tCentros").innerHTML = D.centros.map((c, i) => {
+  const nuevo = !ANTES.some(a => KX.norm(a) === KX.norm(c));
+  return `<tr>
+    <td style="color:var(--ink-3);font-weight:800">${i + 1}</td>
+    <td style="font-weight:600">${KX.esc(c)}</td>
+    <td>${KX.esc((D.supervisoras || [])[i] || "—")}</td>
+    <td>${nuevo ? `<span class="chip nuevo">Nuevo o con otro nombre</span>` : `<span class="chip igual">Ya estaba</span>`}</td>
+  </tr>`;
+}).join("");
+
+document.getElementById("cajaVal").innerHTML = KX.cajaValidar("C");
+KX.pintarValidacion();
+KX.expandirAyudas();
+pintar();
+</script>
+</body>
+</html>

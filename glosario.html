@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glosario — Kardex Demo</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+<div id="cab"></div>
+
+<div class="wrap angosto">
+
+  <div class="card card-p" style="margin-bottom:16px">
+    <h2>Glosario</h2>
+    <p class="cap" style="margin-top:3px">Las palabras que aparecen en las pantallas y en las reuniones, explicadas sin tecnicismos.</p>
+    <p class="explica" style="margin:13px 0 0">
+      Si alguna palabra de este glosario le resulta confusa cuando la use el equipo de desarrollo,
+      <b>pregúntelo</b>. Buena parte de los proyectos que salen mal, salen mal porque cada área entendía
+      una cosa distinta con la misma palabra.
+    </p>
+  </div>
+
+  <h2 class="sec-h">Del kardex y del inventario</h2>
+  <div class="card card-p" style="margin-bottom:16px">
+    <dl class="glo">
+      <dt>Kardex</dt>
+      <dd>La hoja donde se anota, producto por producto, lo que había, lo que entró y lo que se fue usando.
+        Es un registro de movimiento, no una foto: sirve para saber <b>cómo</b> se llegó al saldo de hoy,
+        no solo cuánto hay.</dd>
+
+      <dt>Saldo inicial</dt>
+      <dd>Lo que había en la percha el primer día del mes. En el sistema definitivo se arrastra solo desde el
+        saldo final del mes anterior; hoy, en el Excel, se vuelve a teclear a mano y por eso a veces no cuadra.</dd>
+
+      <dt>Ingreso</dt>
+      <dd>Lo que llegó de bodega central durante el mes. Es lo que <b>suma</b>.</dd>
+
+      <dt>Egreso o consumo</dt>
+      <dd>Lo que se usó. Es lo que <b>resta</b>. En la pantalla del paso 1 se anota día por día, y la columna
+        «Egreso» es la suma de todos esos días.</dd>
+
+      <dt>Saldo final</dt>
+      <dd>Lo que debería quedar: saldo inicial + ingreso − egreso. La palabra clave es <b>debería</b>: si al
+        contar la percha no coincide, hay una diferencia que investigar.</dd>
+
+      <dt>Saldo negativo</dt>
+      <dd>Cuando la cuenta da menos de cero. Físicamente es imposible —no se puede gastar lo que no hay—, así
+        que siempre significa <b>un error de registro</b>: o no se anotó un ingreso, o se anotó consumo de más.
+        En el Excel actual estos errores existen y nadie los ve; aquí la casilla se pone roja al instante.</dd>
+
+      <dt>Unidad de medida (o presentación)</dt>
+      <dd>En qué se cuenta el producto: unidad, caja de 100, galón, paquete de 10. <b>Es el dato más delicado
+        de todo el catálogo.</b> Si dos centros usan unidades distintas para el mismo producto, ni los saldos
+        ni los pedidos se pueden comparar.</dd>
+
+      <dt>Catálogo</dt>
+      <dd>La lista oficial de productos que el sistema controla, con su unidad. Es la «lista maestra»: si un
+        producto no está en el catálogo, no hay dónde anotarlo.</dd>
+
+      <dt>Hoja o categoría</dt>
+      <dd>Las seis divisiones del kardex: Suministros, Medicina, Endoscopía, Limpieza, Oficina y Tóner.
+        Son las mismas pestañas del Excel de hoy.</dd>
+
+      <dt>Punto de reposición o mínimo</dt>
+      <dd>La cantidad a partir de la cual hay que volver a pedir. Si se define uno por producto, el sistema
+        puede avisar solo, sin esperar al cierre de mes. Hoy no existe.</dd>
+
+      <dt>Conteo físico</dt>
+      <dd>Contar de verdad lo que hay en la percha. Es obligatorio el primer mes: el saldo inicial con el que
+        arranca el sistema se toma de la percha, no del Excel, porque el Excel ya trae errores acumulados.</dd>
+    </dl>
+  </div>
+
+  <h2 class="sec-h">Del proyecto y del sistema</h2>
+  <div class="card card-p" style="margin-bottom:16px">
+    <dl class="glo">
+      <dt>Maqueta funcional (o prototipo)</dt>
+      <dd>Pantallas que se ven y se usan como el sistema real y que calculan de verdad, pero que todavía no
+        guardan en un servidor central. Sirven para validar la forma <b>antes</b> de gastar semanas
+        construyendo el fondo. Es exactamente lo que usted está revisando.</dd>
+
+      <dt>Módulo</dt>
+      <dd>Una parte completa de un sistema: sus pantallas, sus reglas, su base de datos, sus usuarios y su
+        conexión con el resto. Lo que hay hoy es la <b>cara</b> del módulo de kardex, no el módulo completo.</dd>
+
+      <dt>Base de datos</dt>
+      <dd>El lugar central donde se guardan los datos para que estén disponibles desde cualquier computador y
+        para todos a la vez. Es lo que hoy falta: por eso lo que usted escriba en esta maqueta se queda en
+        este computador.</dd>
+
+      <dt>Business Central</dt>
+      <dd>El sistema administrativo de la institución (el ERP). La pregunta abierta es qué datos deben viajar
+        entre el kardex y Business Central: por ejemplo, que los ingresos de bodega lleguen desde ahí, o que
+        el consumo del mes se devuelva para costeo.</dd>
+
+      <dt>API o integración</dt>
+      <dd>La forma en que dos sistemas se pasan datos solos, sin que nadie copie y pegue. Cuando en la reunión
+        se habla de «validar las APIs con Business Central», se está hablando de esto.</dd>
+
+      <dt>Sprint</dt>
+      <dd>Un período corto de trabajo —normalmente una o dos semanas— con un conjunto acotado de tareas y una
+        revisión al final. El kardex se está desarrollando dentro del sprint semanal de Desarrollo de Compras.</dd>
+
+      <dt>Validar</dt>
+      <dd>Revisar y decir si sirve o no. <b>No implica aprobar un gasto ni comprometerse técnicamente</b>:
+        implica confirmar que lo que se está construyendo responde a cómo trabaja Compras de verdad.</dd>
+
+      <dt>Matriz de pedido</dt>
+      <dd>El archivo de Excel con el que hoy se arma la compra del mes: producto en la fila, sitio que pide en
+        la columna, y el precio para valorarlo. <b>Es lo contrario del kardex</b>: el kardex registra lo que ya
+        se gastó; la matriz pide lo que hace falta.</dd>
+
+      <dt>Destino</dt>
+      <dd>En la matriz de pedido, cada columna donde alguien pide. No siempre es un centro médico: también hay
+        áreas como Administración o Call Center, y servicios como Endoscopía.</dd>
+
+      <dt>Catálogo maestro</dt>
+      <dd>Una sola lista oficial de productos que usan todos los procesos —el kardex, el pedido y la
+        contabilidad— en vez de una copia por archivo. Así, corregir una unidad de medida se hace una vez y
+        vale para todos.</dd>
+
+      <dt>Exportar</dt>
+      <dd>Bajar los datos de la pantalla a un archivo que se abre en Excel. En estas pantallas, el archivo se
+        descarga a la carpeta de Descargas y se abre con doble clic.</dd>
+
+      <dt>PDF</dt>
+      <dd>Un documento que se ve igual en cualquier computador y no se puede modificar sin dejar rastro. Se
+        genera desde el botón <b>Imprimir</b>, eligiendo «Guardar como PDF» en la lista de impresoras.</dd>
+    </dl>
+  </div>
+
+  <div class="card card-p">
+    <h2>¿Y si algo no está en este glosario?</h2>
+    <p style="font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:9px 0 0">
+      Anótelo en la observación del punto que esté validando, o en el comentario general de la
+      <a href="5-validacion.html">hoja de validación</a>. Si una palabra no se entiende aquí, tampoco se va a
+      entender cuando el sistema esté funcionando en los doce centros.
+    </p>
+  </div>
+
+</div>
+
+<script src="datos.js"></script>
+<script src="comun.js"></script>
+<script>
+KX.montar({ paso: "G", titulo: "Glosario", sub: "Las palabras del kardex, explicadas", etiqueta: "Consulta" });
+</script>
+</body>
+</html>

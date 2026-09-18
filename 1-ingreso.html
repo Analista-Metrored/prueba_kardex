@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 1 · Registro diario del consumo — Kardex Demo</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="extra.css">
+<style>
+  .barra-f{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:end;margin-bottom:12px}
+  .barra-f .acciones{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .ident{display:flex;gap:18px;flex-wrap:wrap;background:var(--pri-cl);border-radius:9px;padding:9px 13px;margin-bottom:12px}
+  .ident div{font-size:13px;color:var(--ink-2)}
+  .ident b{display:block;color:var(--ink);font-size:14px}
+
+  .hoja-wrap{overflow:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surf);max-height:70vh}
+  table.hoja{border-collapse:separate;border-spacing:0;font-size:12.5px;width:max-content;min-width:100%}
+  table.hoja th,table.hoja td{border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:0;white-space:nowrap}
+  table.hoja thead th{
+    position:sticky;top:0;z-index:3;background:var(--surf-2);color:var(--ink-2);
+    font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:7px 6px;text-align:center;
+  }
+  table.hoja thead th.dia{min-width:34px;font-size:12px;letter-spacing:0;color:var(--ink-3)}
+  table.hoja thead th.dia.hoy{background:var(--pri);color:#fff}
+  table.hoja thead th.dia.futuro{color:color-mix(in srgb,var(--ink-3) 55%,transparent)}
+  table.hoja th.prodh{left:0;z-index:5;text-align:left;min-width:250px;padding-left:12px;border-right:2px solid var(--line)}
+  table.hoja td.prodc{
+    position:sticky;left:0;z-index:2;background:var(--surf);border-right:2px solid var(--line);
+    padding:6px 12px;white-space:normal;min-width:250px;max-width:320px;font-weight:600;line-height:1.25;
+  }
+  table.hoja td.prodc small{display:block;font-size:10.5px;color:var(--ink-3);font-weight:800;letter-spacing:.05em;margin-top:1px}
+  table.hoja td.prodc small.falta{color:var(--crit)}
+  tr.fila:hover td{background:var(--surf-2)}
+  tr.fila:hover td.prodc{background:var(--surf-2)}
+
+  td.celda{text-align:center}
+  td.celda input{
+    width:100%;min-width:34px;border:none;background:transparent;text-align:center;padding:7px 2px;
+    font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--acc);font-family:inherit;border-radius:0;
+  }
+  td.celda input:focus{outline:2px solid var(--pri);outline-offset:-2px;background:var(--pri-cl);color:var(--ink)}
+  td.celda.futuro{background:repeating-linear-gradient(45deg,transparent,transparent 5px,var(--surf-2) 5px,var(--surf-2) 10px)}
+  td.celda.futuro input{color:var(--ink-3)}
+  td.fijo{text-align:right;padding:6px 9px;font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink-2)}
+  td.egreso{color:var(--acc);font-weight:800;background:var(--acc-cl)}
+  td.saldo{font-weight:800;font-size:13.5px;background:var(--pri-cl);color:var(--pri-osc)}
+  td.saldo.neg{background:var(--crit-cl);color:var(--crit)}
+  td.tocado{box-shadow:inset 0 0 0 2px var(--pri)}
+  .col-sep{border-left:2px solid var(--line)!important}
+
+  .leyenda{display:flex;gap:15px;flex-wrap:wrap;font-size:12px;color:var(--ink-3);margin-top:10px;align-items:center}
+  .leyenda i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .estado-guardado{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--ink-3)}
+  .estado-guardado.pend{color:var(--acc)}
+</style>
+</head>
+<body>
+<div id="cab"></div>
+
+<div class="wrap">
+  <div id="guia"></div>
+
+  <div class="card card-p" style="margin-bottom:14px">
+
+    <div class="ident">
+      <div>Centro médico<b id="idCentro">CM PARAÍSO</b></div>
+      <div>Responsable<b id="idResp">—</b></div>
+      <div>Mes<b id="idMes">Agosto 2026</b></div>
+      <div style="align-self:center">
+        <i class="ayu" data-t="¿Por qué el centro no se cambia aquí?">
+          Porque cada persona entrará con su propio usuario y el sistema ya sabrá a qué centro pertenece:
+          así nadie registra en el centro equivocado. Aquí está fijo en Paraíso porque es el único
+          con movimiento real para mostrar.
+        </i>
+      </div>
+    </div>
+
+    <div class="barra-f">
+      <div>
+        <label for="fCat">Hoja</label>
+        <select id="fCat"></select>
+      </div>
+      <div>
+        <label for="fMes">Mes</label>
+        <input id="fMes" type="month" value="2026-08">
+      </div>
+      <div>
+        <label for="fQ">Buscar producto</label>
+        <input id="fQ" type="search" placeholder="Escriba parte del nombre…">
+      </div>
+      <div class="acciones">
+        <label style="display:flex;align-items:center;gap:7px;font-size:13px;background:var(--surf-2);border-radius:8px;padding:9px 11px;cursor:pointer;margin:0">
+          <input type="checkbox" id="fMov" style="width:auto;margin:0"> Solo con movimiento
+        </label>
+      </div>
+    </div>
+
+    <p class="explica" style="margin:12px 0 0;max-width:80ch">
+      <b>Hoja</b> son las pestañas del Excel de hoy: Suministros, Medicina, Endoscopía, Limpieza, Oficina y Tóner.
+      <i class="ayu" data-t="Mes">
+        El mes que se está registrando. La cuadrícula se arma con los días que le corresponden (28, 30 o 31).
+      </i>
+      <i class="ayu" data-t="Buscar producto">
+        Filtra las filas mientras escribe. En Suministros hay 182 productos: escriba «guante» y verá solo esos.
+      </i>
+      <i class="ayu" data-t="Solo con movimiento">
+        Esconde los productos en cero que no se usaron. Desmarcada, sale la lista completa.
+      </i>
+    </p>
+
+    <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line-soft);padding-top:12px;margin-top:12px">
+      <div class="estado-guardado" id="estado">✓ Sin cambios pendientes</div>
+      <div style="flex:1"></div>
+      <button class="b-out b-sm" onclick="exportar()">⬇️ Exportar a Excel</button>
+      <button class="b-acc" id="btnG" onclick="guardar()">Guardar cambios</button>
+    </div>
+    <p class="explica" style="margin:12px 0 0;max-width:80ch">
+      Mientras diga «sin cambios pendientes», todo lo escrito ya quedó guardado.
+      <i class="ayu" data-t="Cambios pendientes">
+        Si dice «3 casillas sin guardar», falta pulsar <b>Guardar cambios</b>. Si intenta cerrar la página
+        con algo pendiente, el navegador le avisa. En el Excel eso se pierde en silencio.
+      </i>
+      <i class="ayu" data-t="Exportar a Excel">
+        Baja esta hoja como archivo, con las columnas de siempre. Se abre con doble clic.
+      </i>
+    </p>
+  </div>
+
+  <div class="kpis" style="margin-bottom:12px" id="kpis"></div>
+
+  <p class="explica" style="max-width:80ch">
+    <b>Cómo se llena:</b> busque la fila del producto y escriba, en la columna del día, lo que se gastó.
+    <b>Solo se escribe en las casillas naranjas.</b> Egreso y Saldo final se calculan solos y no se pueden tocar.
+    <i class="ayu" data-t="¿Por qué solo el consumo del día?">
+      Porque es el único dato que la persona del centro sabe con certeza: «hoy saqué 3». El resto son cuentas,
+      y las cuentas las hace mejor el sistema.
+    </i>
+  </p>
+
+  <div class="hoja-wrap" id="hojaCont"></div>
+  <div class="leyenda">
+    <span><i style="background:var(--acc-cl);border:1px solid var(--acc)"></i>Consumo del día (se escribe)</span>
+    <span><i style="background:var(--pri-cl);border:1px solid var(--pri)"></i>Saldo final (lo calcula el sistema)</span>
+    <span><i style="background:var(--crit-cl);border:1px solid var(--crit)"></i>Saldo negativo — hay un error</span>
+    <span>⌨️ Flechas del teclado para moverse, Enter para bajar</span>
+  </div>
+
+  <div id="cajaVal"></div>
+</div>
+
+<script src="datos.js"></script>
+<script src="comun.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+let CAT = "ENDOSCOPIA";
+let ANIO = 2026, MES = 8;
+let FILAS = [];      // las filas del kardex que se están mostrando
+let CAMBIOS = {};    // "producto||día" -> valor nuevo, todavía sin guardar
+
+KX.montar({ paso: 1, titulo: "Registro diario del consumo", sub: "Paso 1 · La hoja del mes, como el Excel pero blindada", etiqueta: "Paso 1 de 5" });
+
+document.getElementById("idResp").textContent = KX.RESP_DEMO;
+
+document.getElementById("guia").innerHTML = KX.panelPantalla({
+  id: "ingreso",
+  resumen: "Aquí el centro médico anota, día por día, cuánto se gastó de cada producto.",
+  queEs: `Es <b>la hoja de Excel de siempre</b>: productos en las filas, días del mes en las columnas.
+    Lo único que cambia es que <b>Egreso</b> y <b>Saldo final</b> ya no se pueden tocar: se calculan solos,
+    así que no hay forma de romper una fórmula sin querer.`,
+  quien: "La misma persona del centro que hoy llena el Excel.",
+  cuando: "A diario, o poniéndose al día de varios días atrasados.",
+  enPantalla: [
+    { q: "La franja celeste", d: "Centro, responsable y mes. No se pueden dejar en blanco ni equivocar." },
+    { q: "Los cuatro números grandes", d: "Resumen automático de la hoja. En el Excel actual esto no existe." },
+    { q: "Las casillas naranjas", d: "Lo único que se escribe: cuánto se gastó ese día." },
+    { q: "Egreso y Saldo final", d: "Se calculan solos. Si el saldo queda negativo, la casilla se pone roja al instante." },
+    { q: "El borde azul", d: "Marca lo que cambió y todavía no se guardó." }
+  ],
+  probar: [
+    "Escriba una cantidad en cualquier día: <b>Egreso y Saldo final se mueven solos</b>.",
+    "Escriba <b>999</b>: la casilla del saldo <b>se pone roja</b> porque quedó negativo.",
+    "Pulse <b>Guardar cambios</b> y vea que el contador vuelve a cero."
+  ]
+});
+
+$("#fCat").innerHTML = KX.CATS.map(c => `<option value="${c}"${c === CAT ? " selected" : ""}>${KX.ICONO[c]} ${c}</option>`).join("");
+$("#fCat").onchange = () => {
+  if (pendientes() && !confirm("Hay cambios sin guardar. ¿Cambiar de hoja igual?")) { $("#fCat").value = CAT; return; }
+  CAT = $("#fCat").value; CAMBIOS = {}; cargar();
+};
+$("#fMes").onchange = () => { const [a, m] = $("#fMes").value.split("-"); ANIO = +a; MES = +m; CAMBIOS = {}; cargar(); };
+$("#fQ").oninput = pintar;
+$("#fMov").onchange = pintar;
+
+function pendientes() { return Object.keys(CAMBIOS).length; }
+function nDias() { return KX.diasDelMes(ANIO, MES); }
+
+function cargar() {
+  FILAS = KX.kardex({ centro: KX.CENTRO_DEMO, categoria: CAT, anio: ANIO, mes: MES });
+  // se completa con el catálogo oficial, para poder registrar productos que aún no tienen movimiento
+  const hay = new Set(FILAS.map(f => f.producto));
+  KX.catalogo(CAT).forEach(p => {
+    if (!hay.has(p.p)) FILAS.push({
+      categoria: CAT, producto: p.p, unidad: p.u || "", ini: 0, ing: 0, ajuste: 0,
+      dias: {}, egreso: 0, movs: 0, saldo: 0, promedio: 0, cobertura: 0, estado: "sinmov"
+    });
+  });
+  FILAS.sort((a, b) => a.producto.localeCompare(b.producto, "es"));
+  const nm = (KX.D.meses[MES - 1] || "") + " " + ANIO;
+  document.getElementById("idMes").textContent = nm.charAt(0) + nm.slice(1).toLowerCase();
+  pintar();
+}
+
+function visibles() {
+  const q = KX.norm($("#fQ").value.trim());
+  const soloMov = $("#fMov").checked;
+  return FILAS.filter(f => {
+    if (q && !KX.norm(f.producto).includes(q)) return false;
+    if (soloMov && !(f.ini || f.ing || f.egreso || Object.keys(f.dias).length)) return false;
+    return true;
+  });
+}
+
+function valorCelda(f, d) {
+  const k = f.producto + "||" + d;
+  return (k in CAMBIOS) ? CAMBIOS[k] : (f.dias[d] || 0);
+}
+function egresoDe(f) {
+  let s = 0; for (let d = 1; d <= nDias(); d++) s += KX.n0(valorCelda(f, d));
+  return s;
+}
+
+function pintar() {
+  const arr = visibles();
+  const nd = nDias();
+  const hoy = (ANIO === 2026 && MES === 8) ? 18 : 32;   // "día actual" del ejemplo
+
+  const cabDias = Array.from({ length: nd }, (_, i) => {
+    const d = i + 1;
+    const cls = d === hoy ? "dia hoy" : (d > hoy ? "dia futuro" : "dia");
+    return `<th class="${cls}">${d}</th>`;
+  }).join("");
+
+  const cuerpo = arr.map((f, fi) => {
+    const eg = egresoDe(f);
+    const saldo = f.ini + f.ing + f.ajuste - eg;
+    const celdas = Array.from({ length: nd }, (_, i) => {
+      const d = i + 1;
+      const v = valorCelda(f, d);
+      const k = f.producto + "||" + d;
+      const cls = "celda" + (d > hoy ? " futuro" : "") + ((k in CAMBIOS) ? " tocado" : "");
+      return `<td class="${cls}"><input inputmode="numeric" data-f="${fi}" data-d="${d}" value="${v || ""}"></td>`;
+    }).join("");
+    const uni = f.unidad
+      ? `<small>${KX.esc(f.unidad)}</small>`
+      : `<small class="falta">SIN UNIDAD DEFINIDA</small>`;
+    return `<tr class="fila">
+      <td class="prodc">${KX.esc(f.producto)}${uni}</td>
+      <td class="fijo">${KX.fmt(f.ini)}</td>
+      <td class="fijo">${KX.fmt(f.ing)}</td>
+      ${celdas}
+      <td class="fijo egreso col-sep">${KX.fmt(eg)}</td>
+      <td class="fijo saldo${saldo < 0 ? " neg" : ""}">${KX.fmt(saldo)}</td>
+    </tr>`;
+  }).join("");
+
+  const ayIni = KX.ayLinea("Saldo inicial", "Lo que había el día 1. <b>Se arrastra solo</b> del mes anterior; hoy se teclea a mano y por eso a veces no cuadra.");
+  const ayIng = KX.ayLinea("Ingreso", "Lo que llegó de bodega central. Es lo que <b>suma</b>.");
+  const ayEg = KX.ayLinea("Egreso", "Todo lo gastado en el mes: la suma de los días. <b>No se escribe.</b>");
+  const aySf = KX.ayLinea("Saldo final", "Lo que debería quedar: inicial + ingreso − egreso. En rojo = negativo, o sea <b>se anotó más de lo que había</b>: siempre es un error.");
+
+  $("#hojaCont").innerHTML = arr.length ? `
+    <table class="hoja">
+      <thead><tr>
+        <th class="prodh">Producto</th>
+        <th>Saldo<br>inicial${ayIni}</th><th>Ingreso${ayIng}</th>
+        ${cabDias}
+        <th class="col-sep">Egreso${ayEg}</th><th>Saldo<br>final${aySf}</th>
+      </tr></thead>
+      <tbody>${cuerpo}</tbody>
+    </table>` : `<div class="vacio">Ningún producto coincide con lo que buscó.</div>`;
+
+  $("#hojaCont").querySelectorAll("td.celda input").forEach(inp => {
+    inp.onchange = inp.oninput = () => {
+      const f = arr[+inp.dataset.f], d = +inp.dataset.d;
+      const k = f.producto + "||" + d;
+      const nuevo = KX.n0(inp.value);
+      if (nuevo === (f.dias[d] || 0)) delete CAMBIOS[k]; else CAMBIOS[k] = nuevo;
+      recalcFila(inp.closest("tr"), f);
+      marcarEstado();
+    };
+    inp.onkeydown = e => mover(e, inp);
+    inp.onfocus = () => inp.select();
+  });
+
+  pintarKPIs(arr);
+  marcarEstado();
+}
+
+function recalcFila(tr, f) {
+  const eg = egresoDe(f);
+  const saldo = f.ini + f.ing + f.ajuste - eg;
+  const tds = tr.querySelectorAll("td.fijo");
+  tds[2].textContent = KX.fmt(eg);
+  const ts = tds[3];
+  ts.textContent = KX.fmt(saldo);
+  ts.classList.toggle("neg", saldo < 0);
+  tr.querySelectorAll("td.celda").forEach(td => {
+    const i = td.querySelector("input");
+    td.classList.toggle("tocado", (f.producto + "||" + i.dataset.d) in CAMBIOS);
+  });
+  pintarKPIs(visibles());
+}
+
+function mover(e, inp) {
+  const d = +inp.dataset.d, f = +inp.dataset.f;
+  let sel = null;
+  if (e.key === "ArrowRight") sel = `[data-f="${f}"][data-d="${d + 1}"]`;
+  else if (e.key === "ArrowLeft") sel = `[data-f="${f}"][data-d="${d - 1}"]`;
+  else if (e.key === "ArrowDown" || e.key === "Enter") sel = `[data-f="${f + 1}"][data-d="${d}"]`;
+  else if (e.key === "ArrowUp") sel = `[data-f="${f - 1}"][data-d="${d}"]`;
+  if (!sel) return;
+  const t = $("#hojaCont").querySelector("td.celda input" + sel);
+  if (t) { e.preventDefault(); t.focus(); t.select(); }
+}
+
+function pintarKPIs(arr) {
+  const con = arr.filter(f => f.ini || f.ing || egresoDe(f));
+  const eg = arr.reduce((s, f) => s + egresoDe(f), 0);
+  const neg = arr.filter(f => (f.ini + f.ing + f.ajuste - egresoDe(f)) < 0).length;
+  const cero = arr.filter(f => (f.ini || f.ing) && (f.ini + f.ing + f.ajuste - egresoDe(f)) === 0).length;
+  $("#kpis").innerHTML = `
+    <div class="kpi pri"><div class="n">${con.length}</div><div class="l">Productos activos</div>
+      <div class="h">Los que tienen saldo, ingreso o consumo en esta hoja. El resto está en cero.</div></div>
+    <div class="kpi acc"><div class="n">${KX.fmt(eg)}</div><div class="l">Consumo del mes</div>
+      <div class="h">La suma de todo lo escrito en las casillas de los días.</div></div>
+    <div class="kpi warn"><div class="n">${cero}</div><div class="l">Llegaron a cero</div>
+      <div class="h">Productos que tenían existencias y se acabaron. Hay que reponerlos.</div></div>
+    <div class="kpi ${neg ? "crit" : ""}"><div class="n">${neg}</div><div class="l">Saldos negativos</div>
+      <div class="h">Se anotó más consumo del que había: es un error de registro. En el Excel actual nadie lo detecta.</div></div>`;
+}
+
+function marcarEstado() {
+  const n = pendientes();
+  const e = $("#estado");
+  e.className = "estado-guardado" + (n ? " pend" : "");
+  e.textContent = n ? `● ${n} casilla(s) sin guardar` : "✓ Sin cambios pendientes";
+  $("#btnG").disabled = !n;
+}
+
+function guardar() {
+  const n = pendientes();
+  if (!n) return;
+  const movs = [];
+  Object.keys(CAMBIOS).forEach(k => {
+    const [prod, d] = k.split("||");
+    const f = FILAS.find(x => x.producto === prod);
+    const delta = CAMBIOS[k] - (f.dias[+d] || 0);
+    if (!delta) return;
+    movs.push({
+      centro: KX.CENTRO_DEMO, categoria: CAT, producto: prod, unidad: f.unidad,
+      fecha: KX.fecha(ANIO, MES, +d), tipo: "EGRESO", cantidad: delta,
+      responsable: KX.RESP_DEMO, obs: ""
+    });
+  });
+  KX.agregar(movs);
+  CAMBIOS = {};
+  KX.toast("✓ " + n + " casilla(s) guardadas");
+  cargar();
+}
+
+function exportar() {
+  const nd = nDias();
+  const arr = visibles();
+  const enc = ["PRODUCTO", "UNIDAD", "SALDO INICIAL", "INGRESO"]
+    .concat(Array.from({ length: nd }, (_, i) => String(i + 1)))
+    .concat(["EGRESO", "SALDO FINAL"]);
+  const filas = [
+    ["CENTRO MÉDICO", KX.CENTRO_DEMO],
+    ["RESPONSABLE", KX.RESP_DEMO],
+    ["MES", (KX.D.meses[MES - 1] || "") + " " + ANIO],
+    ["HOJA", CAT],
+    [], enc
+  ];
+  arr.forEach(f => {
+    const eg = egresoDe(f);
+    filas.push([f.producto, f.unidad, f.ini, f.ing]
+      .concat(Array.from({ length: nd }, (_, i) => valorCelda(f, i + 1) || ""))
+      .concat([eg, f.ini + f.ing + f.ajuste - eg]));
+  });
+  KX.descargarCSV(`Kardex-${CAT}-${ANIO}-${KX.pad(MES)}.csv`, filas);
+}
+
+document.getElementById("cajaVal").innerHTML = KX.cajaValidar("A");
+KX.pintarValidacion();
+KX.expandirAyudas();
+
+cargar();
+window.addEventListener("beforeunload", e => { if (pendientes()) { e.preventDefault(); e.returnValue = ""; } });
+</script>
+</body>
+</html>

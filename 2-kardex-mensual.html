@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 2 · Kardex mensual oficial — Kardex Demo</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="extra.css">
+<style>
+  .controles{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;align-items:end}
+
+  .doc{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--sombra)}
+  .doc-head{display:flex;gap:16px;align-items:flex-start;border-bottom:2px solid var(--pri);padding-bottom:13px;margin-bottom:14px;flex-wrap:wrap}
+  .doc-head .logo{width:44px;height:44px;border-radius:9px;background:var(--pri);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;letter-spacing:.04em;flex:none}
+  .doc-head .tit{flex:1;min-width:200px}
+  .doc-head h2{font-size:19px;letter-spacing:-.02em}
+  .doc-head .sub{font-size:12.5px;color:var(--ink-3);margin-top:2px}
+  .doc-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:15px}
+  .doc-meta div{padding:8px 12px;border-right:1px solid var(--line);background:var(--surf)}
+  .doc-meta div:last-child{border-right:none}
+  .doc-meta small{display:block;font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+  .doc-meta b{font-size:13.5px}
+
+  table.kx{border-collapse:collapse;width:max-content;min-width:100%;font-size:11.5px}
+  table.kx th,table.kx td{border:1px solid var(--line);padding:3px 5px;white-space:nowrap;text-align:center}
+  table.kx thead th{background:var(--surf-2);font-size:9.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-2);position:sticky;top:0;z-index:3}
+  table.kx thead th.dia{min-width:23px;font-size:10.5px;letter-spacing:0}
+  table.kx thead th.fds{background:var(--pri-cl);color:var(--pri-osc)}
+  table.kx th.pr,table.kx td.pr{text-align:left;min-width:235px;max-width:300px;white-space:normal;position:sticky;left:0;background:var(--surf);z-index:2;font-weight:600;line-height:1.2}
+  table.kx th.pr{z-index:4;background:var(--surf-2)}
+  table.kx td.n{font-variant-numeric:tabular-nums;min-width:34px}
+  table.kx td.cons{color:var(--acc);font-weight:700}
+  table.kx td.eg{background:var(--acc-cl);color:var(--acc);font-weight:800}
+  table.kx td.sf{background:var(--pri-cl);color:var(--pri-osc);font-weight:800}
+  table.kx td.sf.neg{background:var(--crit-cl);color:var(--crit)}
+  table.kx td.sinu{color:var(--crit);font-weight:800}
+  table.kx tr.cat td{background:var(--surf-2);text-align:left;font-weight:800;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--pri-osc)}
+  table.kx tbody tr:hover td:not(.pr){background:color-mix(in srgb,var(--pri) 7%,transparent)}
+  .scroll-doc{overflow:auto;max-height:66vh;border:1px solid var(--line);border-radius:8px}
+
+  @media print{
+    @page{size:A4 landscape;margin:9mm}
+    body{background:#fff}
+    .top,.pasos,.no-print,.demo-nota,.guia,.validar{display:none!important}
+    .wrap{max-width:none;padding:0}
+    .doc{border:none;box-shadow:none;padding:0;border-radius:0}
+    .scroll-doc{max-height:none;overflow:visible;border:none}
+    table.kx{font-size:8px;width:100%}
+    table.kx th,table.kx td{padding:1.5px 2px}
+    table.kx th.pr,table.kx td.pr{min-width:0;max-width:150px;position:static}
+    table.kx thead th{position:static}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    tr,td,th{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div id="cab"></div>
+
+<div class="wrap">
+  <div id="guia"></div>
+
+  <div class="card card-p no-print" style="margin-bottom:14px">
+    <div class="controles">
+      <div><label for="fCentro">Centro médico</label><select id="fCentro"></select></div>
+      <div><label for="fCat">Hoja del kardex</label><select id="fCat"></select></div>
+      <div><label for="fMes">Mes</label><input id="fMes" type="month" value="2026-08"></div>
+      <div>
+        <label style="display:flex;align-items:center;gap:7px;background:var(--surf-2);border-radius:8px;padding:9px 11px;cursor:pointer;margin:0;font-size:13px">
+          <input type="checkbox" id="fMov" style="width:auto;margin:0" checked> Solo con movimiento
+        </label>
+      </div>
+      <div class="btns">
+        <button class="b-pri" onclick="window.print()">🖨️ Imprimir / PDF</button>
+        <button class="b-out" onclick="exportar()">⬇️ Excel</button>
+      </div>
+    </div>
+    <p class="explica" style="margin:12px 0 0;max-width:80ch">
+      Con estos controles se arma el documento que se va a imprimir.
+      <i class="ayu" data-t="Centro médico">
+        Los 12 centros del archivo actualizado. Al cambiarlo cambia el responsable de la cabecera.
+        Solo Paraíso tiene movimiento real: los demás salen en cero, es normal aquí.
+      </i>
+      <i class="ayu" data-t="Hoja del kardex">
+        La categoría a imprimir. Con <b>«Todas las hojas»</b> salen las seis seguidas en un solo documento.
+      </i>
+      <i class="ayu" data-t="Solo con movimiento">
+        Deja fuera lo que estuvo en cero todo el mes. Desmarcada, sale la plantilla completa.
+      </i>
+      <i class="ayu" data-t="Imprimir / PDF">
+        Abre la impresión en hoja horizontal. Ahí se elige la impresora o «Guardar como PDF».
+        Las explicaciones azules no se imprimen.
+      </i>
+    </p>
+  </div>
+
+  <div class="doc" id="doc"></div>
+
+  <div id="cajaVal"></div>
+</div>
+
+<script src="datos.js"></script>
+<script src="comun.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+let ANIO = 2026, MES = 8;
+
+KX.montar({ paso: 2, titulo: "Kardex mensual oficial", sub: "Paso 2 · El documento del cierre de mes", etiqueta: "Paso 2 de 5" });
+
+document.getElementById("guia").innerHTML = KX.panelPantalla({
+  id: "mensual",
+  resumen: "El documento del cierre de mes: el que hoy se imprime y se guarda en el archivador.",
+  queEs: `Es el kardex <b>tal cual se archiva hoy</b>, con las mismas columnas, pero
+    <b>armado por el sistema</b> en vez de transcrito a mano. El respaldo en papel no se pierde:
+    solo deja de escribirse.`,
+  quien: "La supervisión del centro, quien lleva el archivo físico y Compras.",
+  cuando: "Al cierre de cada mes, para imprimir y archivar.",
+  enPantalla: [
+    { q: "La cabecera", d: "Centro, responsable y mes, <b>siempre correctos</b>. Hoy vienen vacíos o con otro mes." },
+    { q: "Los siete recuadros", d: "Resumen del documento. Hoy habría que sumarlo a mano." },
+    { q: "Las columnas celestes", d: "Sábados y domingos, para leer más rápido." },
+    { q: "Egreso (naranja) y Saldo final (azul)", d: "Lo gastado y lo que queda. En rojo si quedó negativo." }
+  ],
+  probar: [
+    "Cambie la hoja a <b>Todas las hojas</b> para ver el documento completo.",
+    "Pulse <b>Imprimir / PDF</b> y mire la vista previa. Puede cancelar sin imprimir.",
+    "Cambie de centro: el nombre del responsable cambia también en la cabecera."
+  ]
+});
+
+$("#fCentro").innerHTML = KX.D.centros.map(c => `<option${c === KX.CENTRO_DEMO ? " selected" : ""}>${KX.esc(c)}</option>`).join("");
+$("#fCat").innerHTML = `<option value="">Todas las hojas</option>` +
+  KX.CATS.map(c => `<option value="${c}"${c === "ENDOSCOPIA" ? " selected" : ""}>${KX.ICONO[c]} ${c}</option>`).join("");
+["fCentro", "fCat", "fMes", "fMov"].forEach(id => $("#" + id).onchange = pintar);
+
+function respDe(centro) {
+  const i = KX.D.centros.indexOf(centro);
+  return (KX.D.supervisoras && KX.D.supervisoras[i]) || "—";
+}
+function nombreMes(m) {
+  const s = KX.D.meses[m - 1] || String(m);
+  return s.charAt(0) + s.slice(1).toLowerCase();
+}
+
+function filas() {
+  const cat = $("#fCat").value;
+  let arr = KX.kardex({ centro: $("#fCentro").value, categoria: cat || undefined, anio: ANIO, mes: MES });
+  if (!$("#fMov").checked) {
+    const hay = new Set(arr.map(f => f.categoria + "||" + f.producto));
+    (cat ? [cat] : KX.CATS).forEach(c => KX.catalogo(c).forEach(p => {
+      if (!hay.has(c + "||" + p.p)) arr.push({
+        categoria: c, producto: p.p, unidad: p.u || "", ini: 0, ing: 0, ajuste: 0,
+        dias: {}, egreso: 0, saldo: 0, movs: 0, promedio: 0, cobertura: 0, estado: "sinmov"
+      });
+    }));
+  }
+  return arr.sort((a, b) => (KX.CATS.indexOf(a.categoria) - KX.CATS.indexOf(b.categoria)) ||
+    a.producto.localeCompare(b.producto, "es"));
+}
+
+function pintar() {
+  const [a, m] = $("#fMes").value.split("-"); ANIO = +a; MES = +m;
+  const centro = $("#fCentro").value;
+  const arr = filas();
+  const nd = KX.diasDelMes(ANIO, MES);
+
+  const cabDias = Array.from({ length: nd }, (_, i) => {
+    const d = i + 1, dow = new Date(ANIO, MES - 1, d).getDay();
+    return `<th class="dia${(dow === 0 || dow === 6) ? " fds" : ""}">${d}</th>`;
+  }).join("");
+
+  let ultCat = null;
+  const cuerpo = arr.map(f => {
+    let pre = "";
+    if (f.categoria !== ultCat && !$("#fCat").value) {
+      ultCat = f.categoria;
+      pre = `<tr class="cat"><td colspan="${nd + 5}">${KX.ICONO[f.categoria]} ${KX.esc(f.categoria)}</td></tr>`;
+    }
+    const celdas = Array.from({ length: nd }, (_, i) => {
+      const v = f.dias[i + 1];
+      return `<td class="n${v ? " cons" : ""}">${v ? KX.fmt(v) : ""}</td>`;
+    }).join("");
+    return pre + `<tr>
+      <td class="pr">${KX.esc(f.producto)}</td>
+      <td class="n${f.unidad ? "" : " sinu"}">${f.unidad ? KX.esc(f.unidad) : "sin definir"}</td>
+      <td class="n">${f.ini || ""}</td>
+      <td class="n">${f.ing || ""}</td>
+      ${celdas}
+      <td class="n eg">${f.egreso || ""}</td>
+      <td class="n sf${f.saldo < 0 ? " neg" : ""}">${KX.fmt(f.saldo)}</td>
+    </tr>`;
+  }).join("");
+
+  const totEg = arr.reduce((s, f) => s + f.egreso, 0);
+  const totSf = arr.reduce((s, f) => s + f.saldo, 0);
+
+  $("#doc").innerHTML = `
+    <div class="doc-head">
+      <div class="logo">MR</div>
+      <div class="tit">
+        <h2>Kardex de insumos — control mensual</h2>
+        <div class="sub">Red Médica Demo · Centro Médico Ambulatorio Metroambulat S.A.</div>
+      </div>
+      <div style="text-align:right;font-size:11.5px;color:var(--ink-3)">
+        <div>Documento generado</div>
+        <div style="font-weight:800;color:var(--ink)">${new Date().toLocaleDateString("es-EC")}</div>
+      </div>
+    </div>
+
+    <div class="doc-meta">
+      <div><small>Centro médico</small><b>${KX.esc(centro)}</b></div>
+      <div><small>Responsable</small><b>${KX.esc(respDe(centro))}</b></div>
+      <div><small>Mes</small><b>${KX.esc(nombreMes(MES))} ${ANIO}</b></div>
+      <div><small>Hoja</small><b>${KX.esc($("#fCat").value || "Todas")}</b></div>
+      <div><small>Productos</small><b>${arr.length}</b></div>
+      <div><small>Consumo total</small><b style="color:var(--acc)">${KX.fmt(totEg)}</b></div>
+      <div><small>Saldo total</small><b style="color:var(--pri)">${KX.fmt(totSf)}</b></div>
+    </div>
+
+    <p class="explica no-print" style="max-width:80ch">
+      <b>Esta franja es la cabecera oficial.</b> Centro, responsable y mes son los tres datos que hoy quedan
+      en blanco o mal copiados en el Excel.
+      <i class="ayu" data-t="¿De dónde sale el responsable?">
+        Del archivo actualizado que nos enviaron. <b>Confirmar que la pareja centro–responsable es la
+        correcta es uno de los puntos a revisar.</b>
+      </i>
+    </p>
+
+    <div class="scroll-doc">
+      <table class="kx">
+        <thead><tr>
+          <th class="pr">Producto</th><th>Unidad</th><th>Saldo<br>inicial</th><th>Ingreso</th>
+          ${cabDias}
+          <th>Egreso</th><th>Saldo<br>final</th>
+        </tr></thead>
+        <tbody>${arr.length ? cuerpo : `<tr><td colspan="${nd + 5}" style="padding:26px;color:var(--ink-3)">Sin productos para este filtro.</td></tr>`}</tbody>
+      </table>
+    </div>
+
+    <p class="explica no-print" style="margin:22px 0 0;max-width:80ch">
+      Cada fila es un producto y cada columna numerada, un día.
+      <i class="ayu" data-t="«sin definir» en rojo">
+        Son los 106 productos de <b>Oficina</b> y <b>Tóner</b>: el Excel no trae su unidad. Mientras no se
+        defina, no se sabe si «5» son 5 cajas, 5 resmas o 5 hojas. Se revisa en el paso 3.
+      </i>
+    </p>`;
+
+  KX.expandirAyudas($("#doc"));
+}
+
+function exportar() {
+  const arr = filas(), nd = KX.diasDelMes(ANIO, MES), centro = $("#fCentro").value;
+  const out = [
+    ["CENTRO MÉDICO", centro],
+    ["RESPONSABLE", respDe(centro)],
+    ["MES", nombreMes(MES) + " " + ANIO],
+    [],
+    ["HOJA", "PRODUCTO", "UNIDAD", "SALDO INICIAL", "INGRESO"]
+      .concat(Array.from({ length: nd }, (_, i) => String(i + 1)))
+      .concat(["EGRESO", "SALDO FINAL"])
+  ];
+  arr.forEach(f => out.push([f.categoria, f.producto, f.unidad, f.ini, f.ing]
+    .concat(Array.from({ length: nd }, (_, i) => f.dias[i + 1] || ""))
+    .concat([f.egreso, f.saldo])));
+  KX.descargarCSV(`Kardex-${centro.replace(/\W+/g, "_")}-${ANIO}-${KX.pad(MES)}.csv`, out);
+}
+
+document.getElementById("cajaVal").innerHTML = KX.cajaValidar("B");
+KX.pintarValidacion();
+KX.expandirAyudas();
+pintar();
+</script>
+</body>
+</html>

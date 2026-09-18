@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kardex digital — revisión de Compras</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="extra.css">
+<style>
+  .grande{font-size:17px;line-height:1.6;max-width:70ch}
+  ol.hacer{margin:0;padding-left:0;list-style:none;counter-reset:h}
+  ol.hacer li{
+    counter-increment:h;position:relative;padding-left:40px;margin-bottom:14px;
+    font-size:16px;line-height:1.55;color:var(--ink);
+  }
+  ol.hacer li::before{
+    content:counter(h);position:absolute;left:0;top:-1px;width:27px;height:27px;border-radius:50%;
+    background:var(--pri);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:800;
+  }
+  ol.hacer li small{display:block;font-size:13.5px;color:var(--ink-3);margin-top:2px}
+</style>
+</head>
+<body>
+<div id="cab"></div>
+
+<div class="wrap">
+
+  <div class="card card-p" style="margin-bottom:16px;border-color:var(--warn);background:var(--warn-cl)">
+    <p style="margin:0;font-size:14px;line-height:1.6;color:var(--ink)">
+      <b>🧪 Versión de demostración con datos ficticios.</b>
+      Los centros médicos, los responsables y los proveedores que aparecen aquí
+      <b>son inventados</b>. Los productos, las cantidades y los errores del archivo sí son
+      los reales, porque son justamente lo que hay que revisar.
+    </p>
+  </div>
+
+
+  <div class="card card-p" style="margin-bottom:16px">
+    <h2 style="font-size:21px">Kardex digital de insumos</h2>
+    <p class="grande" style="margin:10px 0 0">
+      Es el reemplazo de los Excel del kardex, uno por centro y por mes.
+      Está hecho pero <b>sin terminar a propósito</b>: falta que Compras diga si está bien
+      antes de construirlo en firme.
+    </p>
+
+    <h2 class="sec-h" style="margin:22px 0 12px">Qué le pedimos</h2>
+    <ol class="hacer">
+      <li>Mire las cuatro pantallas de abajo y pruébelas.
+        <small>Puede escribir, borrar e imprimir: no toca ningún sistema, no se daña nada.</small></li>
+      <li>Al pie de cada una hay <b>una o dos preguntas</b>. Márquelas y escriba lo que vea mal.
+        <small>Son 8 preguntas en total.</small></li>
+      <li>Al final, en <b>Respuestas</b>, imprima la hoja o cópiela y envíemela.
+        <small>Toma unos 20 minutos. No hace falta hacerlo de una sola vez.</small></li>
+    </ol>
+
+    <p class="explica" style="margin:18px 0 0;max-width:70ch">
+      Arriba a la derecha está el interruptor <b>«Ayudas a la vista»</b>. Mientras esté encendido, cada
+      botón y cada columna traen su explicación escrita al lado. Si estorba, apáguelo y quedan detrás
+      de un <b>?</b> azul.
+    </p>
+  </div>
+
+  <div class="mosaico" style="margin-bottom:16px">
+
+    <a class="tarj" href="1-ingreso.html">
+      <div class="nro">1</div>
+      <h3>Registro diario</h3>
+      <p>Donde el centro anota cada día lo que se gastó. La misma cuadrícula del Excel, pero sin fórmulas que se puedan romper.</p>
+      <div class="pie">Abrir →</div>
+    </a>
+
+    <a class="tarj" href="2-kardex-mensual.html">
+      <div class="nro">2</div>
+      <h3>Documento del mes</h3>
+      <p>El kardex que hoy se imprime y se archiva. Igual que siempre, pero armado solo.</p>
+      <div class="pie">Abrir →</div>
+    </a>
+
+    <a class="tarj" href="3-catalogo.html">
+      <div class="nro">3</div>
+      <h3>Productos y unidades</h3>
+      <p>Los 397 productos del último archivo. <b>Es lo que más necesita su criterio:</b> 106 no tienen unidad de medida y 69 la cambiaron.</p>
+      <div class="pie">Abrir →</div>
+    </a>
+
+    <a class="tarj" href="4-matriz-pedido.html">
+      <div class="nro">4</div>
+      <h3>Matriz de pedido</h3>
+      <p>El otro Excel: el pedido de compra de septiembre. <b>Usa la misma lista de productos que el kardex</b>, mantenida aparte y a mano.</p>
+      <div class="pie">Abrir →</div>
+    </a>
+
+    <a class="tarj" href="5-validacion.html" style="border-color:var(--acc)">
+      <div class="nro" style="background:var(--acc)">✓</div>
+      <h3>Respuestas</h3>
+      <p>Sus 8 respuestas juntas, para imprimir, guardar en PDF o copiar en un correo.</p>
+      <div class="pie" style="color:var(--acc)">Abrir →</div>
+    </a>
+
+  </div>
+
+  <div class="card card-p">
+    <p style="font-size:14px;color:var(--ink-2);margin:0;line-height:1.6">
+      <b>Lo que todavía no tiene:</b> no guarda en un servidor central, no tiene usuarios con clave y no está
+      conectado con Business Central. Eso viene después, y depende de lo que usted responda ahora.
+      <i class="ayu" data-t="¿Por qué así?">
+        Porque construir esa parte cuesta semanas, y sería tirarlas si después resulta que las columnas o
+        las unidades de medida no eran las correctas. Cambiar algo hoy toma minutos.
+      </i>
+    </p>
+    <p style="font-size:13px;color:var(--ink-3);margin:14px 0 0;border-top:1px solid var(--line-soft);padding-top:11px">
+      ¿Alguna palabra no se entiende? <a href="glosario.html">Glosario</a> ·
+      Consultas: <b>Cristian Mena</b>, Desarrollo de Compras
+    </p>
+  </div>
+
+</div>
+
+<script src="datos.js"></script>
+<script src="comun.js"></script>
+<script>
+KX.montar({ paso: 0, titulo: "Kardex digital de insumos", sub: "Revisión de Compras", etiqueta: "Para revisar" });
+</script>
+</body>
+</html>

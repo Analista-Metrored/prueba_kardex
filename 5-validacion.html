@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 5 · Hoja de validación — Kardex Demo</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="extra.css">
+<style>
+  .acta{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--sombra)}
+  .acta-head{display:flex;gap:16px;align-items:flex-start;border-bottom:2px solid var(--pri);padding-bottom:13px;margin-bottom:16px;flex-wrap:wrap}
+  .acta-head .logo{width:44px;height:44px;border-radius:9px;background:var(--pri);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
+  .acta-head h2{font-size:19px}
+  .acta-head .sub{font-size:12.5px;color:var(--ink-3);margin-top:2px}
+  .meta-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px}
+  .meta-print{display:none}
+  @media print{
+    @page{size:A4 portrait;margin:14mm}
+    body{background:#fff}
+    .top,.pasos,.no-print,.guia,.demo-nota{display:none!important}
+    .wrap{max-width:none;padding:0}
+    .acta{border:none;box-shadow:none;padding:0}
+    .meta-form{display:none}
+    .meta-print{display:grid}
+    table.acta-t{font-size:10.5px}
+    tr,td,th{page-break-inside:avoid}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<div id="cab"></div>
+
+<div class="wrap">
+  <div id="guia"></div>
+
+  <!-- ====== parte interactiva ====== -->
+  <div class="no-print">
+    <div class="card card-p" style="margin-bottom:14px">
+      <h2>Sus respuestas</h2>
+      <p class="cap" style="margin-top:3px">Lo que marcó en los pasos 1, 2 y 3. Complete lo que falte, ponga su
+        nombre abajo y envíelo.</p>
+      <p class="explica" style="margin:12px 0 0;max-width:80ch">
+        Se guardan solas en este computador, aunque cierre la ventana.
+        <i class="ayu" data-t="Importante">
+          Se guardan solo en <b>este</b> computador: no se envían a ningún lado. Por eso, al terminar hay que
+          <b>imprimir, guardar el PDF o copiar el texto</b> y mandarlo.
+        </i>
+      </p>
+      <div class="btns" style="margin-top:14px">
+        <button class="b-pri" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
+        <button class="b-out" onclick="copiar()">📋 Copiar como texto</button>
+        <button class="b-out" onclick="exportar()">⬇️ Bajar a Excel</button>
+        <button onclick="KX.valBorrar()">🗑️ Borrar todas mis respuestas</button>
+      </div>
+    </div>
+
+    <div class="resu" id="resu"></div>
+
+    <div id="grupos"></div>
+  </div>
+
+  <!-- ====== acta imprimible ====== -->
+  <h2 class="sec-h no-print" style="margin-top:26px">Así se va a imprimir</h2>
+  <div class="acta" id="acta"></div>
+
+</div>
+
+<script src="datos.js"></script>
+<script src="comun.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+
+KX.montar({ paso: 5, titulo: "Hoja de validación", sub: "Lo que respondió, listo para enviar", etiqueta: "Respuestas" });
+
+document.getElementById("guia").innerHTML = KX.panelPantalla({
+  id: "validacion",
+  resumen: "Todo lo que usted respondió, junto en un solo documento para imprimir o enviar.",
+  queEs: `La constancia de qué revisó Compras: qué está bien, qué hay que corregir y qué quedó en duda.
+    Es lo que el equipo de desarrollo necesita antes de construir el sistema definitivo.`,
+  quien: "La persona de Compras que hace la revisión.",
+  cuando: "Al terminar. Se puede volver a abrir y completar en varios ratos.",
+  enPantalla: [
+    { q: "Los cuatro números", d: "Cuántos puntos marcó bien, por corregir, en duda y sin responder." },
+    { q: "El recuadro de nombre y cargo", d: "Sale impreso en la cabecera del documento." },
+    { q: "«Copiar como texto»", d: "Deja todo listo para pegarlo en un correo, sin adjuntos." },
+    { q: "El documento de abajo", d: "Vista previa de lo que se va a imprimir. Se actualiza solo." }
+  ],
+  probar: [
+    "Responda cualquier punto y vea cómo el documento de abajo <b>se actualiza solo</b>.",
+    "Escriba su nombre: aparece en la cabecera del documento.",
+    "Pulse <b>Copiar como texto</b> y péguelo en un correo en blanco."
+  ]
+});
+
+/* ---------- grupos interactivos ---------- */
+$("#grupos").innerHTML = KX.GRUPOS.map(g => {
+  const enlace = g.g === "D" ? "" :
+    `<p class="explica" style="max-width:80ch">Se responde mejor con la pantalla delante:
+      <a href="${g.donde}">abrir el ${g.dondeT}</a>.</p>`;
+  const intro = g.g === "D" ? `<p class="explica" style="max-width:80ch">
+      <b>Esto no se mira en una pantalla: se decide.</b> Escriba su respuesta en la observación, aunque sea
+      provisional.</p>` : "";
+  return `<h2 class="sec-h" style="margin-top:22px">${KX.esc(g.titulo)}</h2>${enlace}${intro}${KX.cajaValidar(g.g)}`;
+}).join("");
+
+/* ---------- el acta ---------- */
+const meta = KX.valLeer().meta || {};
+
+function pintarActa() {
+  const v = KX.valLeer();
+  const r = KX.valResumen();
+  const sinResp = r.total - r.resp;
+
+  $("#resu").innerHTML = `
+    <div><b class="si">${r.ok}</b><small>Está bien</small></div>
+    <div><b class="no">${r.no}</b><small>Hay que corregir</small></div>
+    <div><b style="color:var(--warn)">${r.dd}</b><small>Con dudas</small></div>
+    <div><b style="color:var(--ink-3)">${sinResp}</b><small>Sin responder</small></div>`;
+
+  const grupos = KX.GRUPOS.map(g => {
+    const items = KX.VALID.filter(x => x.g === g.g);
+    const filas = items.map(x => {
+      const it = v.items[x.id] || { e: "", obs: "" };
+      const et = KX.ETIQ[it.e];
+      return `<tr>
+        <td style="width:1%;color:var(--ink-3);font-weight:800;white-space:nowrap">${x.g}${x.id.slice(1)}</td>
+        <td>${KX.esc(x.q)}</td>
+        <td class="est"><span class="pill ${et.c}">${et.t}</span></td>
+        <td style="color:var(--ink-2)">${it.obs ? KX.esc(it.obs) : "<span style='color:var(--ink-3)'>—</span>"}</td>
+      </tr>`;
+    }).join("");
+    return `<div class="acta-grupo">
+      <h3>${KX.esc(g.titulo)}</h3>
+      <div class="tabla-wrap"><table class="acta acta-t">
+        <thead><tr><th>#</th><th style="min-width:250px">Pregunta</th><th>Respuesta</th><th style="min-width:200px">Observación</th></tr></thead>
+        <tbody>${filas}</tbody>
+      </table></div>
+    </div>`;
+  }).join("");
+
+  const m = KX.valLeer().meta || {};
+  $("#acta").innerHTML = `
+    <div class="acta-head">
+      <div class="logo">MR</div>
+      <div style="flex:1;min-width:200px">
+        <h2>Kardex digital de insumos — acta de validación</h2>
+        <div class="sub">Red Médica Demo · Centro Médico Ambulatorio Metroambulat S.A.</div>
+      </div>
+      <div style="text-align:right;font-size:11.5px;color:var(--ink-3)">
+        <div>Fecha</div><div style="font-weight:800;color:var(--ink)">${KX.hoyTexto()}</div>
+      </div>
+    </div>
+
+    <div class="meta-form">
+      <div><label for="mNombre">Validado por</label><input id="mNombre" value="${KX.esc(m.nombre || "")}" placeholder="Nombre y apellido"></div>
+      <div><label for="mCargo">Cargo / área</label><input id="mCargo" value="${KX.esc(m.cargo || "")}" placeholder="Ej.: Analista de Compras"></div>
+      <div style="grid-column:1/-1"><label for="mCom">Comentario general (opcional)</label>
+        <textarea id="mCom" rows="3" placeholder="Lo que quiera dejar dicho más allá de los puntos de la lista…">${KX.esc(m.comentario || "")}</textarea></div>
+    </div>
+
+    <div class="doc-meta meta-print" style="grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px">
+      <div style="padding:8px 12px;border-right:1px solid var(--line)"><small>Validado por</small><b>${KX.esc(m.nombre || "—")}</b></div>
+      <div style="padding:8px 12px;border-right:1px solid var(--line)"><small>Cargo / área</small><b>${KX.esc(m.cargo || "—")}</b></div>
+      <div style="padding:8px 12px"><small>Puntos respondidos</small><b>${r.resp} de ${r.total}</b></div>
+    </div>
+
+    <p style="font-size:13.5px;line-height:1.6;color:var(--ink-2);max-width:82ch;margin:0 0 16px">
+      Se revisó el kardex digital en sus tres partes: registro diario, documento mensual y catálogo de
+      productos. <b>Lo marcado como «hay que corregir» se resuelve antes de construir el sistema.</b>
+    </p>
+
+    <div class="resu">
+      <div><b class="si">${r.ok}</b><small>Está bien</small></div>
+      <div><b class="no">${r.no}</b><small>Hay que corregir</small></div>
+      <div><b style="color:var(--warn)">${r.dd}</b><small>Con dudas</small></div>
+      <div><b style="color:var(--ink-3)">${sinResp}</b><small>Sin responder</small></div>
+    </div>
+
+    ${grupos}
+
+    ${m.comentario ? `<div class="acta-grupo"><h3>Comentario general</h3>
+      <p style="font-size:13.5px;line-height:1.6;color:var(--ink-2);white-space:pre-wrap;margin:0">${KX.esc(m.comentario)}</p></div>` : ""}
+
+    <p style="font-size:12.5px;color:var(--ink-3);margin:26px 0 0;border-top:1px solid var(--line-soft);padding-top:11px">
+      Revisado por ${KX.esc(m.nombre || "—")}${m.cargo ? " · " + KX.esc(m.cargo) : ""} ·
+      Enviar a Cristian Mena, Desarrollo de Compras.
+    </p>`;
+
+  ["mNombre:nombre", "mCargo:cargo", "mCom:comentario"].forEach(par => {
+    const [id, campo] = par.split(":");
+    const e = document.getElementById(id);
+    if (e) e.oninput = () => { KX.valMeta(campo, e.value); pintarSoloPrint(); };
+  });
+}
+
+/* Actualiza los datos del encabezado impreso sin volver a dibujar todo,
+   para no perder el cursor mientras se escribe. */
+function pintarSoloPrint() {
+  const m = KX.valLeer().meta || {};
+  const bs = $("#acta").querySelectorAll(".meta-print b");
+  if (bs[0]) bs[0].textContent = m.nombre || "—";
+  if (bs[1]) bs[1].textContent = m.cargo || "—";
+}
+
+window.alCambiarValidacion = pintarActa;
+
+function textoPlano() {
+  const v = KX.valLeer(), m = v.meta || {}, r = KX.valResumen();
+  const L = [];
+  L.push("KARDEX DIGITAL DE INSUMOS — ACTA DE VALIDACIÓN");
+  L.push("Red Médica Demo · " + KX.hoyTexto());
+  L.push("Validado por: " + (m.nombre || "—") + (m.cargo ? " (" + m.cargo + ")" : ""));
+  L.push(`Resultado: ${r.ok} bien · ${r.no} por corregir · ${r.dd} con dudas · ${r.total - r.resp} sin responder`);
+  KX.GRUPOS.forEach(g => {
+    L.push(""); L.push("== GRUPO " + g.g + ": " + g.titulo.toUpperCase() + " ==");
+    KX.VALID.filter(x => x.g === g.g).forEach(x => {
+      const it = v.items[x.id] || { e: "", obs: "" };
+      L.push(`${x.g}${x.id.slice(1)}. ${x.q}`);
+      L.push(`    → ${KX.ETIQ[it.e].t}${it.obs ? " — " + it.obs : ""}`);
+    });
+  });
+  if (m.comentario) { L.push(""); L.push("COMENTARIO GENERAL:"); L.push(m.comentario); }
+  return L.join("\n");
+}
+
+function copiar() {
+  const t = textoPlano();
+  const ta = document.createElement("textarea");
+  ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); KX.toast("✓ Acta copiada: ya puede pegarla en un correo"); }
+  catch (e) { KX.toast("No se pudo copiar automáticamente"); }
+  ta.remove();
+}
+
+function exportar() {
+  const v = KX.valLeer(), m = v.meta || {};
+  const out = [
+    ["Kardex digital de insumos — acta de validación"],
+    ["Fecha", KX.hoyTexto()],
+    ["Validado por", m.nombre || ""],
+    ["Cargo", m.cargo || ""],
+    [],
+    ["GRUPO", "#", "PUNTO VALIDADO", "RESPUESTA", "OBSERVACIÓN"]
+  ];
+  KX.GRUPOS.forEach(g => KX.VALID.filter(x => x.g === g.g).forEach(x => {
+    const it = v.items[x.id] || { e: "", obs: "" };
+    out.push([g.titulo, x.g + x.id.slice(1), x.q, KX.ETIQ[it.e].t, it.obs || ""]);
+  }));
+  if (m.comentario) { out.push([]); out.push(["Comentario general", m.comentario]); }
+  KX.descargarCSV("Acta-validacion-kardex.csv", out);
+}
+
+pintarActa();
+KX.pintarValidacion();
+KX.expandirAyudas();
+</script>
+</body>
+</html>
